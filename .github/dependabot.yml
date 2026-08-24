@@ -1,0 +1,16 @@
+version: 2
+
+updates:
+  # Único ecosistema real aquí: las GitHub Actions usadas en digest.yml
+  # (actions/checkout, actions/setup-python). No hay requirements.txt.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    commit-message:
+      prefix: "ci"
+    groups:
+      actions:
+        patterns:
+          - "*"
