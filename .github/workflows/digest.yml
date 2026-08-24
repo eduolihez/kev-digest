@@ -1,0 +1,37 @@
+name: Daily KEV digest
+
+on:
+  schedule:
+    # 07:00 Europe/Madrid (UTC+1/+2) ~ 06:00 UTC, safely after midnight either way
+    - cron: "0 6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  digest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Run digest
+        run: python scripts/digest.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "kev-digest-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data digest README.md
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          DATE=$(date -u +%Y-%m-%d)
+          NEW=$(grep -c '^- \*\*CVE' "digest/${DATE}.md" || true)
+          git commit -m "digest: ${NEW} new KEV entr$( [ "$NEW" = "1" ] && echo y || echo ies ) (${DATE})"
+          git push
