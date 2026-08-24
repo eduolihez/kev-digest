@@ -6,7 +6,7 @@ Cada día el workflow descarga el catálogo, lo compara contra `data/seen_cves.j
 
 - **Última ejecución:** 2026-08-24
 - **CVEs trackeados:** 1674
-- **Nuevas hoy:** 0 (línea base inicial)
+- **Nuevas hoy:** 0
 - **Último digest:** [`digest/2026-08-24.md`](digest/2026-08-24.md)
 
 ## Por qué
