@@ -32,6 +32,10 @@ jobs:
             exit 0
           fi
           DATE=$(date -u +%Y-%m-%d)
-          NEW=$(grep -c '^- \*\*CVE' "digest/${DATE}.md" || true)
+          # El corchete opcional cubre las dos formas que ha tenido la linea:
+          # "- **CVE-1234-5678**" antes, y "- **[CVE-1234-5678](enlace al NVD)"
+          # desde que cada entrada enlaza a su ficha. Sin el, el contador
+          # salia siempre a 0 y los commits decian "0 new" con entradas nuevas.
+          NEW=$(grep -cE '^- \*\*\[?CVE' "digest/${DATE}.md" || true)
           git commit -m "digest: ${NEW} new KEV entr$( [ "$NEW" = "1" ] && echo y || echo ies ) (${DATE})"
           git push
