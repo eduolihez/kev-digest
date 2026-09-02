@@ -1,11 +1,25 @@
 name: "Dependabot auto-merge"
 
-# Repo privado: GitHub Free no permite el auto-merge "diferido" aqui (falla
-# con "Auto merge is not allowed for this repository"). Por eso este
-# workflow se dispara tambien cuando termina el CI (workflow_run) y, en ese
-# momento, el PR ya deberia estar limpio -> fusion inmediata sin necesitar
-# esa funcion. El intento por pull_request se deja como via rapida para
-# cuando el PR ya esta limpio nada mas abrirse.
+# ===========================================================================
+#  Aprueba y fusiona sola cualquier actualizacion de Dependabot que no sea
+#  un salto de version mayor.
+#
+#  HISTORIA: mientras el repositorio era privado, GitHub Free no ofrecia el
+#  auto-merge diferido ("Auto merge is not allowed for this repository"), asi
+#  que aqui habia un rodeo: disparar tambien por workflow_run y deducir del
+#  titulo del PR, a base de grep, si el salto era mayor. Ese rodeo ademas
+#  nunca llego a funcionar del todo, porque el bloque `on:` solo declaraba
+#  pull_request y la rama de workflow_run era codigo muerto.
+#
+#  Al pasar el repositorio a publico el auto-merge esta disponible y todo eso
+#  sobra: dependabot/fetch-metadata da el tipo de actualizacion de forma
+#  fiable, sin adivinar nada a partir del texto.
+#
+#  REQUISITOS (ajustes del repositorio, no de este archivo):
+#    - Settings > General > "Allow auto-merge"
+#    - Settings > Actions > General > "Allow GitHub Actions to create and
+#      approve pull requests"
+# ===========================================================================
 
 on:
   pull_request:
@@ -17,55 +31,25 @@ permissions:
 
 jobs:
   auto-merge:
+    if: github.actor == 'dependabot[bot]'
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request' || (github.event_name == 'workflow_run' && github.event.workflow_run.conclusion == 'success')
     steps:
-      - name: Resolver numero de PR
-        id: pr
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Leer metadatos del PR de Dependabot
+        id: metadata
+        uses: dependabot/fetch-metadata@v2
+        with:
+          github-token: "${{ secrets.GITHUB_TOKEN }}"
+
+      - name: Auto-aprobar y activar auto-merge (squash)
+        # Todo menos los saltos mayores. Las GitHub Actions se fusionan
+        # siempre: son las unicas dependencias del repositorio y sus versiones
+        # mayores rara vez rompen nada.
+        if: |
+          steps.metadata.outputs.update-type != 'version-update:semver-major' ||
+          steps.metadata.outputs.package-ecosystem == 'github_actions'
         run: |
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            echo "number=${{ github.event.pull_request.number }}" >> "$GITHUB_OUTPUT"
-          else
-            NUM=$(gh api "repos/${{ github.repository }}/commits/${{ github.event.workflow_run.head_sha }}/pulls" --jq '.[0].number // empty')
-            echo "number=$NUM" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Evaluar y fusionar si procede
-        if: steps.pr.outputs.number != ''
+          gh pr review --approve "$PR_URL"
+          gh pr merge --squash --auto "$PR_URL"
         env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository }}
-          NUM: ${{ steps.pr.outputs.number }}
-        run: |
-          AUTHOR=$(gh pr view "$NUM" --repo "$REPO" --json author --jq '.author.login')
-          if [ "$AUTHOR" != "dependabot[bot]" ]; then
-            echo "No es un PR de Dependabot, nada que hacer."
-            exit 0
-          fi
-
-          TITLE=$(gh pr view "$NUM" --repo "$REPO" --json title --jq '.title')
-          HEAD_REF=$(gh pr view "$NUM" --repo "$REPO" --json headRefName --jq '.headRefName')
-
-          IS_ACTIONS=false
-          case "$HEAD_REF" in *github_actions*) IS_ACTIONS=true ;; esac
-
-          MAJOR=false
-          if [ "$IS_ACTIONS" = "false" ]; then
-            A=$(echo "$TITLE" | grep -ioE 'from [0-9]+' | head -1 | grep -oE '[0-9]+')
-            B=$(echo "$TITLE" | grep -ioE 'to [0-9]+' | head -1 | grep -oE '[0-9]+')
-            if [ -n "$A" ] && [ -n "$B" ] && [ "$A" != "$B" ]; then
-              MAJOR=true
-            fi
-          fi
-
-          if [ "$MAJOR" = "true" ]; then
-            echo "Bump mayor, se deja para revision manual: $TITLE"
-            exit 0
-          fi
-
-          gh pr review --approve "$NUM" --repo "$REPO" || true
-          gh pr merge "$NUM" --repo "$REPO" --squash --auto \
-            || gh pr merge "$NUM" --repo "$REPO" --squash \
-            || echo "Todavia no fusionable (checks pendientes); se reintentara cuando termine el CI."

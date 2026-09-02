@@ -17,6 +17,10 @@ STATE_FILE = ROOT / "data" / "seen_cves.json"
 DIGEST_DIR = ROOT / "digest"
 README_FILE = ROOT / "README.md"
 
+# Delimitan la única parte del README que este script reescribe.
+STATS_START = "<!-- KEV-STATS:START -->"
+STATS_END = "<!-- KEV-STATS:END -->"
+
 
 def fetch_kev():
     req = urllib.request.Request(KEV_URL, headers={"User-Agent": "kev-digest/1.0"})
@@ -38,8 +42,14 @@ def save_seen(cve_ids):
 
 
 def format_entry(vuln):
+    cve = vuln["cveID"]
+    # El catálogo marca las CVE con uso conocido en campañas de ransomware.
+    # Para un analista es lo primero que quiere ver, así que va en la cabecera.
+    ransomware = vuln.get("knownRansomwareCampaignUse", "Unknown").strip()
+    flag = " · 🔴 **Ransomware conocido**" if ransomware.lower() == "known" else ""
     return (
-        f"- **{vuln['cveID']}** — {vuln['vendorProject']} {vuln['product']}\n"
+        f"- **[{cve}](https://nvd.nist.gov/vuln/detail/{cve})** — "
+        f"{vuln['vendorProject']} {vuln['product']}{flag}\n"
         f"  {vuln['vulnerabilityName']}\n"
         f"  Añadida al catálogo: {vuln['dateAdded']} · "
         f"Plazo de mitigación: {vuln.get('dueDate', 'n/d')}\n"
@@ -75,33 +85,51 @@ def write_digest(date_str, new_vulns, total_tracked, first_run):
     return path, body
 
 
-def update_readme(date_str, new_count, total_tracked, first_run):
-    lines = [
-        "# KEV Digest",
-        "",
-        "Vigilancia diaria y automatizada del catálogo "
-        "[CISA KEV](https://www.cisa.gov/known-exploited-vulnerabilities-catalog) "
-        "(Known Exploited Vulnerabilities) vía GitHub Actions "
-        "(`.github/workflows/digest.yml`, cron diario).",
-        "",
-        "Cada día el workflow descarga el catálogo, lo compara contra "
-        "`data/seen_cves.json` (última foto conocida) y escribe un archivo en "
-        "`digest/` con lo que ha cambiado. Sin intervención manual.",
-        "",
-        f"- **Última ejecución:** {date_str}",
-        f"- **CVEs trackeados:** {total_tracked}",
-        f"- **Nuevas hoy:** {new_count}"
-        + (" (línea base inicial)" if first_run else ""),
-        f"- **Último digest:** [`digest/{date_str}.md`](digest/{date_str}.md)",
-        "",
-        "## Por qué",
-        "",
-        "Registro personal de inteligencia de amenazas: entrar cada mañana a "
-        "revisar qué vulnerabilidades explotadas activamente se han añadido "
-        "al catálogo de CISA, sin tener que comprobarlo a mano.",
-        "",
-    ]
-    README_FILE.write_text("\n".join(lines), encoding="utf-8")
+def update_readme(date_str, new_count, total_tracked, first_run, ransomware_count):
+    """Refresca SOLO el bloque de estadísticas del README.
+
+    El README lo escribe una persona; de aquí sale únicamente lo que hay entre
+    los dos marcadores. Antes esta función reconstruía el archivo entero, así
+    que cualquier cosa que se escribiera a mano (instalación, ejemplos,
+    licencia...) desaparecía en la siguiente ejecución del cron.
+
+    Si los marcadores no están, no se toca nada: es preferible un README con
+    cifras viejas que un README machacado.
+    """
+    if not README_FILE.exists():
+        print("README.md no existe; no se actualiza.", file=sys.stderr)
+        return
+
+    content = README_FILE.read_text(encoding="utf-8")
+    if STATS_START not in content or STATS_END not in content:
+        print(
+            f"Marcadores {STATS_START} / {STATS_END} no encontrados en README.md; "
+            "se deja intacto.",
+            file=sys.stderr,
+        )
+        return
+
+    nuevas = f"{new_count}" + (" (línea base inicial)" if first_run else "")
+    bloque = "\n".join(
+        [
+            STATS_START,
+            "<!-- Generado por scripts/digest.py. No editar a mano. -->",
+            "",
+            "| | |",
+            "|---|---|",
+            f"| **Última ejecución** | {date_str} |",
+            f"| **CVEs en seguimiento** | {total_tracked} |",
+            f"| **Nuevas en esta ejecución** | {nuevas} |",
+            f"| **Con uso conocido en ransomware** | {ransomware_count} |",
+            f"| **Último digest** | [`digest/{date_str}.md`](digest/{date_str}.md) |",
+            "",
+            STATS_END,
+        ]
+    )
+
+    inicio = content.index(STATS_START)
+    fin = content.index(STATS_END) + len(STATS_END)
+    README_FILE.write_text(content[:inicio] + bloque + content[fin:], encoding="utf-8")
 
 
 def main():
@@ -124,9 +152,17 @@ def main():
         new_vulns = [v for v in vulns if v["cveID"] in new_ids]
         new_vulns.sort(key=lambda v: v.get("dateAdded", ""), reverse=True)
 
+    ransomware_count = sum(
+        1
+        for v in vulns
+        if v.get("knownRansomwareCampaignUse", "").strip().lower() == "known"
+    )
+
     save_seen(current_ids)
     path, _ = write_digest(date_str, new_vulns, len(current_ids), first_run)
-    update_readme(date_str, len(new_vulns), len(current_ids), first_run)
+    update_readme(
+        date_str, len(new_vulns), len(current_ids), first_run, ransomware_count
+    )
 
     print(f"Wrote {path} — {len(new_vulns)} new, {len(current_ids)} tracked total")
     return 0

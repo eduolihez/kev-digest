@@ -1,0 +1,15 @@
+# Finales de linea LF en el repositorio, siempre.
+#
+# Los bloques `run:` de los workflows se ejecutan en bash sobre un runner
+# Linux: si un .yml llega con CRLF, bash falla con errores crípticos del tipo
+# "$'\r': command not found". Editando desde Windows es facil colar CRLF sin
+# darse cuenta, asi que se normaliza aqui en lugar de confiar en la
+# configuracion de cada maquina.
+* text=auto eol=lf
+
+# data/seen_cves.json lo genera el script; no tiene sentido revisarlo a mano
+# en los diffs de un pull request (son ~1.700 lineas de identificadores).
+data/seen_cves.json linguist-generated=true
+
+# Los digests son salida generada, no codigo fuente.
+digest/*.md linguist-generated=true
