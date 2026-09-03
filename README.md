@@ -5,6 +5,8 @@
 [![Fuente: CISA KEV](https://img.shields.io/badge/fuente-CISA%20KEV-005288.svg)](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
 [![Sin dependencias](https://img.shields.io/badge/dependencias-0-brightgreen.svg)](scripts/digest.py)
 
+### **[Versión en Español](README.md)** · [English version](README.en.md)
+
 Vigilancia diaria y automatizada del catálogo [CISA KEV](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
 (*Known Exploited Vulnerabilities*): el registro oficial de vulnerabilidades que
 se están explotando de verdad, ahora mismo, publicado por la agencia de
