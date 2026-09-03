@@ -7,7 +7,7 @@
 
 Vigilancia diaria y automatizada del catálogo [CISA KEV](https://www.cisa.gov/known-exploited-vulnerabilities-catalog)
 (*Known Exploited Vulnerabilities*): el registro oficial de vulnerabilidades que
-**se están explotando de verdad, ahora mismo**, publicado por la agencia de
+se están explotando de verdad, ahora mismo, publicado por la agencia de
 ciberseguridad estadounidense.
 
 Cada mañana un workflow descarga el catálogo, lo compara con la última foto
@@ -67,14 +67,14 @@ cron diario (06:00 UTC)
 
 Detalles que importan:
 
-- **Sin dependencias.** Sólo la biblioteca estándar de Python 3.12
-  (`urllib`, `json`, `pathlib`). No hay `requirements.txt` que mantener ni
-  cadena de suministro que auditar.
-- **El estado vive en el repositorio.** `data/seen_cves.json` es la única
-  fuente de verdad: no hay base de datos ni almacenamiento externo.
-- **Idempotente.** Si el workflow se ejecuta dos veces el mismo día, el
-  segundo pase no encuentra diferencias y no genera commit.
-- **La primera ejecución sólo fija la línea base.** No inunda el primer digest
+- No tiene dependencias. Sólo la biblioteca estándar de Python 3.12 (`urllib`,
+  `json`, `pathlib`). No hay `requirements.txt` que mantener ni cadena de
+  suministro que auditar.
+- El estado vive en el repositorio. `data/seen_cves.json` es la única fuente de
+  verdad: no hay base de datos ni almacenamiento externo.
+- Es idempotente. Si el workflow se ejecuta dos veces el mismo día, el segundo
+  pase no encuentra diferencias y no genera commit.
+- La primera ejecución sólo fija la línea base, para no inundar el primer digest
   con las ~1.700 CVE que ya estaban en el catálogo.
 
 ## Estructura
@@ -92,12 +92,12 @@ digest/               Un archivo Markdown por día con los cambios
 
 Cada entrada nueva se registra con lo necesario para decidir si actuar:
 
-- **CVE** con enlace a su ficha en el NVD
+- El CVE, con enlace a su ficha en el NVD
 - Fabricante y producto afectados
 - Nombre de la vulnerabilidad
-- Fecha de incorporación al catálogo y **plazo de mitigación** fijado por CISA
+- Fecha de incorporación al catálogo y plazo de mitigación fijado por CISA
 - Descripción breve
-- Aviso destacado si consta **uso conocido en campañas de ransomware**
+- Un aviso destacado si consta uso conocido en campañas de ransomware
 
 ## Ejecutarlo en local
 
@@ -121,9 +121,8 @@ publicado por la *Cybersecurity and Infrastructure Security Agency* de EE. UU.
 como obra del gobierno federal en dominio público. Este repositorio no está
 afiliado a CISA ni respaldado por ella.
 
-Los archivos de `digest/` son una vista derivada y automatizada: **para
-decisiones operativas, consulta siempre el catálogo original**, que es la
-fuente autoritativa.
+Los archivos de `digest/` son una vista derivada y automatizada. Para decisiones
+operativas, consulta siempre el catálogo original, que es la fuente autoritativa.
 
 ## Licencia
 
