@@ -1,0 +1,32 @@
+name: Tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/**"
+      - "tests/**"
+      - ".github/workflows/tests.yml"
+  pull_request:
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - name: Ejecutar las pruebas
+        # Sin dependencias: unittest de la stdlib, catálogos inventados y una
+        # copia temporal del repo. No toca la red ni data/ ni digest/.
+        run: python -m unittest discover -s tests -v
+
+      - name: Comprobar que el script arranca
+        run: python scripts/digest.py --help
