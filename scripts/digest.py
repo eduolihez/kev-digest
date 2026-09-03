@@ -681,7 +681,8 @@ def main() -> int:
         watchlist_hits=sorted(en_inventario),
         due_soon=due_soon,
     )
-    publish.build_feed(ahora_iso)
+    # Tambien con la marca del ultimo cambio, no con la de esta pasada.
+    publish.build_feed(publish.normalizar_ts(last_change))
 
     emit_outputs(
         changed=str(hay_cambios or first_run or migracion).lower(),

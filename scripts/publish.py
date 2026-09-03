@@ -202,6 +202,11 @@ def build_feed(ahora_iso: str) -> Path:
     eventos = read_history()[-FEED_MAX:]
     eventos.reverse()  # lo más reciente primero
     cuerpo = "\n".join(_entrada_atom(e) for e in eventos) if eventos else ""
+
+    # <updated> es cuándo cambió el feed, no cuándo se generó el archivo. Con
+    # la hora de cada pasada, el XML era distinto ocho veces al día y provocaba
+    # un commit vacío en cada una.
+    actualizado = eventos[0].get("ts") if eventos else ahora_iso
     xml = "\n".join([
         '<?xml version="1.0" encoding="utf-8"?>',
         '<feed xmlns="http://www.w3.org/2005/Atom">',
@@ -210,7 +215,7 @@ def build_feed(ahora_iso: str) -> Path:
         f'  <link href="{REPO_URL}"/>',
         f'  <link rel="self" href="{FEED_URL}"/>',
         f"  <id>{REPO_URL}</id>",
-        f"  <updated>{escape(ahora_iso)}</updated>",
+        f"  <updated>{escape(actualizado)}</updated>",
         "  <author><name>kev-digest</name></author>",
         cuerpo,
         "</feed>",

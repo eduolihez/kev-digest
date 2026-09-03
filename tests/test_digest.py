@@ -469,6 +469,40 @@ class TestLatestJson(DigestTestCase):
         self.assertEqual((self.repo / "data" / "latest.json").read_text(encoding="utf-8"), antes)
 
 
+class TestSinNovedadesNoTocaNada(DigestTestCase):
+    """Con 8 pasadas al día, un solo byte que cambie son 8 commits vacíos.
+
+    Todo lo que se escribe en cada pasada tiene que llevar la marca del último
+    cambio, no la de la pasada. Ya pasó dos veces: `generatedAt` en latest.json
+    y `<updated>` en el feed.
+    """
+
+    ARCHIVOS = ("data/seen_cves.json", "data/latest.json", "digest/feed.xml",
+                "digest/2026-09-03.md", "README.md", "README.en.md")
+
+    def foto(self):
+        salida = {}
+        for rel in self.ARCHIVOS:
+            ruta = self.repo / rel
+            salida[rel] = ruta.read_bytes() if ruta.exists() else None
+        return salida
+
+    def test_ningun_archivo_cambia_entre_pasadas_sin_novedades(self):
+        self.estado_v1([e["cveID"] for e in GRANDE])
+        self.correr(catalogo(GRANDE))
+        # Una pasada con novedad, para que haya historial, feed y digest reales.
+        con_novedad = GRANDE + [entrada("CVE-2000-0001", added="2026-09-03", due="2026-12-01")]
+        self.correr(catalogo(con_novedad), hora=(6, 0))
+
+        antes = self.foto()
+        for hora in ((9, 0), (12, 0), (21, 0)):
+            self.correr(catalogo(con_novedad), hora=hora)
+        despues = self.foto()
+
+        distintos = [k for k in self.ARCHIVOS if antes[k] != despues[k]]
+        self.assertEqual(distintos, [], f"cambiaron sin motivo: {distintos}")
+
+
 class TestHistorialYFeed(DigestTestCase):
     def setUp(self):
         super().setUp()
