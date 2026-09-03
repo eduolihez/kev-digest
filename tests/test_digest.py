@@ -10,6 +10,7 @@ from __future__ import annotations
 
 import datetime
 import importlib.util
+import io
 import json
 import os
 import shutil
@@ -392,6 +393,38 @@ class TestPlazos(DigestTestCase):
         lejano = [entrada("CVE-1000-0001", due="2026-12-01")] + GRANDE[1:]
         self.correr(catalogo(lejano), hora=(6, 0))
         self.assertNotIn("Plazos de CISA que vencen", self.digest_hoy)
+
+
+class TestResumen(DigestTestCase):
+    """El resumen acaba siendo el mensaje del commit, asi que no puede mentir."""
+
+    def setUp(self):
+        super().setUp()
+        self.estado_v1([e["cveID"] for e in GRANDE])
+        self.correr(catalogo(GRANDE))
+
+    def resumen_de(self, cat, hora=(6, 0)):
+        salida = io.StringIO()
+        stdout = sys.stdout
+        sys.stdout = salida
+        try:
+            self.correr(cat, hora=hora)
+        finally:
+            sys.stdout = stdout
+        return salida.getvalue().strip().splitlines()[-1]
+
+    def test_una_pasada_de_solo_plazos_no_dice_cero_cambios(self):
+        pronto = [entrada("CVE-1000-0001", due="2026-09-06")] + GRANDE[1:]
+        resumen = self.resumen_de(catalogo(pronto))
+        self.assertIn("plazos", resumen)
+        self.assertNotIn("0 nuevas", resumen)
+
+    def test_solo_nombra_lo_que_ha_cambiado(self):
+        nuevo = GRANDE + [entrada("CVE-2000-0001", added="2026-09-03", due="2026-12-01")]
+        resumen = self.resumen_de(catalogo(nuevo))
+        self.assertIn("1 nuevas", resumen)
+        self.assertNotIn("modificadas", resumen)
+        self.assertNotIn("retiradas", resumen)
 
 
 class TestLatestJson(DigestTestCase):

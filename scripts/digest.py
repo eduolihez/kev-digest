@@ -567,9 +567,22 @@ def main() -> int:
     hay_cambios = bool(nuevas or modificadas or retiradas or due_nuevos)
     migracion = prev_meta.get("schema", 0) < SCHEMA and not first_run
 
+    # El resumen solo nombra lo que ha cambiado. Enumerar siempre los cuatro
+    # contadores dejaba commits diciendo "0 nuevas, 0 modificadas, 0 retiradas"
+    # en pasadas que sí habían escrito algo, por ejemplo solo plazos.
+    partes_resumen = []
+    if nuevas:
+        partes_resumen.append(f"{len(nuevas)} nuevas")
+    if modificadas:
+        partes_resumen.append(f"{len(modificadas)} modificadas")
+    if retiradas:
+        partes_resumen.append(f"{len(retiradas)} retiradas")
+    if due_nuevos:
+        partes_resumen.append(f"{len(due_nuevos)} plazos a punto de vencer")
+    if en_inventario:
+        partes_resumen.append(f"{len(en_inventario)} en inventario")
     resumen = (
-        f"digest: {len(nuevas)} nuevas, {len(modificadas)} modificadas, "
-        f"{len(retiradas)} retiradas ({fecha} {hora})"
+        f"digest: {', '.join(partes_resumen) or 'sin cambios'} ({fecha} {hora})"
     )
     if first_run:
         resumen = f"digest: línea base con {len(current)} CVEs ({fecha})"
