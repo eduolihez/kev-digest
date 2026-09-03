@@ -23,11 +23,11 @@ cambiado. Sin intervención manual y sin servidor: todo ocurre en GitHub Actions
 
 | | |
 |---|---|
-| **Última ejecución** | 2026-09-02 |
-| **CVEs en seguimiento** | 1687 |
-| **Nuevas en esta ejecución** | 0 |
+| **Última ejecución** | 2026-09-03 |
+| **CVEs en seguimiento** | 1694 |
+| **Nuevas en esta ejecución** | 7 |
 | **Con uso conocido en ransomware** | 352 |
-| **Último digest** | [`digest/2026-09-02.md`](digest/2026-09-02.md) |
+| **Último digest** | [`digest/2026-09-03.md`](digest/2026-09-03.md) |
 
 <!-- KEV-STATS:END -->
 
