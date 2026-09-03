@@ -2,10 +2,13 @@
 """Vigilante del catálogo CISA KEV (Known Exploited Vulnerabilities).
 
 Descarga el catálogo, lo compara con la última foto conocida y añade al digest
-del día lo que haya cambiado: entradas nuevas, entradas modificadas y entradas
-retiradas. Pensado para correr varias veces al día desde
-.github/workflows/digest.yml, así que cada pasada *añade* una sección al
-archivo del día en vez de reescribirlo.
+del día lo que haya cambiado: entradas nuevas, entradas modificadas, entradas
+retiradas y plazos de CISA que están a punto de vencer. Pensado para correr
+varias veces al día desde .github/workflows/digest.yml, así que cada pasada
+*añade* una sección al archivo del día en vez de reescribirlo.
+
+Publica además `data/latest.json`, que es lo que consume la página KEV Watch
+del Blue Team Hub, y un feed Atom en `digest/feed.xml`.
 
 Sin dependencias: solo biblioteca estándar de Python 3.12.
 """
@@ -22,12 +25,21 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
+# Los módulos hermanos viven junto a este archivo. Añadir su carpeta al path
+# hace que el import funcione tanto con `python scripts/digest.py` como
+# cargando el módulo desde otro sitio, que es lo que hacen las pruebas.
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+import enrich as enrich_mod  # noqa: E402
+import publish  # noqa: E402
+
 KEV_URL = "https://www.cisa.gov/sites/default/files/feeds/known_exploited_vulnerabilities.json"
 ROOT = Path(__file__).resolve().parent.parent
 STATE_FILE = ROOT / "data" / "seen_cves.json"
 DIGEST_DIR = ROOT / "digest"
+WATCHLIST_FILE = ROOT / "config" / "watchlist.json"
 
-SCHEMA = 2
+SCHEMA = 3
 
 # Delimitan la única parte de los README que este script reescribe.
 STATS_START = "<!-- KEV-STATS:START -->"
@@ -57,6 +69,11 @@ FETCH_BACKOFF = 5  # segundos, se multiplica por el número de intento
 # guardar el estado, porque machacarlo con datos malos perdería la línea base.
 SHRINK_GUARD = 0.10
 
+# Cuántos días antes del plazo de CISA avisar.
+DUE_SOON_DIAS = 7
+# Cuánto se conserva un aviso de plazo ya dado, para no repetirlo.
+DUE_MEMORIA_DIAS = 30
+
 
 def fingerprint(text: str) -> str:
     return hashlib.sha256(text.strip().encode("utf-8")).hexdigest()[:12]
@@ -76,7 +93,8 @@ def fetch_kev(attempts: int = FETCH_ATTEMPTS) -> dict:
     for attempt in range(1, attempts + 1):
         try:
             req = urllib.request.Request(
-                KEV_URL, headers={"User-Agent": "kev-digest/2.0 (+https://github.com/eduolihez/kev-digest)"}
+                KEV_URL,
+                headers={"User-Agent": "kev-digest/3.0 (+https://github.com/eduolihez/kev-digest)"},
             )
             with urllib.request.urlopen(req, timeout=45) as resp:
                 return json.load(resp)
@@ -90,6 +108,54 @@ def fetch_kev(attempts: int = FETCH_ATTEMPTS) -> dict:
                 )
                 time.sleep(pausa)
     raise RuntimeError(f"no se pudo descargar el catálogo tras {attempts} intentos: {last_error}")
+
+
+def load_watchlist() -> dict:
+    """Inventario a vigilar.
+
+    Se lee primero de la variable de entorno `KEV_WATCHLIST`, y solo si no
+    está, del archivo. En un repositorio público, publicar la lista de
+    fabricantes y productos de tu organización es un inventario de su stack a
+    disposición de cualquiera, así que lo suyo es meterla como secreto del
+    repositorio y dejar el archivo fuera de git.
+    """
+    crudo = os.environ.get("KEV_WATCHLIST", "").strip()
+    if crudo:
+        try:
+            datos = json.loads(crudo)
+        except json.JSONDecodeError as exc:
+            print(f"KEV_WATCHLIST no es JSON válido ({exc}); se ignora.", file=sys.stderr)
+            datos = {}
+    elif WATCHLIST_FILE.exists():
+        try:
+            datos = json.loads(WATCHLIST_FILE.read_text(encoding="utf-8"))
+        except json.JSONDecodeError as exc:
+            print(f"{WATCHLIST_FILE.name} no es JSON válido ({exc}); se ignora.", file=sys.stderr)
+            datos = {}
+    else:
+        return {"vendors": [], "products": [], "cves": []}
+
+    return {
+        "vendors": [str(x).lower() for x in datos.get("vendors", []) if str(x).strip()],
+        "products": [str(x).lower() for x in datos.get("products", []) if str(x).strip()],
+        "cves": [str(x).upper() for x in datos.get("cves", []) if str(x).strip()],
+    }
+
+
+def matches_watchlist(vuln: dict, watchlist: dict) -> bool:
+    """Coincidencia por subcadena, insensible a mayúsculas.
+
+    Deliberadamente laxa: "fortinet" tiene que casar con "Fortinet FortiOS", y
+    quien mantiene la lista prefiere un falso positivo antes que perderse una
+    entrada de un producto que sí tiene desplegado.
+    """
+    if vuln["cveID"].upper() in watchlist.get("cves", []):
+        return True
+    fabricante = (vuln.get("vendorProject") or "").lower()
+    producto = (vuln.get("product") or "").lower()
+    if any(v in fabricante for v in watchlist.get("vendors", [])):
+        return True
+    return any(p in producto for p in watchlist.get("products", []))
 
 
 def load_state() -> tuple[dict | None, dict]:
@@ -107,23 +173,6 @@ def load_state() -> tuple[dict | None, dict]:
         return {cve: None for cve in raw}, {"schema": 1}
     meta = {k: v for k, v in raw.items() if k != "entries"}
     return raw.get("entries", {}), meta
-
-
-def save_state(entries: dict, catalog: dict, last_change: str) -> None:
-    STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
-    payload = {
-        "schema": SCHEMA,
-        "catalog_version": catalog.get("catalogVersion", ""),
-        "date_released": catalog.get("dateReleased", ""),
-        "last_change": last_change,
-        "count": len(entries),
-        "entries": entries,
-    }
-    # Escritura atómica: si el runner muere a media escritura, no queremos
-    # dejar un seen_cves.json truncado que rompa la ejecución siguiente.
-    tmp = STATE_FILE.with_suffix(".json.tmp")
-    tmp.write_text(serialize_state(payload), encoding="utf-8")
-    tmp.replace(STATE_FILE)
 
 
 def serialize_state(payload: dict) -> str:
@@ -149,6 +198,24 @@ def serialize_state(payload: dict) -> str:
     salto = "\n"
     cuerpo = ("," + salto).join(filas)
     return salto.join(["{", *cabecera, ' "entries": {', cuerpo, " }", "}"]) + salto
+
+
+def save_state(entries: dict, catalog: dict, last_change: str, announced_due: list[str]) -> None:
+    STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "schema": SCHEMA,
+        "catalog_version": catalog.get("catalogVersion", ""),
+        "date_released": catalog.get("dateReleased", ""),
+        "last_change": last_change,
+        "count": len(entries),
+        "announced_due": sorted(announced_due),
+        "entries": entries,
+    }
+    # Escritura atómica: si el runner muere a media escritura, no queremos
+    # dejar un seen_cves.json truncado que rompa la ejecución siguiente.
+    tmp = STATE_FILE.with_suffix(".json.tmp")
+    tmp.write_text(serialize_state(payload), encoding="utf-8", newline="\n")
+    tmp.replace(STATE_FILE)
 
 
 def diff_catalog(previous: dict, current: dict) -> tuple[list, list, list]:
@@ -179,24 +246,43 @@ def diff_catalog(previous: dict, current: dict) -> tuple[list, list, list]:
     return nuevas, modificadas, retiradas
 
 
-def format_new(vuln: dict) -> str:
+def calcular_due_soon(vulns: list[dict], hoy: datetime.date) -> list[dict]:
+    """CVEs cuyo plazo de CISA vence dentro de la ventana y aún no ha pasado."""
+    salida = []
+    for v in vulns:
+        restantes = publish.dias_hasta(v.get("dueDate") or "", hoy)
+        if 0 <= restantes <= DUE_SOON_DIAS:
+            salida.append({"cveID": v["cveID"], "dueDate": v["dueDate"], "diasRestantes": int(restantes)})
+    return sorted(salida, key=lambda x: (x["diasRestantes"], x["cveID"]))
+
+
+def format_new(vuln: dict, extra: dict | None, marcado: bool) -> str:
     cve = vuln["cveID"]
     # El catálogo marca las CVE con uso conocido en campañas de ransomware.
     # Para un analista es lo primero que quiere ver, así que va en la cabecera.
     ransomware = (vuln.get("knownRansomwareCampaignUse") or "Unknown").strip()
-    flag = " · 🔴 **Ransomware conocido**" if ransomware.lower() == "known" else ""
-    return (
+    flags = ""
+    if marcado:
+        flags += " · ⭐ **En tu inventario**"
+    if ransomware.lower() == "known":
+        flags += " · 🔴 **Ransomware conocido**"
+    linea_extra = enrich_mod.etiqueta(extra)
+    bloque = (
         f"- **[{cve}](https://nvd.nist.gov/vuln/detail/{cve})** · "
-        f"{vuln['vendorProject']} {vuln['product']}{flag}\n"
+        f"{vuln['vendorProject']} {vuln['product']}{flags}\n"
         f"  {vuln['vulnerabilityName']}\n"
         f"  Añadida al catálogo: {vuln['dateAdded']} · "
         f"Plazo de mitigación: {vuln.get('dueDate') or 'n/d'}\n"
-        f"  {(vuln.get('shortDescription') or '').strip()}\n"
     )
+    if linea_extra:
+        bloque += f"  {linea_extra}\n"
+    bloque += f"  {(vuln.get('shortDescription') or '').strip()}\n"
+    return bloque
 
 
-def format_modified(cve: str, cambios: list) -> str:
-    lineas = [f"- **[{cve}](https://nvd.nist.gov/vuln/detail/{cve})**"]
+def format_modified(cve: str, cambios: list, marcado: bool) -> str:
+    marca = " · ⭐ **En tu inventario**" if marcado else ""
+    lineas = [f"- **[{cve}](https://nvd.nist.gov/vuln/detail/{cve})**{marca}"]
     for etiqueta_es, _en, antes, despues in cambios:
         if antes is None:
             lineas.append(f"  - {etiqueta_es}: actualizada")
@@ -216,6 +302,10 @@ def append_digest(
     modificadas: list,
     retiradas: list,
     total: int,
+    enriquecimiento: dict,
+    en_inventario: set,
+    due_nuevos: list,
+    por_id: dict,
 ) -> Path:
     """Añade una sección al digest del día, creándolo si no existe.
 
@@ -233,25 +323,61 @@ def append_digest(
         titulares.append(f"{len(modificadas)} modificada(s)")
     if retiradas:
         titulares.append(f"{len(retiradas)} retirada(s)")
+    if due_nuevos:
+        titulares.append(f"{len(due_nuevos)} plazo(s) a punto de vencer")
 
     partes = [f"## {hora} · {' · '.join(titulares)}\n"]
 
-    if nuevas_v:
-        partes.append("### Entradas nuevas\n")
-        partes.append("\n".join(format_new(v) for v in nuevas_v))
-    if modificadas:
-        partes.append("### Entradas modificadas\n")
-        partes.append("\n".join(format_modified(cve, c) for cve, c in modificadas))
-    if retiradas:
-        partes.append("### Entradas retiradas del catálogo\n")
+    # Lo que toca tu inventario va primero: es lo único que probablemente
+    # requiera que alguien haga algo hoy.
+    if en_inventario:
+        partes.append("### ⭐ Afecta a tu inventario\n")
         partes.append(
             "\n".join(
-                f"- [{cve}](https://nvd.nist.gov/vuln/detail/{cve})" for cve in retiradas
+                f"- [{cve}](https://nvd.nist.gov/vuln/detail/{cve})"
+                f" · {por_id[cve].get('vendorProject', '')} {por_id[cve].get('product', '')}".rstrip()
+                for cve in sorted(en_inventario)
+                if cve in por_id
             )
             + "\n"
         )
-    partes.append(f"_Total en seguimiento tras esta comprobación: {total}._\n")
 
+    if nuevas_v:
+        partes.append("### Entradas nuevas\n")
+        partes.append(
+            "\n".join(
+                format_new(v, enriquecimiento.get(v["cveID"]), v["cveID"] in en_inventario)
+                for v in nuevas_v
+            )
+        )
+    if modificadas:
+        partes.append("### Entradas modificadas\n")
+        partes.append(
+            "\n".join(format_modified(cve, c, cve in en_inventario) for cve, c in modificadas)
+        )
+    if retiradas:
+        partes.append("### Entradas retiradas del catálogo\n")
+        partes.append(
+            "\n".join(f"- [{cve}](https://nvd.nist.gov/vuln/detail/{cve})" for cve in retiradas)
+            + "\n"
+        )
+    if due_nuevos:
+        partes.append(f"### Plazos de CISA que vencen en {DUE_SOON_DIAS} días o menos\n")
+        filas = []
+        for item in due_nuevos:
+            cve = item["cveID"]
+            v = por_id.get(cve, {})
+            marca = " · ⭐" if cve in en_inventario else ""
+            dias = item["diasRestantes"]
+            cuando = "hoy" if dias == 0 else f"en {dias} día{'s' if dias != 1 else ''}"
+            filas.append(
+                f"- [{cve}](https://nvd.nist.gov/vuln/detail/{cve}) · "
+                f"{v.get('vendorProject', '')} {v.get('product', '')}".rstrip()
+                + f" · vence {cuando} ({item['dueDate']}){marca}"
+            )
+        partes.append("\n".join(filas) + "\n")
+
+    partes.append(f"_Total en seguimiento tras esta comprobación: {total}._\n")
     seccion = "\n".join(partes)
 
     if path.exists():
@@ -259,7 +385,7 @@ def append_digest(
     else:
         contenido = f"# KEV digest · {fecha}\n\n" + seccion
 
-    path.write_text(contenido, encoding="utf-8")
+    path.write_text(contenido, encoding="utf-8", newline="\n")
     return path
 
 
@@ -272,6 +398,7 @@ def write_baseline(fecha: str, total: int) -> Path:
         "presentes en el catálogo CISA KEV. A partir de la siguiente pasada, "
         "este archivo solo listará lo que cambie.\n",
         encoding="utf-8",
+        newline="\n",
     )
     return path
 
@@ -284,6 +411,8 @@ def stats_block(labels: dict, meta: dict, ultimo_digest: str | None) -> str:
         f"| **{labels['released']}** | {meta['date_released'] or 'n/d'} |",
         f"| **{labels['change']}** | {meta['last_change']} |",
     ]
+    if meta.get("due_soon") is not None:
+        filas.append(f"| **{labels['due']}** | {meta['due_soon']} |")
     if ultimo_digest:
         filas.append(
             f"| **{labels['digest']}** | "
@@ -300,6 +429,7 @@ ES_LABELS = {
     "version": "Versión del catálogo",
     "released": "Publicado por CISA",
     "change": "Último cambio detectado",
+    "due": f"Plazos que vencen en {DUE_SOON_DIAS} días",
     "digest": "Último digest",
     "generated": "Generado por scripts/digest.py. No editar a mano.",
 }
@@ -309,6 +439,7 @@ EN_LABELS = {
     "version": "Catalog version",
     "released": "Published by CISA",
     "change": "Last change detected",
+    "due": f"Deadlines within {DUE_SOON_DIAS} days",
     "digest": "Latest digest",
     "generated": "Generated by scripts/digest.py. Do not edit by hand.",
 }
@@ -335,7 +466,7 @@ def update_readmes(meta: dict, ultimo_digest: str | None) -> list[str]:
         fin = contenido.index(STATS_END) + len(STATS_END)
         nuevo = contenido[:inicio] + stats_block(labels, meta, ultimo_digest) + contenido[fin:]
         if nuevo != contenido:
-            ruta.write_text(nuevo, encoding="utf-8")
+            ruta.write_text(nuevo, encoding="utf-8", newline="\n")
             tocados.append(nombre)
     return tocados
 
@@ -350,7 +481,7 @@ def emit_outputs(**kwargs) -> None:
     destino = os.environ.get("GITHUB_OUTPUT")
     if not destino:
         return
-    with open(destino, "a", encoding="utf-8") as fh:
+    with open(destino, "a", encoding="utf-8", newline="\n") as fh:
         for clave, valor in kwargs.items():
             fh.write(f"{clave}={valor}\n")
 
@@ -365,11 +496,18 @@ def main() -> int:
         action="store_true",
         help="procesa aunque el catálogo haya encogido más de lo razonable",
     )
+    parser.add_argument(
+        "--no-enrich",
+        action="store_true",
+        help="no consulta EPSS ni NVD; usa solo lo que ya esté cacheado",
+    )
     args = parser.parse_args()
 
     ahora = datetime.datetime.now(datetime.UTC)
-    fecha = ahora.date().isoformat()
+    hoy = ahora.date()
+    fecha = hoy.isoformat()
     hora = ahora.strftime("%H:%M UTC")
+    ahora_iso = ahora.strftime("%Y-%m-%dT%H:%M:%SZ")
 
     try:
         catalog = fetch_kev()
@@ -409,11 +547,25 @@ def main() -> int:
     else:
         nuevas, modificadas, retiradas = diff_catalog(previous, current)
 
+    watchlist = load_watchlist()
+    tocadas = list(nuevas) + [cve for cve, _ in modificadas]
+    en_inventario = {c for c in tocadas if c in por_id and matches_watchlist(por_id[c], watchlist)}
+
+    # Plazos: solo se avisa de los que entran nuevos en la ventana, para no
+    # repetir el mismo aviso ocho veces al día durante una semana.
+    due_soon = calcular_due_soon(vulns, hoy)
+    ya_avisados = set(prev_meta.get("announced_due", []))
+    due_nuevos = [d for d in due_soon if d["cveID"] not in ya_avisados]
+    announced = {d["cveID"] for d in due_soon} | {
+        c for c in ya_avisados
+        if c in por_id and publish.dias_hasta(por_id[c].get("dueDate") or "", hoy) > -DUE_MEMORIA_DIAS
+    }
+
     nuevas_v = sorted(
         (por_id[c] for c in nuevas), key=lambda v: v.get("dateAdded", ""), reverse=True
     )
-    hay_cambios = bool(nuevas or modificadas or retiradas)
-    migracion = prev_meta.get("schema") == 1
+    hay_cambios = bool(nuevas or modificadas or retiradas or due_nuevos)
+    migracion = prev_meta.get("schema", 0) < SCHEMA and not first_run
 
     resumen = (
         f"digest: {len(nuevas)} nuevas, {len(modificadas)} modificadas, "
@@ -426,13 +578,19 @@ def main() -> int:
 
     if args.dry_run:
         print(resumen)
+        for cve in nuevas:
+            print(f"  + {cve}" + ("  [inventario]" if cve in en_inventario else ""))
         for cve, cambios in modificadas:
             print(f"  ~ {cve}: " + ", ".join(c[0] for c in cambios))
-        for cve in nuevas:
-            print(f"  + {cve}")
         for cve in retiradas:
             print(f"  - {cve}")
+        for item in due_nuevos:
+            print(f"  ! {item['cveID']} vence en {item['diasRestantes']} d ({item['dueDate']})")
         return 0
+
+    # Solo se enriquecen las entradas nuevas: pedir CVSS de las 1.694 en cada
+    # pasada sería absurdo, y el rate-limit del NVD no lo aguantaría.
+    enriquecimiento = enrich_mod.enrich(list(nuevas), network=not args.no_enrich) if nuevas else {}
 
     ultimo_digest = None
     if first_run:
@@ -440,22 +598,48 @@ def main() -> int:
         write_baseline(fecha, len(current))
     elif hay_cambios:
         ultimo_digest = fecha
-        append_digest(fecha, hora, nuevas_v, modificadas, retiradas, len(current))
+        append_digest(
+            fecha, hora, nuevas_v, modificadas, retiradas, len(current),
+            enriquecimiento, en_inventario, due_nuevos, por_id,
+        )
     else:
-        # Sin novedades no se escribe digest ni se toca el README: con 8 pasadas
-        # al día, hacerlo llenaría el historial de commits vacíos.
         existentes = sorted(p.stem for p in DIGEST_DIR.glob("*.md")) if DIGEST_DIR.exists() else []
         ultimo_digest = existentes[-1] if existentes else None
 
-    if hay_cambios or first_run:
-        last_change = f"{fecha} {hora}"
-    else:
-        # Al migrar desde el formato v1 no hay fecha previa que conservar, así
-        # que se siembra con la de ahora: es cuando se fija la foto de campos.
-        last_change = prev_meta.get("last_change") or f"{fecha} {hora}"
+    # Historial: un evento por línea, solo-añadir.
+    eventos = []
+    for v in nuevas_v:
+        eventos.append({
+            "ts": ahora_iso, "date": fecha, "event": "new", "cve": v["cveID"],
+            "vendor": v.get("vendorProject", ""), "product": v.get("product", ""),
+            "name": v.get("vulnerabilityName", ""),
+            "summary": (v.get("shortDescription") or "").strip()[:400],
+            "ransomware": (v.get("knownRansomwareCampaignUse") or "").strip() == "Known",
+            "watchlist": v["cveID"] in en_inventario,
+        })
+    for cve, cambios in modificadas:
+        eventos.append({
+            "ts": ahora_iso, "date": fecha, "event": "modified", "cve": cve,
+            "vendor": por_id.get(cve, {}).get("vendorProject", ""),
+            "product": por_id.get(cve, {}).get("product", ""),
+            "summary": "Cambios: " + ", ".join(c[0] for c in cambios),
+            "watchlist": cve in en_inventario,
+        })
+    for cve in retiradas:
+        eventos.append({
+            "ts": ahora_iso, "date": fecha, "event": "removed", "cve": cve,
+            "summary": "Retirada del catálogo KEV",
+        })
+    publish.append_history(eventos)
+
+    last_change = (
+        f"{fecha} {hora}"
+        if (hay_cambios or first_run)
+        else (prev_meta.get("last_change") or f"{fecha} {hora}")
+    )
 
     if hay_cambios or first_run or migracion:
-        save_state(current, catalog, last_change)
+        save_state(current, catalog, last_change, sorted(announced))
         update_readmes(
             {
                 "total": len(current),
@@ -463,15 +647,36 @@ def main() -> int:
                 "catalog_version": catalog.get("catalogVersion", ""),
                 "date_released": catalog.get("dateReleased", ""),
                 "last_change": last_change,
+                "due_soon": len(due_soon),
             },
             ultimo_digest,
         )
+
+    # latest.json y el feed se regeneran siempre: su contenido solo cambia si
+    # cambia el catálogo o pasa el día, y de eso ya se encarga git.
+    #
+    # `generatedAt` lleva la marca del último cambio, no la de esta pasada. Si
+    # llevara "ahora", el archivo sería distinto en cada una de las ocho
+    # ejecuciones diarias y se commitearía siempre, aunque no hubiera novedad.
+    publish.build_latest(
+        vulns=vulns,
+        enriquecimiento=enrich_mod.load_cache(),
+        nuevas_hoy=publish.count_new_today(fecha),
+        catalog=catalog,
+        hoy=hoy,
+        ahora_iso=last_change,
+        watchlist_hits=sorted(en_inventario),
+        due_soon=due_soon,
+    )
+    publish.build_feed(ahora_iso)
 
     emit_outputs(
         changed=str(hay_cambios or first_run or migracion).lower(),
         new=len(nuevas),
         modified=len(modificadas),
         removed=len(retiradas),
+        due_soon=len(due_nuevos),
+        watchlist=len(en_inventario),
         total=len(current),
         date=fecha,
         summary=resumen,

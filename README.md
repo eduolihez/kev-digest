@@ -30,12 +30,27 @@ cambiado. Sin intervención manual y sin servidor: todo ocurre en GitHub Actions
 | **Con uso conocido en ransomware** | 352 |
 | **Versión del catálogo** | 2026.09.02 |
 | **Publicado por CISA** | 2026-09-02T16:54:39.8321Z |
-| **Último cambio detectado** | 2026-09-03 08:01 UTC |
+| **Último cambio detectado** | 2026-09-03 08:19 UTC |
+| **Plazos que vencen en 7 días** | 11 |
 | **Último digest** | [`digest/2026-09-03.md`](digest/2026-09-03.md) |
 
 <!-- KEV-STATS:END -->
 
 ---
+
+## Cómo enterarte
+
+El proyecto no sirve de nada si hay que entrar al repositorio a mirar. Hay tres
+formas de que te llegue:
+
+- **Feed Atom** en [`digest/feed.xml`](digest/feed.xml), con los últimos 50
+  eventos. Se lee desde cualquier cliente de RSS, sin cuenta ni permisos.
+- **Un issue por día** con novedades. GitHub ya notifica de los issues, así que
+  no hace falta ni webhook ni secreto, y queda un hilo donde anotar qué hiciste
+  con cada CVE. Las pasadas siguientes del mismo día comentan en ese issue en
+  vez de abrir otro.
+- **Telegram**, si defines los secretos `TELEGRAM_BOT_TOKEN` y
+  `TELEGRAM_CHAT_ID`. Sin ellos, ese paso se salta.
 
 ## Por qué existe
 
@@ -50,18 +65,74 @@ la explotación activa.
 
 ## Qué detecta
 
-Al principio esto solo miraba si aparecían CVEs nuevas. Pero una entrada ya
-catalogada también cambia, y esos cambios mueven la prioridad de parcheo tanto
-como una entrada nueva. Ahora se vigilan tres cosas:
-
 - **Entradas nuevas.** Lo que CISA acaba de añadir al catálogo.
 - **Entradas modificadas.** Cambios en el nombre, el fabricante, el producto, la
   fecha de alta, el plazo de mitigación, la descripción o la acción requerida.
   El que más importa: cuando `knownRansomwareCampaignUse` pasa a `Known`, que es
   una CVE que llevaba meses catalogada y de repente se usa en campañas de
   ransomware. Sale marcada en rojo, igual que en las nuevas.
-- **Entradas retiradas.** CISA saca entradas del catálogo de vez en cuando. Antes
-  desaparecían en silencio.
+- **Entradas retiradas.** CISA saca entradas del catálogo de vez en cuando.
+- **Plazos a punto de vencer.** CISA fija una fecha límite de mitigación por
+  entrada. Se avisa de las que vencen en 7 días o menos, y solo la primera vez
+  que entran en esa ventana: repetirlo en las ocho pasadas diarias durante una
+  semana sería insufrible.
+
+## Tu inventario
+
+De 1.694 CVEs, a un analista le importan las de los productos que tiene
+delante. Con una watchlist, el digest abre con un bloque **"Afecta a tu
+inventario"** antes del listado general, y esas entradas van marcadas con ⭐.
+
+```json
+{
+  "vendors": ["Fortinet", "Microsoft"],
+  "products": ["FortiGate", "Exchange"],
+  "cves": ["CVE-2026-12345"]
+}
+```
+
+El match es por subcadena e insensible a mayúsculas, así que `fortinet` casa
+con `Fortinet FortiOS`. Es deliberadamente laxo: más vale un falso positivo que
+perderse una entrada de algo que sí tienes desplegado.
+
+> **Dónde ponerla.** En un repositorio público, la lista de fabricantes y
+> productos de tu organización es un inventario de su stack al alcance de
+> cualquiera. Por eso se lee primero del secreto `KEV_WATCHLIST` del
+> repositorio, y solo si no está, de `config/watchlist.json`, que está en el
+> `.gitignore`. Tienes una plantilla en
+> [`config/watchlist.example.json`](config/watchlist.example.json).
+
+## Contexto de cada CVE
+
+Estar en KEV dice que se explota, pero no si es un 9.8 o un 5.4. Cada entrada
+nueva se enriquece con dos fuentes gratuitas:
+
+- **EPSS** (FIRST.org): probabilidad de explotación en los próximos 30 días.
+  Admite consulta en bloque, así que todas las CVE de una pasada caben en una
+  petición.
+- **NVD 2.0** (NIST): CVSS y severidad. Va de una en una y con rate-limit, así
+  que se cachea en `data/enrichment.json` y se limita cuántas se piden por
+  pasada.
+
+Solo se enriquecen las entradas nuevas: pedir el CVSS de las 1.694 en cada
+pasada no tendría sentido. Si una fuente falla, el digest sale igual, sin ese
+dato. El secreto opcional `NVD_API_KEY` sube el rate-limit del NVD de 5 a 50
+peticiones cada 30 s.
+
+## Salida pública
+
+[`data/latest.json`](data/latest.json) es el artefacto que consume la página
+[KEV Watch](https://eduolihez.github.io/tools/kev-watch) del Blue Team Hub. El
+cálculo del diff vive solo aquí, y el Hub se limita a descargar el resultado
+cada 3 horas.
+
+Los campos `lastUpdated`, `totalTracked`, `newToday` y `recentAdditions` son
+contrato con esa página: renombrarlos la rompe, y hay una prueba que lo vigila.
+Lleva además `ransomwareTracked`, `dueSoon` y `watchlistHits`.
+
+`data/history.jsonl` es un registro de solo-añadir con un evento por línea.
+Sirve para responder "¿cuándo entró esta CVE?" sin arqueología de `git log`, y
+es de donde sale el feed.
 
 ## Cómo funciona
 
@@ -78,15 +149,17 @@ cron cada 3 h
  compara con data/seen_cves.json                ← última foto conocida
         │
         ├── nuevas ────────┐
-        ├── modificadas ───┼──► añade una sección a digest/AAAA-MM-DD.md
-        ├── retiradas ─────┘
+        ├── modificadas ───┤
+        ├── retiradas ─────┼──► añade una sección a digest/AAAA-MM-DD.md
+        ├── plazos ────────┘
         │
-        ├── actualiza data/seen_cves.json
-        │
+        ├── enriquece las nuevas con EPSS y NVD (con caché)
+        ├── actualiza data/seen_cves.json y data/history.jsonl
+        ├── publica data/latest.json y digest/feed.xml
         └── refresca el bloque de estado de los dos README
         │
         ▼
- commit + push (solo si algo cambió)
+ commit + push + aviso (solo si algo cambió)
 ```
 
 Detalles que importan:
@@ -108,6 +181,8 @@ Detalles que importan:
 - El estado se guarda *después* de escribir el digest, no antes. Si falla la
   escritura, la pasada siguiente vuelve a ver esas entradas como nuevas en vez
   de perderlas.
+- Las actions van fijadas por SHA, no por tag: un tag se puede mover, y este
+  workflow tiene permiso de escritura sobre el repositorio.
 
 ### Formato del estado
 
@@ -117,19 +192,24 @@ huella SHA-256 truncada: así se detecta que cambian sin meter varios cientos de
 KB de prosa en el repositorio. El precio es que el digest dice "descripción:
 actualizada" en vez de enseñar el antes y el después.
 
-El formato anterior era una lista plana de IDs. El script lo detecta y lo migra
-solo. En esa primera pasada no se reporta ninguna modificación, porque no hay
-foto anterior de los campos con la que comparar.
+Los formatos anteriores se migran solos, y esa primera pasada no reporta
+modificaciones, porque no hay foto de los campos con la que comparar.
 
 ## Estructura
 
 ```
-scripts/digest.py     Toda la lógica: descarga, diff y escritura
+scripts/digest.py     Descarga, diff y escritura del digest
+scripts/enrich.py     EPSS y CVSS, con caché en disco
+scripts/publish.py    latest.json, feed Atom e historial
 tests/test_digest.py  Pruebas con catálogos inventados (unittest, sin red)
+config/               Plantilla de la watchlist (la real no se versiona)
 data/seen_cves.json   Última foto conocida del catálogo (estado)
-digest/               Un archivo Markdown por día con los cambios
+data/enrichment.json  Caché de EPSS y CVSS
+data/history.jsonl    Un evento por línea, solo-añadir
+data/latest.json      Salida pública que consume el Blue Team Hub
+digest/               Un archivo Markdown por día, más feed.xml
 .github/workflows/
-  digest.yml          Cron cada 3 h + commit automático
+  digest.yml          Cron cada 3 h, commit y aviso
   tests.yml           Pruebas en cada push y PR
   dependabot-auto-merge.yml
 ```
@@ -142,8 +222,10 @@ Cada entrada nueva se registra con lo necesario para decidir si actuar:
 - Fabricante y producto afectados
 - Nombre de la vulnerabilidad
 - Fecha de incorporación al catálogo y plazo de mitigación fijado por CISA
+- CVSS y EPSS, cuando se han podido obtener
 - Descripción breve
-- Un aviso destacado si consta uso conocido en campañas de ransomware
+- Un aviso destacado si consta uso conocido en campañas de ransomware, y una
+  estrella si está en tu inventario
 
 Las modificadas listan qué campo cambió y su valor anterior y nuevo. Las
 retiradas, solo el CVE con su enlace.
@@ -158,12 +240,11 @@ cd kev-digest
 python scripts/digest.py
 ```
 
-Escribirá el digest de hoy en `digest/` y actualizará `data/seen_cves.json`.
-
 | Flag | Para qué |
 |---|---|
-| `--dry-run` | Dice qué cambiaría sin tocar ningún archivo. Lo cómodo para mirar rápido |
+| `--dry-run` | Dice qué cambiaría sin tocar ningún archivo |
 | `--force` | Salta el guardia de encogimiento, cuando el catálogo ha menguado de verdad |
+| `--no-enrich` | No consulta EPSS ni NVD; usa solo lo ya cacheado |
 
 Para probar desde cero sin línea base previa, borra el archivo de estado antes
 de ejecutarlo (`rm data/seen_cves.json`): el script detectará que es la primera
@@ -180,8 +261,9 @@ python -m unittest discover -s tests
 
 Los datos proceden del [catálogo KEV de CISA](https://www.cisa.gov/known-exploited-vulnerabilities-catalog),
 publicado por la *Cybersecurity and Infrastructure Security Agency* de EE. UU.
-como obra del gobierno federal en dominio público. Este repositorio no está
-afiliado a CISA ni respaldado por ella.
+como obra del gobierno federal en dominio público. El enriquecimiento viene del
+[NVD](https://nvd.nist.gov/) y de [EPSS](https://www.first.org/epss/). Este
+repositorio no está afiliado a ninguno de los tres ni respaldado por ellos.
 
 Los archivos de `digest/` son una vista derivada y automatizada. Para decisiones
 operativas, consulta siempre el catálogo original, que es la fuente autoritativa.

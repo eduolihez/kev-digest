@@ -1,2 +1,8 @@
 __pycache__/
 *.pyc
+
+# Inventario propio: no se publica (ver config/watchlist.example.json)
+config/watchlist.json
+
+# Temporales de escritura atomica
+data/*.json.tmp

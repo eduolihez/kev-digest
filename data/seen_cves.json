@@ -1,9 +1,10 @@
 {
- "schema": 2,
+ "schema": 3,
  "catalog_version": "2026.09.02",
  "date_released": "2026-09-02T16:54:39.8321Z",
- "last_change": "2026-09-03 08:01 UTC",
+ "last_change": "2026-09-03 08:19 UTC",
  "count": 1694,
+ "announced_due": [],
  "entries": {
   "CVE-2002-0367": {"dateAdded": "2022-03-03", "dueDate": "2022-03-24", "knownRansomwareCampaignUse": "Unknown", "product": "Windows", "requiredAction#": "975dbe03c141", "shortDescription#": "ba5f1f8e9b35", "vendorProject": "Microsoft", "vulnerabilityName": "Microsoft Windows Privilege Escalation Vulnerability"},
   "CVE-2004-0210": {"dateAdded": "2022-03-03", "dueDate": "2022-03-24", "knownRansomwareCampaignUse": "Unknown", "product": "Windows", "requiredAction#": "975dbe03c141", "shortDescription#": "d94ad5efc92d", "vendorProject": "Microsoft", "vulnerabilityName": "Microsoft Windows Privilege Escalation Vulnerability"},

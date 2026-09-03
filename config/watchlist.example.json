@@ -1,0 +1,17 @@
+{
+  "_comentario": "Copia esto a config/watchlist.json, o mejor, mete el JSON en el secreto KEV_WATCHLIST del repositorio. En un repo publico, la lista de productos de tu organizacion es un inventario de su stack al alcance de cualquiera.",
+  "vendors": [
+    "Fortinet",
+    "Microsoft",
+    "Trend Micro",
+    "VMware",
+    "Cisco"
+  ],
+  "products": [
+    "FortiGate",
+    "FortiAnalyzer",
+    "Active Directory",
+    "Exchange"
+  ],
+  "cves": []
+}

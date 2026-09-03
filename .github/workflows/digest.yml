@@ -15,6 +15,7 @@ on:
 
 permissions:
   contents: write
+  issues: write # el aviso diario se publica como issue
 
 # Dos pasadas a la vez se pisarían al hacer push. Se encolan.
 concurrency:
@@ -25,27 +26,36 @@ jobs:
   digest:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v7
+      # Las actions van fijadas por SHA, no por tag: un tag se puede mover, y
+      # esto tiene permiso de escritura sobre el repositorio.
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           # Historia completa: el push hace rebase si alguien commiteó mientras.
           fetch-depth: 0
 
-      - uses: actions/setup-python@v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7
         with:
           python-version: "3.12"
 
       - name: Comprobar el catálogo KEV
         id: run
+        env:
+          # Inventario a vigilar. Va en un secreto y no en el repositorio:
+          # publicar los productos de tu organización es publicar su stack.
+          KEV_WATCHLIST: ${{ secrets.KEV_WATCHLIST }}
+          # Opcional: sube el rate-limit del NVD de 5 a 50 peticiones/30 s.
+          NVD_API_KEY: ${{ secrets.NVD_API_KEY }}
         run: python scripts/digest.py ${{ inputs.force && '--force' || '' }}
 
       - name: Commit y push si hay novedades
-        if: steps.run.outputs.changed == 'true'
+        id: commit
         run: |
           git config user.name "kev-digest-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data digest README.md README.en.md
           if git diff --cached --quiet; then
-            echo "El script marcó cambios pero no hay nada en el índice; nada que hacer."
+            echo "Nada que commitear."
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           # El mensaje sale de los outputs del script. Antes se sacaba con un
@@ -54,6 +64,57 @@ jobs:
           git commit -m "${{ steps.run.outputs.summary }}"
           git pull --rebase --autostash
           git push
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+
+      # El aviso va como issue porque GitHub ya notifica de los issues: sin
+      # webhooks, sin secretos, y queda un hilo donde anotar qué se hizo con
+      # cada CVE. Un issue por día: las pasadas siguientes comentan en él.
+      - name: Avisar por issue
+        if: steps.run.outputs.new != '0' || steps.run.outputs.due_soon != '0'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          FECHA: ${{ steps.run.outputs.date }}
+          NUEVAS: ${{ steps.run.outputs.new }}
+          MODIFICADAS: ${{ steps.run.outputs.modified }}
+          PLAZOS: ${{ steps.run.outputs.due_soon }}
+          INVENTARIO: ${{ steps.run.outputs.watchlist }}
+        run: |
+          TITULO="KEV digest · ${FECHA}"
+          CUERPO=$(printf '%s\n' \
+            "- Nuevas: ${NUEVAS}" \
+            "- Modificadas: ${MODIFICADAS}" \
+            "- Plazos que vencen pronto: ${PLAZOS}" \
+            "- Afectan a tu inventario: ${INVENTARIO}" \
+            "" \
+            "Detalle: [digest/${FECHA}.md](https://github.com/${GITHUB_REPOSITORY}/blob/main/digest/${FECHA}.md)")
+          EXISTENTE=$(gh issue list --state open --search "$TITULO in:title" \
+            --json number,title --jq ".[] | select(.title == \"$TITULO\") | .number" | head -1)
+          if [ -n "$EXISTENTE" ]; then
+            gh issue comment "$EXISTENTE" --body "$CUERPO"
+          else
+            gh issue create --title "$TITULO" --body "$CUERPO" --label digest \
+              || gh issue create --title "$TITULO" --body "$CUERPO"
+          fi
+
+      # Opcional: solo se ejecuta si el secreto existe. Sin él, el paso se
+      # salta y el workflow sigue igual de verde.
+      - name: Avisar por Telegram
+        if: >-
+          (steps.run.outputs.new != '0' || steps.run.outputs.due_soon != '0')
+          && env.TELEGRAM_BOT_TOKEN != ''
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          FECHA: ${{ steps.run.outputs.date }}
+          NUEVAS: ${{ steps.run.outputs.new }}
+          PLAZOS: ${{ steps.run.outputs.due_soon }}
+          INVENTARIO: ${{ steps.run.outputs.watchlist }}
+        run: |
+          TEXTO="KEV ${FECHA}: ${NUEVAS} nuevas, ${PLAZOS} plazos a punto de vencer, ${INVENTARIO} en tu inventario. https://github.com/${GITHUB_REPOSITORY}/blob/main/digest/${FECHA}.md"
+          curl -fsS -X POST \
+            "https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage" \
+            -d "chat_id=${TELEGRAM_CHAT_ID}" \
+            --data-urlencode "text=${TEXTO}" > /dev/null
 
       - name: Resumen
         if: always()
@@ -64,5 +125,8 @@ jobs:
             echo "- Nuevas: ${{ steps.run.outputs.new || '—' }}"
             echo "- Modificadas: ${{ steps.run.outputs.modified || '—' }}"
             echo "- Retiradas: ${{ steps.run.outputs.removed || '—' }}"
+            echo "- Plazos que vencen pronto: ${{ steps.run.outputs.due_soon || '—' }}"
+            echo "- En tu inventario: ${{ steps.run.outputs.watchlist || '—' }}"
             echo "- Total en seguimiento: ${{ steps.run.outputs.total || '—' }}"
+            echo "- Commit: ${{ steps.commit.outputs.pushed || 'no' }}"
           } >> "$GITHUB_STEP_SUMMARY"

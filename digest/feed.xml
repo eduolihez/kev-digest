@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>KEV Digest</title>
+  <subtitle>Cambios en el catálogo CISA KEV</subtitle>
+  <link href="https://github.com/eduolihez/kev-digest"/>
+  <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
+  <id>https://github.com/eduolihez/kev-digest</id>
+  <updated>2026-09-03T11:43:35Z</updated>
+  <author><name>kev-digest</name></author>
+
+</feed>
