@@ -1,41 +1,68 @@
-name: Daily KEV digest
+name: KEV watch
 
 on:
   schedule:
-    # 07:00 Europe/Madrid (UTC+1/+2) ~ 06:00 UTC, safely after midnight either way
-    - cron: "0 6 * * *"
-  workflow_dispatch: {}
+    # Cada 3 horas. CISA publica sin previo aviso y casi siempre en horario
+    # laboral de EE. UU., que con una sola pasada a las 06:00 UTC significaba
+    # enterarse hasta 24 h tarde.
+    - cron: "0 */3 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Ignorar el guardia de encogimiento del catálogo"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
+
+# Dos pasadas a la vez se pisarían al hacer push. Se encolan.
+concurrency:
+  group: kev-digest
+  cancel-in-progress: false
 
 jobs:
   digest:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
+        with:
+          # Historia completa: el push hace rebase si alguien commiteó mientras.
+          fetch-depth: 0
 
       - uses: actions/setup-python@v7
         with:
           python-version: "3.12"
 
-      - name: Run digest
-        run: python scripts/digest.py
+      - name: Comprobar el catálogo KEV
+        id: run
+        run: python scripts/digest.py ${{ inputs.force && '--force' || '' }}
 
-      - name: Commit and push if changed
+      - name: Commit y push si hay novedades
+        if: steps.run.outputs.changed == 'true'
         run: |
           git config user.name "kev-digest-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data digest README.md
+          git add data digest README.md README.en.md
           if git diff --cached --quiet; then
-            echo "No changes to commit"
+            echo "El script marcó cambios pero no hay nada en el índice; nada que hacer."
             exit 0
           fi
-          DATE=$(date -u +%Y-%m-%d)
-          # El corchete opcional cubre las dos formas que ha tenido la linea:
-          # "- **CVE-1234-5678**" antes, y "- **[CVE-1234-5678](enlace al NVD)"
-          # desde que cada entrada enlaza a su ficha. Sin el, el contador
-          # salia siempre a 0 y los commits decian "0 new" con entradas nuevas.
-          NEW=$(grep -cE '^- \*\*\[?CVE' "digest/${DATE}.md" || true)
-          git commit -m "digest: ${NEW} new KEV entr$( [ "$NEW" = "1" ] && echo y || echo ies ) (${DATE})"
+          # El mensaje sale de los outputs del script. Antes se sacaba con un
+          # grep sobre el Markdown del digest, que se rompía cada vez que
+          # cambiaba el formato de una línea y dejaba commits diciendo "0 new".
+          git commit -m "${{ steps.run.outputs.summary }}"
+          git pull --rebase --autostash
           git push
+
+      - name: Resumen
+        if: always()
+        run: |
+          {
+            echo "### KEV watch"
+            echo ""
+            echo "- Nuevas: ${{ steps.run.outputs.new || '—' }}"
+            echo "- Modificadas: ${{ steps.run.outputs.modified || '—' }}"
+            echo "- Retiradas: ${{ steps.run.outputs.removed || '—' }}"
+            echo "- Total en seguimiento: ${{ steps.run.outputs.total || '—' }}"
+          } >> "$GITHUB_STEP_SUMMARY"
