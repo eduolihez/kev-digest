@@ -31,7 +31,7 @@ Actions.
 | **Known ransomware use** | 352 |
 | **Catalog version** | 2026.09.02 |
 | **Published by CISA** | 2026-09-02T16:54:39.8321Z |
-| **Last change detected** | 2026-09-03 08:19 UTC |
+| **Last change detected** | 2026-09-03 11:45 UTC |
 | **Deadlines within 7 days** | 11 |
 | **Latest digest** | [`digest/2026-09-03.md`](digest/2026-09-03.md) |
 
