@@ -1,13 +1,28 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-09-03T11:45Z",
- "catalogVersion": "2026.09.02",
- "dateReleased": "2026-09-02T16:54:39.8321Z",
+ "generatedAt": "2026-09-04T18:06Z",
+ "catalogVersion": "2026.09.04",
+ "dateReleased": "2026-09-04T16:47:03.5197Z",
  "lastUpdated": "2026-09-04",
- "totalTracked": 1694,
- "newToday": 0,
+ "totalTracked": 1695,
+ "newToday": 1,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-85046",
+   "vendorProject": "Google",
+   "product": "Chromium V8",
+   "vulnerabilityName": "Google Chromium V8 Type Confusion Vulnerability",
+   "dateAdded": "2026-09-04",
+   "dueDate": "2026-09-18",
+   "shortDescription": "Google Chromium V8 contains a type confusion vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.",
+   "knownRansomware": false,
+   "cvss": 8.8,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1",
+   "epss": 0.00462,
+   "epssPercentile": 0.38423
+  },
   {
    "cveID": "CVE-2026-59822",
    "vendorProject": "BerriAI",
@@ -479,7 +494,7 @@
    "knownRansomware": false
   }
  ],
- "ransomwareTracked": 352,
+ "ransomwareTracked": 354,
  "watchlistHits": [],
  "dueSoon": [
   {

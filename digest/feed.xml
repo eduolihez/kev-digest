@@ -5,7 +5,27 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-09-03T11:45Z</updated>
+  <updated>2026-09-04T18:06:02Z</updated>
   <author><name>kev-digest</name></author>
-
+  <entry>
+    <title>Modificada: CVE-2022-37969 · Microsoft Windows</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2022-37969"/>
+    <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2022-37969/2026-09-04T18:06:02Z</id>
+    <updated>2026-09-04T18:06:02Z</updated>
+    <summary>Cambios: uso en ransomware</summary>
+  </entry>
+  <entry>
+    <title>Modificada: CVE-2016-4117 · Adobe Flash Player</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2016-4117"/>
+    <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2016-4117/2026-09-04T18:06:02Z</id>
+    <updated>2026-09-04T18:06:02Z</updated>
+    <summary>Cambios: uso en ransomware</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-85046 · Google Chromium V8</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-85046"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-85046/2026-09-04T18:06:02Z</id>
+    <updated>2026-09-04T18:06:02Z</updated>
+    <summary>Google Chromium V8 contains a type confusion vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.</summary>
+  </entry>
 </feed>
