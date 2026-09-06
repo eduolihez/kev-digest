@@ -4,7 +4,7 @@
  "generatedAt": "2026-09-04T18:06Z",
  "catalogVersion": "2026.09.04",
  "dateReleased": "2026-09-04T16:47:03.5197Z",
- "lastUpdated": "2026-09-05",
+ "lastUpdated": "2026-09-06",
  "totalTracked": 1695,
  "newToday": 0,
  "recentAdditions": [
@@ -432,80 +432,35 @@
    "dueDate": "2026-07-30",
    "shortDescription": "Arista VeloCloud Orchestrator On-Prem contains an OS command injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.",
    "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-16232",
-   "vendorProject": "Check Point",
-   "product": "SmartConsole",
-   "vulnerabilityName": "Check Point SmartConsole Improper Authentication Vulnerability",
-   "dateAdded": "2026-07-22",
-   "dueDate": "2026-07-25",
-   "shortDescription": "Check Point SmartConsole contains an improper authentication vulnerability which could allow an unauthenticated remote attacker to obtain an application login token and use it to authenticate with full administrative privileges.",
-   "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-50522",
-   "vendorProject": "Microsoft",
-   "product": "SharePoint",
-   "vulnerabilityName": "Microsoft SharePoint Deserialization of Untrusted Data Vulnerability ",
-   "dateAdded": "2026-07-22",
-   "dueDate": "2026-07-25",
-   "shortDescription": "Microsoft SharePoint contains a deserialization of untrusted data vulnerability which could allow an unauthorized attacker to execute code over a network.",
-   "knownRansomware": false
   }
  ],
  "ransomwareTracked": 354,
  "watchlistHits": [],
  "dueSoon": [
   {
-   "cveID": "CVE-2026-49869",
-   "dueDate": "2026-09-05",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2026-82329",
-   "dueDate": "2026-09-05",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2026-83548",
-   "dueDate": "2026-09-05",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2026-83549",
-   "dueDate": "2026-09-05",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2026-9586",
-   "dueDate": "2026-09-05",
-   "diasRestantes": 0
-  },
-  {
    "cveID": "CVE-2015-3246",
    "dueDate": "2026-09-09",
-   "diasRestantes": 4
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2015-5287",
    "dueDate": "2026-09-09",
-   "diasRestantes": 4
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2021-23758",
    "dueDate": "2026-09-09",
-   "diasRestantes": 4
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2022-0995",
    "dueDate": "2026-09-09",
-   "diasRestantes": 4
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2026-66384",
    "dueDate": "2026-09-10",
-   "diasRestantes": 5
+   "diasRestantes": 4
   }
  ]
 }
