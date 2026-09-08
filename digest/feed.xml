@@ -5,8 +5,43 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-09-04T18:06:02Z</updated>
+  <updated>2026-09-08T20:44:03Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Modificada: CVE-2025-14733 · WatchGuard Firebox</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2025-14733"/>
+    <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2025-14733/2026-09-08T20:44:03Z</id>
+    <updated>2026-09-08T20:44:03Z</updated>
+    <summary>Cambios: uso en ransomware</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-86218 · N-able N-central</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-86218"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-86218/2026-09-08T20:44:03Z</id>
+    <updated>2026-09-08T20:44:03Z</updated>
+    <summary>N-able N-central contains a static code injection vulnerability that could allow for pre-authentication remote code execution.</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-85880 · Microsoft Windows</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-85880"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-85880/2026-09-08T20:44:03Z</id>
+    <updated>2026-09-08T20:44:03Z</updated>
+    <summary>Microsoft Windows Advanced Local Procedure Call contains a heap-based buffer overflow vulnerability that allows an attacker to elevate privileges locally.</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-81963 · Microsoft Windows</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-81963"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-81963/2026-09-08T20:44:03Z</id>
+    <updated>2026-09-08T20:44:03Z</updated>
+    <summary>Microsoft Windows Update Stack contains a link following vulnerability that allows a local attacker to escalate privileges locally up to SYSTEM.</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-75650 · Adobe Commerce and Magento</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-75650"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-75650/2026-09-08T20:44:03Z</id>
+    <updated>2026-09-08T20:44:03Z</updated>
+    <summary>Adobe Commerce and Magento Open Source contain an improper neutralization of special elements used in a template engine vulnerability that could allow an attacker to execute arbitrary code.</summary>
+  </entry>
   <entry>
     <title>Modificada: CVE-2022-37969 · Microsoft Windows</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2022-37969"/>
