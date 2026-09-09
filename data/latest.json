@@ -1,12 +1,12 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-09-08T20:44Z",
+ "generatedAt": "2026-09-09T03:07Z",
  "catalogVersion": "2026.09.08",
  "dateReleased": "2026-09-08T18:00:21.1079Z",
- "lastUpdated": "2026-09-08",
+ "lastUpdated": "2026-09-09",
  "totalTracked": 1699,
- "newToday": 4,
+ "newToday": 0,
  "recentAdditions": [
   {
    "cveID": "CVE-2026-75650",
@@ -496,47 +496,57 @@
   {
    "cveID": "CVE-2015-3246",
    "dueDate": "2026-09-09",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2015-5287",
    "dueDate": "2026-09-09",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2021-23758",
    "dueDate": "2026-09-09",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2022-0995",
    "dueDate": "2026-09-09",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-66384",
    "dueDate": "2026-09-10",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-75650",
    "dueDate": "2026-09-11",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-86218",
    "dueDate": "2026-09-11",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-81578",
    "dueDate": "2026-09-14",
-   "diasRestantes": 6
+   "diasRestantes": 5
   },
   {
    "cveID": "CVE-2026-82078",
    "dueDate": "2026-09-14",
-   "diasRestantes": 6
+   "diasRestantes": 5
+  },
+  {
+   "cveID": "CVE-2026-48710",
+   "dueDate": "2026-09-16",
+   "diasRestantes": 7
+  },
+  {
+   "cveID": "CVE-2026-59822",
+   "dueDate": "2026-09-16",
+   "diasRestantes": 7
   }
  ]
 }
