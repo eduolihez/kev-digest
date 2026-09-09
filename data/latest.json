@@ -1,9 +1,9 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-09-09T03:07Z",
- "catalogVersion": "2026.09.08",
- "dateReleased": "2026-09-08T18:00:21.1079Z",
+ "generatedAt": "2026-09-09T15:55Z",
+ "catalogVersion": "2026.09.09",
+ "dateReleased": "2026-09-09T12:56:45.0136Z",
  "lastUpdated": "2026-09-09",
  "totalTracked": 1699,
  "newToday": 0,
@@ -490,7 +490,7 @@
    "knownRansomware": false
   }
  ],
- "ransomwareTracked": 355,
+ "ransomwareTracked": 358,
  "watchlistHits": [],
  "dueSoon": [
   {
