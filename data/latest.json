@@ -1,13 +1,37 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-09-09T20:25Z",
- "catalogVersion": "2026.09.09",
- "dateReleased": "2026-09-09T19:00:50.2591Z",
+ "generatedAt": "2026-09-10T20:25Z",
+ "catalogVersion": "2026.09.10",
+ "dateReleased": "2026-09-10T19:00:05.1949Z",
  "lastUpdated": "2026-09-10",
- "totalTracked": 1703,
- "newToday": 0,
+ "totalTracked": 1705,
+ "newToday": 2,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-86060",
+   "vendorProject": "MikroTik",
+   "product": "RouterOS",
+   "vulnerabilityName": "MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability",
+   "dateAdded": "2026-09-10",
+   "dueDate": "2026-09-13",
+   "shortDescription": "MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacked to change the trusted RouterOS policy mask, leading to privilege escalation.",
+   "knownRansomware": false,
+   "epss": 0.00401,
+   "epssPercentile": 0.33627
+  },
+  {
+   "cveID": "CVE-2026-67277",
+   "vendorProject": "MikroTik",
+   "product": "RouterOS",
+   "vulnerabilityName": "MikroTik RouterOS Missing Authentication for Critical Function Vulnerability",
+   "dateAdded": "2026-09-10",
+   "dueDate": "2026-09-13",
+   "shortDescription": "MikroTik RouterOS contains a missing authenticaion for critical function vulnerability which allows kernel memory disclosure and denial of service in the btest service.",
+   "knownRansomware": false,
+   "epss": 0.00435,
+   "epssPercentile": 0.36743
+  },
   {
    "cveID": "CVE-2026-19490",
    "vendorProject": "Citrix",
@@ -524,7 +548,7 @@
    "dateAdded": "2026-07-29",
    "dueDate": "2026-08-01",
    "shortDescription": "Cisco Secure Firewall Management Center (FMC) formerly known as Firepower Management Center contains a use of hard-coded password vulnerability that could allow an unauthenticated, remote attacker to log in to an affected device using a low-privileged account to access sensitive data within the impacted systems.",
-   "knownRansomware": false
+   "knownRansomware": true
   },
   {
    "cveID": "CVE-2025-68686",
@@ -547,7 +571,7 @@
    "knownRansomware": false
   }
  ],
- "ransomwareTracked": 358,
+ "ransomwareTracked": 359,
  "watchlistHits": [],
  "dueSoon": [
   {
@@ -579,6 +603,16 @@
    "cveID": "CVE-2026-20079",
    "dueDate": "2026-09-12",
    "diasRestantes": 2
+  },
+  {
+   "cveID": "CVE-2026-67277",
+   "dueDate": "2026-09-13",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-86060",
+   "dueDate": "2026-09-13",
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2026-81578",
