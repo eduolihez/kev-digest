@@ -5,8 +5,15 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-09-10T20:25:39Z</updated>
+  <updated>2026-09-11T15:52:18Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Modificada: CVE-2026-59310 · Broadcom VMware vCenter</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-59310"/>
+    <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2026-59310/2026-09-11T15:52:18Z</id>
+    <updated>2026-09-11T15:52:18Z</updated>
+    <summary>Cambios: uso en ransomware</summary>
+  </entry>
   <entry>
     <title>Modificada: CVE-2026-20316 · Cisco Secure Firewall Management Center (FMC)</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-20316"/>

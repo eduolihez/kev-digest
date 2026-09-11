@@ -27,10 +27,10 @@ cambiado. Sin intervención manual y sin servidor: todo ocurre en GitHub Actions
 | | |
 |---|---|
 | **CVEs en seguimiento** | 1705 |
-| **Con uso conocido en ransomware** | 359 |
-| **Versión del catálogo** | 2026.09.10 |
-| **Publicado por CISA** | 2026-09-10T19:00:05.1949Z |
-| **Último cambio detectado** | 2026-09-11 03:02 UTC |
+| **Con uso conocido en ransomware** | 360 |
+| **Versión del catálogo** | 2026.09.11 |
+| **Publicado por CISA** | 2026-09-11T15:39:54.626Z |
+| **Último cambio detectado** | 2026-09-11 15:52 UTC |
 | **Plazos que vencen en 7 días** | 12 |
 | **Último digest** | [`digest/2026-09-11.md`](digest/2026-09-11.md) |
 

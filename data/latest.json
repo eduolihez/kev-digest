@@ -1,9 +1,9 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-09-11T03:02Z",
- "catalogVersion": "2026.09.10",
- "dateReleased": "2026-09-10T19:00:05.1949Z",
+ "generatedAt": "2026-09-11T15:52Z",
+ "catalogVersion": "2026.09.11",
+ "dateReleased": "2026-09-11T15:39:54.626Z",
  "lastUpdated": "2026-09-11",
  "totalTracked": 1705,
  "newToday": 0,
@@ -418,7 +418,7 @@
    "dateAdded": "2026-08-18",
    "dueDate": "2026-08-21",
    "shortDescription": "Broadcom VMware vCenter contains a path traversal vulnerability which could allow a threat actor with network access to vCenter to execute arbitrary code.",
-   "knownRansomware": false
+   "knownRansomware": true
   },
   {
    "cveID": "CVE-2026-55040",
@@ -551,7 +551,7 @@
    "knownRansomware": true
   }
  ],
- "ransomwareTracked": 359,
+ "ransomwareTracked": 360,
  "watchlistHits": [],
  "dueSoon": [
   {
