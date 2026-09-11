@@ -30,9 +30,9 @@ cambiado. Sin intervención manual y sin servidor: todo ocurre en GitHub Actions
 | **Con uso conocido en ransomware** | 359 |
 | **Versión del catálogo** | 2026.09.10 |
 | **Publicado por CISA** | 2026-09-10T19:00:05.1949Z |
-| **Último cambio detectado** | 2026-09-10 20:25 UTC |
+| **Último cambio detectado** | 2026-09-11 03:02 UTC |
 | **Plazos que vencen en 7 días** | 12 |
-| **Último digest** | [`digest/2026-09-10.md`](digest/2026-09-10.md) |
+| **Último digest** | [`digest/2026-09-11.md`](digest/2026-09-11.md) |
 
 <!-- KEV-STATS:END -->
 

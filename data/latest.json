@@ -1,12 +1,12 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-09-10T20:25Z",
+ "generatedAt": "2026-09-11T03:02Z",
  "catalogVersion": "2026.09.10",
  "dateReleased": "2026-09-10T19:00:05.1949Z",
- "lastUpdated": "2026-09-10",
+ "lastUpdated": "2026-09-11",
  "totalTracked": 1705,
- "newToday": 2,
+ "newToday": 0,
  "recentAdditions": [
   {
    "cveID": "CVE-2026-86060",
@@ -549,90 +549,70 @@
    "dueDate": "2026-08-01",
    "shortDescription": "Cisco Secure Firewall Management Center (FMC) formerly known as Firepower Management Center contains a use of hard-coded password vulnerability that could allow an unauthenticated, remote attacker to log in to an affected device using a low-privileged account to access sensitive data within the impacted systems.",
    "knownRansomware": true
-  },
-  {
-   "cveID": "CVE-2025-68686",
-   "vendorProject": "Fortinet",
-   "product": "FortiOS",
-   "vulnerabilityName": "Fortinet FortiOS Exposure of Sensitive Information to an Unauthorized Actor Vulnerability",
-   "dateAdded": "2026-07-27",
-   "dueDate": "2026-08-10",
-   "shortDescription": "Fortinet FortiOS contains an exposure of sensitive information to an unauthorized actor vulnerability. This may allow a remote unauthenticated attacker to bypass the patch developed for the symbolic link persistency mechanism observed in some post-exploit cases, via crafted HTTP requests. An attacker would need first to have compromised the product via another vulnerability, at filesystem level.",
-   "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-16812",
-   "vendorProject": "Arista",
-   "product": "VeloCloud Orchestrator",
-   "vulnerabilityName": "Arista VeloCloud Orchestrator On-Prem OS Command Injection Vulnerability",
-   "dateAdded": "2026-07-27",
-   "dueDate": "2026-07-30",
-   "shortDescription": "Arista VeloCloud Orchestrator On-Prem contains an OS command injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.",
-   "knownRansomware": false
   }
  ],
  "ransomwareTracked": 359,
  "watchlistHits": [],
  "dueSoon": [
   {
-   "cveID": "CVE-2026-66384",
-   "dueDate": "2026-09-10",
-   "diasRestantes": 0
-  },
-  {
    "cveID": "CVE-2026-75650",
    "dueDate": "2026-09-11",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-86218",
    "dueDate": "2026-09-11",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2025-25249",
    "dueDate": "2026-09-12",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-19490",
    "dueDate": "2026-09-12",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-20079",
    "dueDate": "2026-09-12",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-67277",
    "dueDate": "2026-09-13",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-86060",
    "dueDate": "2026-09-13",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-81578",
    "dueDate": "2026-09-14",
-   "diasRestantes": 4
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2026-82078",
    "dueDate": "2026-09-14",
-   "diasRestantes": 4
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2026-48710",
    "dueDate": "2026-09-16",
-   "diasRestantes": 6
+   "diasRestantes": 5
   },
   {
    "cveID": "CVE-2026-59822",
    "dueDate": "2026-09-16",
-   "diasRestantes": 6
+   "diasRestantes": 5
+  },
+  {
+   "cveID": "CVE-2026-85046",
+   "dueDate": "2026-09-18",
+   "diasRestantes": 7
   }
  ]
 }
