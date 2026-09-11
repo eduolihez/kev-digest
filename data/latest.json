@@ -1,13 +1,68 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-09-11T15:52Z",
+ "generatedAt": "2026-09-11T20:27Z",
  "catalogVersion": "2026.09.11",
- "dateReleased": "2026-09-11T15:39:54.626Z",
+ "dateReleased": "2026-09-11T19:32:16.8993Z",
  "lastUpdated": "2026-09-11",
- "totalTracked": 1705,
- "newToday": 0,
+ "totalTracked": 1709,
+ "newToday": 4,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-84869",
+   "vendorProject": "ConnectWise",
+   "product": "ScreenConnect",
+   "vulnerabilityName": "ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability",
+   "dateAdded": "2026-09-11",
+   "dueDate": "2026-09-14",
+   "shortDescription": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to file transfer and execution through an active remote sessions without authorization or host confirmation.",
+   "knownRansomware": false,
+   "cvss": 9.9,
+   "cvssSeverity": "Critical",
+   "cvssVersion": "3.1",
+   "epss": 0.00382,
+   "epssPercentile": 0.31639
+  },
+  {
+   "cveID": "CVE-2026-42016",
+   "vendorProject": "JFrog",
+   "product": "Artifactory",
+   "vulnerabilityName": "JFrog Artifactory Incorrect Authorization Vulnerability",
+   "dateAdded": "2026-09-11",
+   "dueDate": "2026-09-25",
+   "shortDescription": "JFrog Artifactory contains an incorrect authorization vulnerability that allows leads to privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.",
+   "knownRansomware": false,
+   "cvss": 8.1,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1",
+   "epss": 0.00266,
+   "epssPercentile": 0.184
+  },
+  {
+   "cveID": "CVE-2026-42018",
+   "vendorProject": "JFrog",
+   "product": "Artifactory",
+   "vulnerabilityName": "JFrog Artifactory Improper Authentication Vulnerability",
+   "dateAdded": "2026-09-11",
+   "dueDate": "2026-09-25",
+   "shortDescription": "JFrog Artifactory contains an improper authentication vulnerability that could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources.",
+   "knownRansomware": false,
+   "cvss": 7.5,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1",
+   "epss": 0.00349,
+   "epssPercentile": 0.28044
+  },
+  {
+   "cveID": "CVE-2026-85706",
+   "vendorProject": "GitLab",
+   "product": "Community Edition and Enterprise Edition",
+   "vulnerabilityName": "GitLab Community Edition and Enterprise Edition Path Traversal Vulnerability",
+   "dateAdded": "2026-09-11",
+   "dueDate": "2026-09-14",
+   "shortDescription": "GitLab Community Edition and Enterprise Edition contains a path traversal vulnerability that allows an unauthenticated user to read arbitrary files due to an improper path confinement and missing authentication enforcement in the repository commits API.",
+   "knownRansomware": false
+  },
   {
    "cveID": "CVE-2026-86060",
    "vendorProject": "MikroTik",
@@ -596,6 +651,16 @@
   },
   {
    "cveID": "CVE-2026-82078",
+   "dueDate": "2026-09-14",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-84869",
+   "dueDate": "2026-09-14",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-85706",
    "dueDate": "2026-09-14",
    "diasRestantes": 3
   },
