@@ -1,13 +1,28 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-09-16T03:22Z",
- "catalogVersion": "2026.09.14",
- "dateReleased": "2026-09-14T19:00:02.426Z",
+ "generatedAt": "2026-09-16T16:09Z",
+ "catalogVersion": "2026.09.16",
+ "dateReleased": "2026-09-16T14:19:54.4996Z",
  "lastUpdated": "2026-09-16",
- "totalTracked": 1710,
- "newToday": 0,
+ "totalTracked": 1711,
+ "newToday": 1,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-58704",
+   "vendorProject": "Google",
+   "product": "Pixel",
+   "vulnerabilityName": "Google Pixel Improper Authorization Vulnerability",
+   "dateAdded": "2026-09-16",
+   "dueDate": "2026-09-19",
+   "shortDescription": "Google Pixel devices contain an improper authorization vulnerability in the cellular modem. A logic error may allow an attacker to bypass permission checks and escalate privileges.",
+   "knownRansomware": false,
+   "cvss": 8.0,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1",
+   "epss": 0.00112,
+   "epssPercentile": 0.01564
+  },
   {
    "cveID": "CVE-2026-76461",
    "vendorProject": "Cisco",
@@ -28,7 +43,7 @@
    "vulnerabilityName": "ConnectWise ScreenConnect Improper Privilege Management and Missing Authorization Vulnerability",
    "dateAdded": "2026-09-11",
    "dueDate": "2026-09-14",
-   "shortDescription": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to file transfer and execution through an active remote sessions without authorization or host confirmation.",
+   "shortDescription": "ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to transfer and execute files through an active remote session without authorization or host confirmation.",
    "knownRansomware": false,
    "cvss": 9.9,
    "cvssSeverity": "Critical",
@@ -43,7 +58,7 @@
    "vulnerabilityName": "JFrog Artifactory Incorrect Authorization Vulnerability",
    "dateAdded": "2026-09-11",
    "dueDate": "2026-09-25",
-   "shortDescription": "JFrog Artifactory contains an incorrect authorization vulnerability that allows leads to privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.",
+   "shortDescription": "JFrog Artifactory contains an incorrect authorization vulnerability that leads to a privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.",
    "knownRansomware": false,
    "cvss": 8.1,
    "cvssSeverity": "High",
@@ -83,7 +98,7 @@
    "vulnerabilityName": "MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability",
    "dateAdded": "2026-09-10",
    "dueDate": "2026-09-13",
-   "shortDescription": "MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacked to change the trusted RouterOS policy mask, leading to privilege escalation.",
+   "shortDescription": "MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacker to change the trusted RouterOS policy mask, leading to privilege escalation.",
    "knownRansomware": false,
    "epss": 0.00401,
    "epssPercentile": 0.33627
@@ -95,7 +110,7 @@
    "vulnerabilityName": "MikroTik RouterOS Missing Authentication for Critical Function Vulnerability",
    "dateAdded": "2026-09-10",
    "dueDate": "2026-09-13",
-   "shortDescription": "MikroTik RouterOS contains a missing authenticaion for critical function vulnerability which allows kernel memory disclosure and denial of service in the btest service.",
+   "shortDescription": "MikroTik RouterOS contains a missing authentication for critical function vulnerability which allows kernel memory disclosure and denial of service in the btest service.",
    "knownRansomware": false,
    "epss": 0.00435,
    "epssPercentile": 0.36743
@@ -631,6 +646,11 @@
    "cveID": "CVE-2026-85046",
    "dueDate": "2026-09-18",
    "diasRestantes": 2
+  },
+  {
+   "cveID": "CVE-2026-58704",
+   "dueDate": "2026-09-19",
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2026-81963",

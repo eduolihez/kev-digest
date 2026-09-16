@@ -5,8 +5,43 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-09-14T21:29:19Z</updated>
+  <updated>2026-09-16T16:09:01Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Modificada: CVE-2026-86060 · MikroTik RouterOS</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-86060"/>
+    <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2026-86060/2026-09-16T16:09:01Z</id>
+    <updated>2026-09-16T16:09:01Z</updated>
+    <summary>Cambios: descripción</summary>
+  </entry>
+  <entry>
+    <title>Modificada: CVE-2026-84869 · ConnectWise ScreenConnect</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-84869"/>
+    <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2026-84869/2026-09-16T16:09:01Z</id>
+    <updated>2026-09-16T16:09:01Z</updated>
+    <summary>Cambios: descripción</summary>
+  </entry>
+  <entry>
+    <title>Modificada: CVE-2026-67277 · MikroTik RouterOS</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-67277"/>
+    <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2026-67277/2026-09-16T16:09:01Z</id>
+    <updated>2026-09-16T16:09:01Z</updated>
+    <summary>Cambios: descripción</summary>
+  </entry>
+  <entry>
+    <title>Modificada: CVE-2026-42016 · JFrog Artifactory</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-42016"/>
+    <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2026-42016/2026-09-16T16:09:01Z</id>
+    <updated>2026-09-16T16:09:01Z</updated>
+    <summary>Cambios: descripción</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-58704 · Google Pixel</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-58704"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-58704/2026-09-16T16:09:01Z</id>
+    <updated>2026-09-16T16:09:01Z</updated>
+    <summary>Google Pixel devices contain an improper authorization vulnerability in the cellular modem. A logic error may allow an attacker to bypass permission checks and escalate privileges.</summary>
+  </entry>
   <entry>
     <title>Nueva en KEV: CVE-2026-76461 · Cisco Secure Email Gateway</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-76461"/>
