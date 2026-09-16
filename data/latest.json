@@ -1,12 +1,12 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-09-16T16:09Z",
+ "generatedAt": "2026-09-16T20:52Z",
  "catalogVersion": "2026.09.16",
- "dateReleased": "2026-09-16T14:19:54.4996Z",
+ "dateReleased": "2026-09-16T18:47:50.6796Z",
  "lastUpdated": "2026-09-16",
- "totalTracked": 1711,
- "newToday": 1,
+ "totalTracked": 1713,
+ "newToday": 3,
  "recentAdditions": [
   {
    "cveID": "CVE-2026-58704",
@@ -22,6 +22,26 @@
    "cvssVersion": "3.1",
    "epss": 0.00112,
    "epssPercentile": 0.01564
+  },
+  {
+   "cveID": "CVE-2026-76460",
+   "vendorProject": "Cisco",
+   "product": "Identity Services Engine",
+   "vulnerabilityName": "Cisco Identity Services Engine Incorrect Use of Privileged APIs Vulnerability",
+   "dateAdded": "2026-09-16",
+   "dueDate": "2026-09-19",
+   "shortDescription": "Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) contain an incorrect use of privileged APIs vulnerability that could allow an unauthenticated, remote attacker to gain unauthorized access to the affected device by bypassing the web-based management interface.",
+   "knownRansomware": false
+  },
+  {
+   "cveID": "CVE-2026-87886",
+   "vendorProject": "Acronis",
+   "product": "Backup",
+   "vulnerabilityName": "Acronis Backup Incorrect Default Permissions Vulnerability",
+   "dateAdded": "2026-09-16",
+   "dueDate": "2026-09-19",
+   "shortDescription": "Acronis Backup plugin for cPanel & WHM and extension for Plesk contains an incorrect default permissions vulnerability that could allow for privilege escalation.",
+   "knownRansomware": false
   },
   {
    "cveID": "CVE-2026-76461",
@@ -649,6 +669,16 @@
   },
   {
    "cveID": "CVE-2026-58704",
+   "dueDate": "2026-09-19",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-76460",
+   "dueDate": "2026-09-19",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-87886",
    "dueDate": "2026-09-19",
    "diasRestantes": 3
   },
