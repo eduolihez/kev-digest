@@ -1,13 +1,43 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-09-18T03:14Z",
- "catalogVersion": "2026.09.16",
- "dateReleased": "2026-09-16T18:47:50.6796Z",
+ "generatedAt": "2026-09-18T15:50Z",
+ "catalogVersion": "2026.09.18",
+ "dateReleased": "2026-09-18T13:49:41.7236Z",
  "lastUpdated": "2026-09-18",
- "totalTracked": 1713,
- "newToday": 0,
+ "totalTracked": 1715,
+ "newToday": 2,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2025-39964",
+   "vendorProject": "Linux",
+   "product": "Kernel",
+   "vulnerabilityName": "Linux Kernel Race Condition Vulnerability",
+   "dateAdded": "2026-09-18",
+   "dueDate": "2026-09-21",
+   "shortDescription": "Linux Kernel contains a race condition vulnerability which allows concurrent writes to the same AF_ALG socket causing data to be unpredictably interleaved and creating inconsistencies in the socket's internal state.",
+   "knownRansomware": false,
+   "cvss": 7.8,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1",
+   "epss": 0.00323,
+   "epssPercentile": 0.25393
+  },
+  {
+   "cveID": "CVE-2026-53266",
+   "vendorProject": "Linux",
+   "product": "Kernel",
+   "vulnerabilityName": "Linux Kernel Out-of-Bounds Write Vulnerability",
+   "dateAdded": "2026-09-18",
+   "dueDate": "2026-09-21",
+   "shortDescription": "Linux Kernel contains an out-of-bounds write vulnerability in the ebtables SNAT target which allows an ARP sender hardware address rewrite to write directly into a nonlinear socket-buffer fragment backed by a splice-imported file page. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
+   "knownRansomware": false,
+   "cvss": 8.8,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1",
+   "epss": 0.00121,
+   "epssPercentile": 0.02189
+  },
   {
    "cveID": "CVE-2026-58704",
    "vendorProject": "Google",
@@ -656,6 +686,16 @@
    "cveID": "CVE-2026-87886",
    "dueDate": "2026-09-19",
    "diasRestantes": 1
+  },
+  {
+   "cveID": "CVE-2025-39964",
+   "dueDate": "2026-09-21",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-53266",
+   "dueDate": "2026-09-21",
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2026-81963",
