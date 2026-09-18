@@ -5,8 +5,15 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-09-18T15:50:30Z</updated>
+  <updated>2026-09-18T20:24:36Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Nueva en KEV: CVE-2025-39682 · Linux Kernel</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2025-39682"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2025-39682/2026-09-18T20:24:36Z</id>
+    <updated>2026-09-18T20:24:36Z</updated>
+    <summary>Linux Kernel contains an improper check for unusual or exceptional conditions vulnerability in the TLS receive path which allows a zero-length record retrieved from the rx_list to bypass the intended recvmsg() record-type handling, potentially causing subsequent TLS records to be processed using incorrect zero-copy and queuing assumptions. The impacted product(s) could be end-of-life (EoL) and/or </summary>
+  </entry>
   <entry>
     <title>Nueva en KEV: CVE-2026-53266 · Linux Kernel</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-53266"/>

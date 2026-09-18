@@ -1,5 +1,6 @@
 {
   "CVE-2025-25249": {"cvss": 8.1, "cvssSeverity": "High", "cvssVersion": "3.1", "epss": 0.00759, "epssPercentile": 0.53107},
+  "CVE-2025-39682": {"cvss": 9.8, "cvssSeverity": "Critical", "cvssVersion": "3.1", "epss": 0.00505, "epssPercentile": 0.41914},
   "CVE-2025-39964": {"cvss": 7.8, "cvssSeverity": "High", "cvssVersion": "3.1", "epss": 0.00323, "epssPercentile": 0.25393},
   "CVE-2026-19490": {"epss": 0.03372, "epssPercentile": 0.88028},
   "CVE-2026-20079": {"cvss": 10.0, "cvssSeverity": "Critical", "cvssVersion": "3.1", "epss": 0.35946, "epssPercentile": 0.98374},

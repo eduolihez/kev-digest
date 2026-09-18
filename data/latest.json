@@ -1,12 +1,12 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-09-18T15:50Z",
+ "generatedAt": "2026-09-18T20:24Z",
  "catalogVersion": "2026.09.18",
- "dateReleased": "2026-09-18T13:49:41.7236Z",
+ "dateReleased": "2026-09-18T19:00:05.0974Z",
  "lastUpdated": "2026-09-18",
- "totalTracked": 1715,
- "newToday": 2,
+ "totalTracked": 1716,
+ "newToday": 3,
  "recentAdditions": [
   {
    "cveID": "CVE-2025-39964",
@@ -37,6 +37,21 @@
    "cvssVersion": "3.1",
    "epss": 0.00121,
    "epssPercentile": 0.02189
+  },
+  {
+   "cveID": "CVE-2025-39682",
+   "vendorProject": "Linux",
+   "product": "Kernel",
+   "vulnerabilityName": "Linux Kernel Improper Check for Unusual or Exceptional Conditions Vulnerability",
+   "dateAdded": "2026-09-18",
+   "dueDate": "2026-09-21",
+   "shortDescription": "Linux Kernel contains an improper check for unusual or exceptional conditions vulnerability in the TLS receive path which allows a zero-length record retrieved from the rx_list to bypass the intended recvmsg() record-type handling, potentially causing subsequent TLS records to be processed using incorrect zero-copy and queuing assumptions. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
+   "knownRansomware": false,
+   "cvss": 9.8,
+   "cvssSeverity": "Critical",
+   "cvssVersion": "3.1",
+   "epss": 0.00505,
+   "epssPercentile": 0.41914
   },
   {
    "cveID": "CVE-2026-58704",
@@ -686,6 +701,11 @@
    "cveID": "CVE-2026-87886",
    "dueDate": "2026-09-19",
    "diasRestantes": 1
+  },
+  {
+   "cveID": "CVE-2025-39682",
+   "dueDate": "2026-09-21",
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2025-39964",
