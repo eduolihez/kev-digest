@@ -4,9 +4,9 @@
  "generatedAt": "2026-09-18T20:24Z",
  "catalogVersion": "2026.09.18",
  "dateReleased": "2026-09-18T19:00:05.0974Z",
- "lastUpdated": "2026-09-18",
+ "lastUpdated": "2026-09-19",
  "totalTracked": 1716,
- "newToday": 3,
+ "newToday": 0,
  "recentAdditions": [
   {
    "cveID": "CVE-2025-39964",
@@ -647,100 +647,65 @@
    "dueDate": "2026-08-08",
    "shortDescription": "JetBrains TeamCity contains a deserialization of untrusted data vulnerability that could allow unauthenticated remote code execution via the agent polling protocol.",
    "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-18556",
-   "vendorProject": "N-able",
-   "product": "N-central",
-   "vulnerabilityName": "N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability",
-   "dateAdded": "2026-08-04",
-   "dueDate": "2026-08-07",
-   "shortDescription": "N-able N-central contains an authentication bypass using an alternate path or channel that allows for authentication bypass.",
-   "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-34486",
-   "vendorProject": "Apache",
-   "product": "Tomcat",
-   "vulnerabilityName": "Apache Tomcat Missing Encryption of Sensitive Data Vulnerability",
-   "dateAdded": "2026-08-04",
-   "dueDate": "2026-08-07",
-   "shortDescription": "Apache Tomcat contains a missing encryption of sensitive data vulnerability that allows the bypass of the EncryptInterceptor. This vulnerability can be chained with CVE‑2025‑24813.",
-   "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-9198",
-   "vendorProject": "IBM",
-   "product": "Langflow",
-   "vulnerabilityName": "IBM Langflow Code Injection Vulnerability",
-   "dateAdded": "2026-08-04",
-   "dueDate": "2026-08-07",
-   "shortDescription": "Langflow contains a code injection vulnerability that allows unauthenticated attackers to achieve full remote code execution on default Langflow deployments.",
-   "knownRansomware": false
   }
  ],
  "ransomwareTracked": 360,
  "watchlistHits": [],
  "dueSoon": [
   {
-   "cveID": "CVE-2026-85046",
-   "dueDate": "2026-09-18",
-   "diasRestantes": 0
-  },
-  {
    "cveID": "CVE-2026-58704",
    "dueDate": "2026-09-19",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-76460",
    "dueDate": "2026-09-19",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-87886",
    "dueDate": "2026-09-19",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2025-39682",
    "dueDate": "2026-09-21",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2025-39964",
    "dueDate": "2026-09-21",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-53266",
    "dueDate": "2026-09-21",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-81963",
    "dueDate": "2026-09-22",
-   "diasRestantes": 4
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2026-85880",
    "dueDate": "2026-09-22",
-   "diasRestantes": 4
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2026-87491",
    "dueDate": "2026-09-23",
-   "diasRestantes": 5
+   "diasRestantes": 4
   },
   {
    "cveID": "CVE-2026-42016",
    "dueDate": "2026-09-25",
-   "diasRestantes": 7
+   "diasRestantes": 6
   },
   {
    "cveID": "CVE-2026-42018",
    "dueDate": "2026-09-25",
-   "diasRestantes": 7
+   "diasRestantes": 6
   }
  ]
 }
