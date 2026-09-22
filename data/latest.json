@@ -4,9 +4,9 @@
  "generatedAt": "2026-09-21T19:51Z",
  "catalogVersion": "2026.09.21",
  "dateReleased": "2026-09-21T18:46:35.0873Z",
- "lastUpdated": "2026-09-21",
+ "lastUpdated": "2026-09-22",
  "totalTracked": 1717,
- "newToday": 1,
+ "newToday": 0,
  "recentAdditions": [
   {
    "cveID": "CVE-2026-7273",
@@ -642,65 +642,40 @@
    "dueDate": "2026-08-14",
    "shortDescription": "Metabase contains a SQL Injection vulnerability that allows an unauthenticated remote attacker to inject arbitrary SQL into the Metabase application database, which can give them administrator access to the instance. From there, the attacker could change the application configuration, steal stored credentials for the connected databases, read any data accessible through those connections, and export data.",
    "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-8037",
-   "vendorProject": "Progress",
-   "product": "LoadMaster",
-   "vulnerabilityName": "Progress LoadMaster Command Injection Vulnerability",
-   "dateAdded": "2026-08-07",
-   "dueDate": "2026-08-10",
-   "shortDescription": "Progress LoadMaster contains a command injection vulnerability that allows an un-authenticated attacker to execute arbitrary commands on the LoadMaster appliance by exploiting unsanitized input in multiple command endpoints.",
-   "knownRansomware": false
   }
  ],
  "ransomwareTracked": 360,
  "watchlistHits": [],
  "dueSoon": [
   {
-   "cveID": "CVE-2025-39682",
-   "dueDate": "2026-09-21",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2025-39964",
-   "dueDate": "2026-09-21",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2026-53266",
-   "dueDate": "2026-09-21",
-   "diasRestantes": 0
-  },
-  {
    "cveID": "CVE-2026-81963",
    "dueDate": "2026-09-22",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-85880",
    "dueDate": "2026-09-22",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-87491",
    "dueDate": "2026-09-23",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-7273",
    "dueDate": "2026-09-24",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-42016",
    "dueDate": "2026-09-25",
-   "diasRestantes": 4
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2026-42018",
    "dueDate": "2026-09-25",
-   "diasRestantes": 4
+   "diasRestantes": 3
   }
  ]
 }
