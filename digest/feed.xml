@@ -5,8 +5,15 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-09-22T20:53:44Z</updated>
+  <updated>2026-09-23T16:07:23Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Modificada: CVE-2026-63077 · JetBrains TeamCity</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-63077"/>
+    <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2026-63077/2026-09-23T16:07:23Z</id>
+    <updated>2026-09-23T16:07:23Z</updated>
+    <summary>Cambios: uso en ransomware</summary>
+  </entry>
   <entry>
     <title>Nueva en KEV: CVE-2026-94127 · F5 BIG-IP APM</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-94127"/>
