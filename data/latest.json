@@ -1,13 +1,43 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-09-23T16:07Z",
- "catalogVersion": "2026.09.23",
- "dateReleased": "2026-09-23T12:51:35.821Z",
+ "generatedAt": "2026-09-24T21:09Z",
+ "catalogVersion": "2026.09.24",
+ "dateReleased": "2026-09-24T19:00:55.0481Z",
  "lastUpdated": "2026-09-24",
- "totalTracked": 1721,
- "newToday": 0,
+ "totalTracked": 1723,
+ "newToday": 2,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-5430",
+   "vendorProject": "WSO2",
+   "product": "Multiple Products",
+   "vulnerabilityName": "WSO2 Multiple Products Path Traversal Vulnerability ",
+   "dateAdded": "2026-09-24",
+   "dueDate": "2026-09-27",
+   "shortDescription": "WSO2 API Control Plane, API Manager, Traffic Manager & Universal Gateway contain a path traversal vulnerability that could allow for unrestricted file upload and lead to remote code execution.",
+   "knownRansomware": false,
+   "cvss": 10.0,
+   "cvssSeverity": "Critical",
+   "cvssVersion": "3.1",
+   "epss": 0.00374,
+   "epssPercentile": 0.28583
+  },
+  {
+   "cveID": "CVE-2026-71362",
+   "vendorProject": "Adobe",
+   "product": "Commerce and Magento ",
+   "vulnerabilityName": "Adobe Commerce and Magento Incorrect Authorization Vulnerability ",
+   "dateAdded": "2026-09-24",
+   "dueDate": "2026-09-27",
+   "shortDescription": "Adobe Commerce and Magento contains an incorrect authorization vulnerability that could allow an attacker to leverage this vulnerability to gain elevated access to sensitive resources without any user interaction.",
+   "knownRansomware": false,
+   "cvss": 9.1,
+   "cvssSeverity": "Critical",
+   "cvssVersion": "3.1",
+   "epss": 0.02335,
+   "epssPercentile": 0.82839
+  },
   {
    "cveID": "CVE-2026-93952",
    "vendorProject": "Arista",
@@ -737,6 +767,16 @@
    "cveID": "CVE-2026-94127",
    "dueDate": "2026-09-25",
    "diasRestantes": 1
+  },
+  {
+   "cveID": "CVE-2026-5430",
+   "dueDate": "2026-09-27",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-71362",
+   "dueDate": "2026-09-27",
+   "diasRestantes": 3
   }
  ]
 }
