@@ -4,9 +4,9 @@
  "generatedAt": "2026-09-24T21:09Z",
  "catalogVersion": "2026.09.24",
  "dateReleased": "2026-09-24T19:00:55.0481Z",
- "lastUpdated": "2026-09-24",
+ "lastUpdated": "2026-09-25",
  "totalTracked": 1723,
- "newToday": 2,
+ "newToday": 0,
  "recentAdditions": [
   {
    "cveID": "CVE-2026-5430",
@@ -734,49 +734,44 @@
  "watchlistHits": [],
  "dueSoon": [
   {
-   "cveID": "CVE-2026-7273",
-   "dueDate": "2026-09-24",
-   "diasRestantes": 0
-  },
-  {
    "cveID": "CVE-2026-42016",
    "dueDate": "2026-09-25",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-42018",
    "dueDate": "2026-09-25",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-85102",
    "dueDate": "2026-09-25",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-93616",
    "dueDate": "2026-09-25",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-93952",
    "dueDate": "2026-09-25",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-94127",
    "dueDate": "2026-09-25",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-5430",
    "dueDate": "2026-09-27",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-71362",
    "dueDate": "2026-09-27",
-   "diasRestantes": 3
+   "diasRestantes": 2
   }
  ]
 }
