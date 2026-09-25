@@ -1,12 +1,12 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-09-25T16:33Z",
+ "generatedAt": "2026-09-25T21:05Z",
  "catalogVersion": "2026.09.25",
- "dateReleased": "2026-09-25T14:39:25.3654Z",
+ "dateReleased": "2026-09-25T18:58:16.5029Z",
  "lastUpdated": "2026-09-25",
- "totalTracked": 1725,
- "newToday": 2,
+ "totalTracked": 1726,
+ "newToday": 3,
  "recentAdditions": [
   {
    "cveID": "CVE-2026-67279",
@@ -37,6 +37,21 @@
    "cvssVersion": "3.1",
    "epss": 0.01221,
    "epssPercentile": 0.6743
+  },
+  {
+   "cveID": "CVE-2026-87902",
+   "vendorProject": "WordPress",
+   "product": "Core",
+   "vulnerabilityName": "WordPress Core Remote File Inclusion Vulnerability",
+   "dateAdded": "2026-09-25",
+   "dueDate": "2026-09-28",
+   "shortDescription": "WordPress Core contains a remote file inclusion vulnerability which could allow an unauthenticated attacker to make page-template resolution include a chosen readable local `.php` file outside the active theme directories, leading to remote code execution.",
+   "knownRansomware": false,
+   "cvss": 8.1,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1",
+   "epss": 0.02877,
+   "epssPercentile": 0.86275
   },
   {
    "cveID": "CVE-2026-5430",
@@ -810,6 +825,11 @@
   },
   {
    "cveID": "CVE-2026-67279",
+   "dueDate": "2026-09-28",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-87902",
    "dueDate": "2026-09-28",
    "diasRestantes": 3
   }
