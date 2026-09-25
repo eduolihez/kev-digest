@@ -1,13 +1,43 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-09-24T21:09Z",
- "catalogVersion": "2026.09.24",
- "dateReleased": "2026-09-24T19:00:55.0481Z",
+ "generatedAt": "2026-09-25T16:33Z",
+ "catalogVersion": "2026.09.25",
+ "dateReleased": "2026-09-25T14:39:25.3654Z",
  "lastUpdated": "2026-09-25",
- "totalTracked": 1723,
- "newToday": 0,
+ "totalTracked": 1725,
+ "newToday": 2,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-67279",
+   "vendorProject": "MikroTik",
+   "product": "RouterOS",
+   "vulnerabilityName": "Mikrotik RouterOS Improper Enforcement of Behavioral Workflow Vulnerability",
+   "dateAdded": "2026-09-25",
+   "dueDate": "2026-09-28",
+   "shortDescription": "Mikrotik RouterOS contains an improper enforcement of behavioral workflow vulnerability that could allow an unauthenticated client to open a session channel and send an exec request. This vulnerability can be chained to achieve unauthenticated exploitation of CVE-2026-86060.",
+   "knownRansomware": false,
+   "cvss": 6.5,
+   "cvssSeverity": "Medium",
+   "cvssVersion": "3.1",
+   "epss": 0.0071,
+   "epssPercentile": 0.51535
+  },
+  {
+   "cveID": "CVE-2026-65660",
+   "vendorProject": "Microsoft",
+   "product": "SharePoint",
+   "vulnerabilityName": "Microsoft SharePoint Code Injection Vulnerability",
+   "dateAdded": "2026-09-25",
+   "dueDate": "2026-09-28",
+   "shortDescription": "Microsoft SharePoint contains a code injection vulnerability which could allow an authorized attacker to execute code over a network.",
+   "knownRansomware": false,
+   "cvss": 8.8,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1",
+   "epss": 0.01221,
+   "epssPercentile": 0.6743
+  },
   {
    "cveID": "CVE-2026-5430",
    "vendorProject": "WSO2",
@@ -772,6 +802,16 @@
    "cveID": "CVE-2026-71362",
    "dueDate": "2026-09-27",
    "diasRestantes": 2
+  },
+  {
+   "cveID": "CVE-2026-65660",
+   "dueDate": "2026-09-28",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-67279",
+   "dueDate": "2026-09-28",
+   "diasRestantes": 3
   }
  ]
 }
