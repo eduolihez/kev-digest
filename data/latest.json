@@ -4,9 +4,9 @@
  "generatedAt": "2026-09-25T21:05Z",
  "catalogVersion": "2026.09.25",
  "dateReleased": "2026-09-25T18:58:16.5029Z",
- "lastUpdated": "2026-09-25",
+ "lastUpdated": "2026-09-26",
  "totalTracked": 1726,
- "newToday": 3,
+ "newToday": 0,
  "recentAdditions": [
   {
    "cveID": "CVE-2026-67279",
@@ -743,95 +743,35 @@
    "dueDate": "2026-08-20",
    "shortDescription": "Ray-Project Ray contains a code injection vulnerability that could allow remote code execution. Developers using Ray as a development tool may be exposed to this vulnerability exploitable through Firefox and Safari.",
    "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-20349",
-   "vendorProject": "Cisco",
-   "product": "Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) ",
-   "vulnerabilityName": "Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) Heap Inspection Vulnerability",
-   "dateAdded": "2026-08-11",
-   "dueDate": "2026-08-14",
-   "shortDescription": "Cisco Secure Firewall Adaptive Security Appliance (ASA) and Secure Firewall Threat Defense (FTD) contain a heap inspection vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition.",
-   "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-68820",
-   "vendorProject": "Microsoft",
-   "product": "Windows Ancillary Function Driver for WinSock ",
-   "vulnerabilityName": "Microsoft Windows Ancillary Function Driver for WinSock Use-After-Free Vulnerability",
-   "dateAdded": "2026-08-11",
-   "dueDate": "2026-08-25",
-   "shortDescription": "Microsoft Windows Ancillary Function Driver for WinSock contains a use-after-free vulnerability that allows an authorized attacker to elevate privileges locally.",
-   "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-72898",
-   "vendorProject": "Metabase",
-   "product": "Metabase",
-   "vulnerabilityName": "Metabase SQL Injection Vulnerability",
-   "dateAdded": "2026-08-11",
-   "dueDate": "2026-08-14",
-   "shortDescription": "Metabase contains a SQL Injection vulnerability that allows an unauthenticated remote attacker to inject arbitrary SQL into the Metabase application database, which can give them administrator access to the instance. From there, the attacker could change the application configuration, steal stored credentials for the connected databases, read any data accessible through those connections, and export data.",
-   "knownRansomware": false
   }
  ],
  "ransomwareTracked": 361,
  "watchlistHits": [],
  "dueSoon": [
   {
-   "cveID": "CVE-2026-42016",
-   "dueDate": "2026-09-25",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2026-42018",
-   "dueDate": "2026-09-25",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2026-85102",
-   "dueDate": "2026-09-25",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2026-93616",
-   "dueDate": "2026-09-25",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2026-93952",
-   "dueDate": "2026-09-25",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2026-94127",
-   "dueDate": "2026-09-25",
-   "diasRestantes": 0
-  },
-  {
    "cveID": "CVE-2026-5430",
    "dueDate": "2026-09-27",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-71362",
    "dueDate": "2026-09-27",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-65660",
    "dueDate": "2026-09-28",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-67279",
    "dueDate": "2026-09-28",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-87902",
    "dueDate": "2026-09-28",
-   "diasRestantes": 3
+   "diasRestantes": 2
   }
  ]
 }
