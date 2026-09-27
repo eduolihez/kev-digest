@@ -5,8 +5,22 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-09-25T21:05:52Z</updated>
+  <updated>2026-09-27T23:38:47Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-88772 · Citrix NetScaler</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-88772"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-88772/2026-09-27T23:38:47Z</id>
+    <updated>2026-09-27T23:38:47Z</updated>
+    <summary>Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for remote code execution or denial of service</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-88771 · Citrix NetScaler</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-88771"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-88771/2026-09-27T23:38:47Z</id>
+    <updated>2026-09-27T23:38:47Z</updated>
+    <summary>Citrix NetScaler ADC and NetScaler Gateway contain an improper input validation vulnerability that could allow an unauthenticated attacker to execute arbitrary commands.</summary>
+  </entry>
   <entry>
     <title>Nueva en KEV: CVE-2026-87902 · WordPress Core</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-87902"/>

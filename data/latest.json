@@ -1,13 +1,33 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-09-25T21:05Z",
- "catalogVersion": "2026.09.25",
- "dateReleased": "2026-09-25T18:58:16.5029Z",
+ "generatedAt": "2026-09-27T23:38Z",
+ "catalogVersion": "2026.09.27",
+ "dateReleased": "2026-09-27T21:30:35.5521Z",
  "lastUpdated": "2026-09-27",
- "totalTracked": 1726,
- "newToday": 0,
+ "totalTracked": 1728,
+ "newToday": 2,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-88772",
+   "vendorProject": "Citrix",
+   "product": "NetScaler",
+   "vulnerabilityName": "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+   "dateAdded": "2026-09-27",
+   "dueDate": "2026-09-30",
+   "shortDescription": "Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for remote code execution or denial of service",
+   "knownRansomware": false
+  },
+  {
+   "cveID": "CVE-2026-88771",
+   "vendorProject": "Citrix",
+   "product": "NetScaler",
+   "vulnerabilityName": "Citrix NetScaler Improper Input Validation Vulnerability",
+   "dateAdded": "2026-09-27",
+   "dueDate": "2026-09-30",
+   "shortDescription": "Citrix NetScaler ADC and NetScaler Gateway contain an improper input validation vulnerability that could allow an unauthenticated attacker to execute arbitrary commands.",
+   "knownRansomware": false
+  },
   {
    "cveID": "CVE-2026-67279",
    "vendorProject": "MikroTik",
@@ -772,6 +792,16 @@
    "cveID": "CVE-2026-87902",
    "dueDate": "2026-09-28",
    "diasRestantes": 1
+  },
+  {
+   "cveID": "CVE-2026-88771",
+   "dueDate": "2026-09-30",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-88772",
+   "dueDate": "2026-09-30",
+   "diasRestantes": 3
   }
  ]
 }
