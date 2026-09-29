@@ -5,8 +5,15 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-09-27T23:38:47Z</updated>
+  <updated>2026-09-29T19:46:57Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-86950 · Apple Multiple Products</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-86950"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-86950/2026-09-29T19:46:57Z</id>
+    <updated>2026-09-29T19:46:57Z</updated>
+    <summary>Apple iOS, macOS, and iPadOS contain an out-of-bounds write vulnerability in CoreGraphics that may lead to arbitrary code execution.</summary>
+  </entry>
   <entry>
     <title>Nueva en KEV: CVE-2026-88772 · Citrix NetScaler</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-88772"/>

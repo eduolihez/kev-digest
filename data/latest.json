@@ -1,13 +1,28 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-09-27T23:38Z",
- "catalogVersion": "2026.09.27",
- "dateReleased": "2026-09-27T21:30:35.5521Z",
+ "generatedAt": "2026-09-29T19:46Z",
+ "catalogVersion": "2026.09.29",
+ "dateReleased": "2026-09-29T13:51:33.3852Z",
  "lastUpdated": "2026-09-29",
- "totalTracked": 1728,
- "newToday": 0,
+ "totalTracked": 1729,
+ "newToday": 1,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-86950",
+   "vendorProject": "Apple",
+   "product": "Multiple Products",
+   "vulnerabilityName": "Apple Multiple Products Out-of-Bounds Write Vulnerability",
+   "dateAdded": "2026-09-29",
+   "dueDate": "2026-10-02",
+   "shortDescription": "Apple iOS, macOS, and iPadOS contain an out-of-bounds write vulnerability in CoreGraphics that may lead to arbitrary code execution.",
+   "knownRansomware": false,
+   "cvss": 8.8,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1",
+   "epss": 0.00812,
+   "epssPercentile": 0.55295
+  },
   {
    "cveID": "CVE-2026-88772",
    "vendorProject": "Citrix",
@@ -777,6 +792,11 @@
    "cveID": "CVE-2026-88772",
    "dueDate": "2026-09-30",
    "diasRestantes": 1
+  },
+  {
+   "cveID": "CVE-2026-86950",
+   "dueDate": "2026-10-02",
+   "diasRestantes": 3
   }
  ]
 }
