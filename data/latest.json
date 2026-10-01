@@ -1,13 +1,23 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-09-30T17:37Z",
- "catalogVersion": "2026.09.30",
- "dateReleased": "2026-09-30T16:59:23.0688Z",
+ "generatedAt": "2026-10-01T20:06Z",
+ "catalogVersion": "2026.10.01",
+ "dateReleased": "2026-10-01T19:54:04.9308Z",
  "lastUpdated": "2026-10-01",
- "totalTracked": 1730,
- "newToday": 0,
+ "totalTracked": 1731,
+ "newToday": 1,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-104286",
+   "vendorProject": "Fortinet",
+   "product": "FortiMail",
+   "vulnerabilityName": "Fortinet FortiMail Path Traversal Vulnerability",
+   "dateAdded": "2026-10-01",
+   "dueDate": "2026-10-04",
+   "shortDescription": "Fortinet FortiMail contains a path traversal and an improper neutralization of NULL byte or NULL character vulnerability that may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.",
+   "knownRansomware": false
+  },
   {
    "cveID": "CVE-2026-76504",
    "vendorProject": "Cisco",
@@ -805,6 +815,11 @@
    "cveID": "CVE-2026-76504",
    "dueDate": "2026-10-03",
    "diasRestantes": 2
+  },
+  {
+   "cveID": "CVE-2026-104286",
+   "dueDate": "2026-10-04",
+   "diasRestantes": 3
   }
  ]
 }
