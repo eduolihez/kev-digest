@@ -1,13 +1,43 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-10-01T20:06Z",
- "catalogVersion": "2026.10.01",
- "dateReleased": "2026-10-01T19:54:04.9308Z",
+ "generatedAt": "2026-10-02T17:28Z",
+ "catalogVersion": "2026.10.02",
+ "dateReleased": "2026-10-02T15:19:38.2945Z",
  "lastUpdated": "2026-10-02",
- "totalTracked": 1731,
- "newToday": 0,
+ "totalTracked": 1733,
+ "newToday": 2,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-102490",
+   "vendorProject": "Zammad GmbH",
+   "product": "Zammad",
+   "vulnerabilityName": "Zammad GmbH Zammad Improper Privilege Management Vulnerability",
+   "dateAdded": "2026-10-02",
+   "dueDate": "2026-10-05",
+   "shortDescription": "Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489.",
+   "knownRansomware": false,
+   "cvss": 9.8,
+   "cvssSeverity": "Critical",
+   "cvssVersion": "3.1",
+   "epss": 0.00262,
+   "epssPercentile": 0.16336
+  },
+  {
+   "cveID": "CVE-2026-102489",
+   "vendorProject": "Zammad GmbH",
+   "product": "Zammad",
+   "vulnerabilityName": "Zammad GmbH Zammad Session Fixation Vulnerability",
+   "dateAdded": "2026-10-02",
+   "dueDate": "2026-10-05",
+   "shortDescription": "Zammad GmbH Zammad contains a session fixation vulnerability that can lead to remote code execution as the zammad user. This vulnerability can be chained with CVE-2026-102490.",
+   "knownRansomware": false,
+   "cvss": 9.8,
+   "cvssSeverity": "Critical",
+   "cvssVersion": "3.1",
+   "epss": 0.00582,
+   "epssPercentile": 0.45835
+  },
   {
    "cveID": "CVE-2026-104286",
    "vendorProject": "Fortinet",
@@ -810,6 +840,16 @@
    "cveID": "CVE-2026-104286",
    "dueDate": "2026-10-04",
    "diasRestantes": 2
+  },
+  {
+   "cveID": "CVE-2026-102489",
+   "dueDate": "2026-10-05",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-102490",
+   "dueDate": "2026-10-05",
+   "diasRestantes": 3
   }
  ]
 }

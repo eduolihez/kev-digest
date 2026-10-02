@@ -5,8 +5,22 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-10-01T20:06:10Z</updated>
+  <updated>2026-10-02T17:28:26Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-102490 · Zammad GmbH Zammad</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-102490"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-102490/2026-10-02T17:28:26Z</id>
+    <updated>2026-10-02T17:28:26Z</updated>
+    <summary>Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489.</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-102489 · Zammad GmbH Zammad</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-102489"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-102489/2026-10-02T17:28:26Z</id>
+    <updated>2026-10-02T17:28:26Z</updated>
+    <summary>Zammad GmbH Zammad contains a session fixation vulnerability that can lead to remote code execution as the zammad user. This vulnerability can be chained with CVE-2026-102490.</summary>
+  </entry>
   <entry>
     <title>Nueva en KEV: CVE-2026-104286 · Fortinet FortiMail</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-104286"/>
@@ -342,19 +356,5 @@
     <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2022-37969/2026-09-04T18:06:02Z</id>
     <updated>2026-09-04T18:06:02Z</updated>
     <summary>Cambios: uso en ransomware</summary>
-  </entry>
-  <entry>
-    <title>Modificada: CVE-2016-4117 · Adobe Flash Player</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2016-4117"/>
-    <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2016-4117/2026-09-04T18:06:02Z</id>
-    <updated>2026-09-04T18:06:02Z</updated>
-    <summary>Cambios: uso en ransomware</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-85046 · Google Chromium V8</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-85046"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-85046/2026-09-04T18:06:02Z</id>
-    <updated>2026-09-04T18:06:02Z</updated>
-    <summary>Google Chromium V8 contains a type confusion vulnerability that allows a remote attacker to execute arbitrary code inside the sandbox via a crafted HTML page. This vulnerability could affect multiple web browsers that utilize Chromium, including, but not limited to, Google Chrome, Microsoft Edge, and Opera.</summary>
   </entry>
 </feed>
