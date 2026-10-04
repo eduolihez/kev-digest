@@ -4,7 +4,7 @@
  "generatedAt": "2026-10-02T17:28Z",
  "catalogVersion": "2026.10.02",
  "dateReleased": "2026-10-02T15:19:38.2945Z",
- "lastUpdated": "2026-10-03",
+ "lastUpdated": "2026-10-04",
  "totalTracked": 1733,
  "newToday": 0,
  "recentAdditions": [
@@ -771,40 +771,25 @@
    "dueDate": "2026-08-23",
    "shortDescription": "TrueConf Server contains a missing authentication for critical function vulnerability which could allow a remote unauthorized attacker with network access via port 4307/TCP to execute an arbitrary script.",
    "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-64849",
-   "vendorProject": "MLflow",
-   "product": "MLflow",
-   "vulnerabilityName": "MLflow Server-Side Request Forgery Vulnerability",
-   "dateAdded": "2026-08-19",
-   "dueDate": "2026-09-02",
-   "shortDescription": "MLflow contains a server-side request forgery vulnerability that can allow attackers to reach internal or cloud metadata services and receive response_status and response_body.",
-   "knownRansomware": false
   }
  ],
  "ransomwareTracked": 361,
  "watchlistHits": [],
  "dueSoon": [
   {
-   "cveID": "CVE-2026-76504",
-   "dueDate": "2026-10-03",
-   "diasRestantes": 0
-  },
-  {
    "cveID": "CVE-2026-104286",
    "dueDate": "2026-10-04",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-102489",
    "dueDate": "2026-10-05",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-102490",
    "dueDate": "2026-10-05",
-   "diasRestantes": 2
+   "diasRestantes": 1
   }
  ]
 }
