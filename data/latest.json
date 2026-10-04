@@ -1,13 +1,25 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-10-02T17:28Z",
- "catalogVersion": "2026.10.02",
- "dateReleased": "2026-10-02T15:19:38.2945Z",
+ "generatedAt": "2026-10-04T20:52Z",
+ "catalogVersion": "2026.10.04",
+ "dateReleased": "2026-10-04T18:52:56.0635Z",
  "lastUpdated": "2026-10-04",
- "totalTracked": 1733,
- "newToday": 0,
+ "totalTracked": 1734,
+ "newToday": 1,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-88779",
+   "vendorProject": "Citrix",
+   "product": "NetScaler",
+   "vulnerabilityName": "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
+   "dateAdded": "2026-10-04",
+   "dueDate": "2026-10-07",
+   "shortDescription": "Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service.",
+   "knownRansomware": false,
+   "epss": 0.00276,
+   "epssPercentile": 0.18203
+  },
   {
    "cveID": "CVE-2026-102490",
    "vendorProject": "Zammad GmbH",
@@ -790,6 +802,11 @@
    "cveID": "CVE-2026-102490",
    "dueDate": "2026-10-05",
    "diasRestantes": 1
+  },
+  {
+   "cveID": "CVE-2026-88779",
+   "dueDate": "2026-10-07",
+   "diasRestantes": 3
   }
  ]
 }
