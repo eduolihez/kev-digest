@@ -4,9 +4,9 @@
  "generatedAt": "2026-10-04T20:52Z",
  "catalogVersion": "2026.10.04",
  "dateReleased": "2026-10-04T18:52:56.0635Z",
- "lastUpdated": "2026-10-04",
+ "lastUpdated": "2026-10-05",
  "totalTracked": 1734,
- "newToday": 1,
+ "newToday": 0,
  "recentAdditions": [
   {
    "cveID": "CVE-2026-88779",
@@ -763,50 +763,25 @@
    "dueDate": "2026-08-24",
    "shortDescription": "Zimbra Collaboration Suite (ZCS) contains an OS command injection vulnerability which could allow an unauthenticated attacker to send specially crafted SMTP requests that may result in execution of arbitrary operating system commands as the Zimbra user.",
    "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-72530",
-   "vendorProject": "TrueConf",
-   "product": "Server",
-   "vulnerabilityName": "TrueConf Server Code Injection Vulnerability",
-   "dateAdded": "2026-08-20",
-   "dueDate": "2026-09-03",
-   "shortDescription": "TrueConf Server contains a code injection vulnerability that could allow an unauthorized remote attacker with network access via port 4307/TCP to use a specially crafted script to break out of the isolated environment and execute arbitrary code on the host system.",
-   "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-72529",
-   "vendorProject": "TrueConf",
-   "product": "Server",
-   "vulnerabilityName": "TrueConf Server Missing Authentication for Critical Function Vulnerability",
-   "dateAdded": "2026-08-20",
-   "dueDate": "2026-08-23",
-   "shortDescription": "TrueConf Server contains a missing authentication for critical function vulnerability which could allow a remote unauthorized attacker with network access via port 4307/TCP to execute an arbitrary script.",
-   "knownRansomware": false
   }
  ],
  "ransomwareTracked": 361,
  "watchlistHits": [],
  "dueSoon": [
   {
-   "cveID": "CVE-2026-104286",
-   "dueDate": "2026-10-04",
-   "diasRestantes": 0
-  },
-  {
    "cveID": "CVE-2026-102489",
    "dueDate": "2026-10-05",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-102490",
    "dueDate": "2026-10-05",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-88779",
    "dueDate": "2026-10-07",
-   "diasRestantes": 3
+   "diasRestantes": 2
   }
  ]
 }
