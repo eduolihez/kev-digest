@@ -4,7 +4,7 @@
  "generatedAt": "2026-10-04T20:52Z",
  "catalogVersion": "2026.10.04",
  "dateReleased": "2026-10-04T18:52:56.0635Z",
- "lastUpdated": "2026-10-05",
+ "lastUpdated": "2026-10-06",
  "totalTracked": 1734,
  "newToday": 0,
  "recentAdditions": [
@@ -753,35 +753,15 @@
    "dueDate": "2026-08-27",
    "shortDescription": "Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in contain an improper access control vulnerability that can result in unauthorized creation, deletion or modification access to critical data as well as unauthorized access to critical data or complete access to all Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in accessible data.",
    "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-73570",
-   "vendorProject": "Synacor",
-   "product": "Zimbra Collaboration Suite (ZCS)",
-   "vulnerabilityName": "Zimbra Collaboration Suite (ZCS) OS Command Injection Vulnerability",
-   "dateAdded": "2026-08-21",
-   "dueDate": "2026-08-24",
-   "shortDescription": "Zimbra Collaboration Suite (ZCS) contains an OS command injection vulnerability which could allow an unauthenticated attacker to send specially crafted SMTP requests that may result in execution of arbitrary operating system commands as the Zimbra user.",
-   "knownRansomware": false
   }
  ],
  "ransomwareTracked": 361,
  "watchlistHits": [],
  "dueSoon": [
   {
-   "cveID": "CVE-2026-102489",
-   "dueDate": "2026-10-05",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2026-102490",
-   "dueDate": "2026-10-05",
-   "diasRestantes": 0
-  },
-  {
    "cveID": "CVE-2026-88779",
    "dueDate": "2026-10-07",
-   "diasRestantes": 2
+   "diasRestantes": 1
   }
  ]
 }
