@@ -1,13 +1,88 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-10-04T20:52Z",
- "catalogVersion": "2026.10.04",
- "dateReleased": "2026-10-04T18:52:56.0635Z",
+ "generatedAt": "2026-10-08T18:25Z",
+ "catalogVersion": "2026.10.08",
+ "dateReleased": "2026-10-08T17:20:54.304Z",
  "lastUpdated": "2026-10-08",
- "totalTracked": 1734,
- "newToday": 0,
+ "totalTracked": 1739,
+ "newToday": 5,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2015-5477",
+   "vendorProject": "ISC",
+   "product": "BIND",
+   "vulnerabilityName": " ISC BIND Data Processing Errors Vulnerability",
+   "dateAdded": "2026-10-08",
+   "dueDate": "2026-10-11",
+   "shortDescription": "ISC BIND contains a data processing errors vulnerability that could allow remote attackers to cause a denial of service via TKEY queries.",
+   "knownRansomware": false,
+   "cvss": 7.5,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1",
+   "epss": 0.91284,
+   "epssPercentile": 0.9981
+  },
+  {
+   "cveID": "CVE-2016-3081",
+   "vendorProject": "Apache",
+   "product": "Struts",
+   "vulnerabilityName": "Apache Struts Command Injection Vulnerability",
+   "dateAdded": "2026-10-08",
+   "dueDate": "2026-10-11",
+   "shortDescription": "Apache Struts contains a command injection vulnerability that could allow remote attackers to execute arbitrary code via method:prefix when Dynamic Method Invocation is enabled.",
+   "knownRansomware": false,
+   "cvss": 8.1,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1",
+   "epss": 0.93352,
+   "epssPercentile": 0.99838
+  },
+  {
+   "cveID": "CVE-2023-22894",
+   "vendorProject": "Strapi",
+   "product": "Strapi",
+   "vulnerabilityName": "Strapi Cleartext Storage of Sensitive Information Vulnerability",
+   "dateAdded": "2026-10-08",
+   "dueDate": "2026-10-11",
+   "shortDescription": "Strapi contains a cleartext storage of sensitive information vulnerability that could allow attackers with access to the admin panel to discover sensitive user details via the query filter. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version. This vulnerability can be chained with CVE-2023-22621 to achieve remote code execution.",
+   "knownRansomware": false,
+   "cvss": 4.9,
+   "cvssSeverity": "Medium",
+   "cvssVersion": "3.1",
+   "epss": 0.01658,
+   "epssPercentile": 0.7591
+  },
+  {
+   "cveID": "CVE-2021-3199",
+   "vendorProject": "ONLYOFFICE",
+   "product": "Docs",
+   "vulnerabilityName": "ONLYOFFICE Docs Server Path Traversal Vulnerability",
+   "dateAdded": "2026-10-08",
+   "dueDate": "2026-10-11",
+   "shortDescription": "ONLYOFFICE Docs contains a path traversal vulnerability that can occur when JWT is used, via a /.. sequence in an image upload parameter and could allow for remote code execution.",
+   "knownRansomware": false,
+   "cvss": 9.8,
+   "cvssSeverity": "Critical",
+   "cvssVersion": "3.1",
+   "epss": 0.08215,
+   "epssPercentile": 0.9475
+  },
+  {
+   "cveID": "CVE-2015-3306",
+   "vendorProject": "ProFTPD",
+   "product": "ProFTPD",
+   "vulnerabilityName": "ProFTPD Improper Access Control Vulnerability",
+   "dateAdded": "2026-10-08",
+   "dueDate": "2026-10-11",
+   "shortDescription": "ProFTPD contains an improper access control vulnerability that could allow remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands.",
+   "knownRansomware": false,
+   "cvss": 10.0,
+   "cvssSeverity": "Critical",
+   "cvssVersion": "3.1",
+   "epss": 0.96752,
+   "epssPercentile": 0.99887
+  },
   {
    "cveID": "CVE-2026-88779",
    "vendorProject": "Citrix",
@@ -757,5 +832,31 @@
  ],
  "ransomwareTracked": 361,
  "watchlistHits": [],
- "dueSoon": []
+ "dueSoon": [
+  {
+   "cveID": "CVE-2015-3306",
+   "dueDate": "2026-10-11",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2015-5477",
+   "dueDate": "2026-10-11",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2016-3081",
+   "dueDate": "2026-10-11",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2021-3199",
+   "dueDate": "2026-10-11",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2023-22894",
+   "dueDate": "2026-10-11",
+   "diasRestantes": 3
+  }
+ ]
 }
