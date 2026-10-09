@@ -5,8 +5,22 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-10-08T18:25:37Z</updated>
+  <updated>2026-10-09T00:58:15Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Modificada: CVE-2026-86950 · Apple Multiple Products</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-86950"/>
+    <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2026-86950/2026-10-09T00:58:15Z</id>
+    <updated>2026-10-09T00:58:15Z</updated>
+    <summary>Cambios: plazo de mitigación</summary>
+  </entry>
+  <entry>
+    <title>Modificada: CVE-2022-0995 · Linux Kernel</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2022-0995"/>
+    <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2022-0995/2026-10-09T00:58:15Z</id>
+    <updated>2026-10-09T00:58:15Z</updated>
+    <summary>Cambios: plazo de mitigación</summary>
+  </entry>
   <entry>
     <title>Nueva en KEV: CVE-2023-22894 · Strapi Strapi</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2023-22894"/>
@@ -340,20 +354,6 @@
     <title>Modificada: CVE-2022-41352 · Synacor Zimbra Collaboration Suite (ZCS)</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2022-41352"/>
     <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2022-41352/2026-09-09T15:55:42Z</id>
-    <updated>2026-09-09T15:55:42Z</updated>
-    <summary>Cambios: uso en ransomware</summary>
-  </entry>
-  <entry>
-    <title>Modificada: CVE-2019-0859 · Microsoft Win32k</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2019-0859"/>
-    <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2019-0859/2026-09-09T15:55:42Z</id>
-    <updated>2026-09-09T15:55:42Z</updated>
-    <summary>Cambios: uso en ransomware</summary>
-  </entry>
-  <entry>
-    <title>Modificada: CVE-2016-7255 · Microsoft Win32k</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2016-7255"/>
-    <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2016-7255/2026-09-09T15:55:42Z</id>
     <updated>2026-09-09T15:55:42Z</updated>
     <summary>Cambios: uso en ransomware</summary>
   </entry>

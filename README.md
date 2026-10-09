@@ -29,10 +29,10 @@ cambiado. Sin intervención manual y sin servidor: todo ocurre en GitHub Actions
 | **CVEs en seguimiento** | 1739 |
 | **Con uso conocido en ransomware** | 361 |
 | **Versión del catálogo** | 2026.10.08 |
-| **Publicado por CISA** | 2026-10-08T17:20:54.304Z |
-| **Último cambio detectado** | 2026-10-08 18:25 UTC |
-| **Plazos que vencen en 7 días** | 5 |
-| **Último digest** | [`digest/2026-10-08.md`](digest/2026-10-08.md) |
+| **Publicado por CISA** | 2026-10-08T20:09:18.9833Z |
+| **Último cambio detectado** | 2026-10-09 00:58 UTC |
+| **Plazos que vencen en 7 días** | 6 |
+| **Último digest** | [`digest/2026-10-09.md`](digest/2026-10-09.md) |
 
 <!-- KEV-STATS:END -->
 

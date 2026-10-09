@@ -1,12 +1,12 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-10-08T18:25Z",
+ "generatedAt": "2026-10-09T00:58Z",
  "catalogVersion": "2026.10.08",
- "dateReleased": "2026-10-08T17:20:54.304Z",
- "lastUpdated": "2026-10-08",
+ "dateReleased": "2026-10-08T20:09:18.9833Z",
+ "lastUpdated": "2026-10-09",
  "totalTracked": 1739,
- "newToday": 5,
+ "newToday": 0,
  "recentAdditions": [
   {
    "cveID": "CVE-2015-5477",
@@ -154,7 +154,7 @@
    "product": "Multiple Products",
    "vulnerabilityName": "Apple Multiple Products Out-of-Bounds Write Vulnerability",
    "dateAdded": "2026-09-29",
-   "dueDate": "2026-10-02",
+   "dueDate": "2026-10-13",
    "shortDescription": "Apple iOS, macOS, and iPadOS contain an out-of-bounds write vulnerability in CoreGraphics that may lead to arbitrary code execution.",
    "knownRansomware": false,
    "cvss": 8.8,
@@ -785,7 +785,7 @@
    "product": "Kernel",
    "vulnerabilityName": "Linux Kernel Out-of-Bounds Write Vulnerability",
    "dateAdded": "2026-08-26",
-   "dueDate": "2026-09-09",
+   "dueDate": "2026-08-29",
    "shortDescription": "Linux Kernel contains an out-of-bounds memory write vulnerability which could allow a local user to gain privileged access or cause a denial of service on the system.",
    "knownRansomware": false
   },
@@ -818,16 +818,6 @@
    "dueDate": "2026-08-28",
    "shortDescription": "Gitea contains a code injection vulnerability that allows an attacker with repository write access to send a malicious patch to the diffpatch API endpoint to plant an executable Git hook and run shell commands as the Gitea service account.",
    "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-21962",
-   "vendorProject": "Oracle",
-   "product": "HTTP Server and Oracle Weblogic Server Proxy Plug-in",
-   "vulnerabilityName": "Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in Improper Access Control Vulnerability",
-   "dateAdded": "2026-08-24",
-   "dueDate": "2026-08-27",
-   "shortDescription": "Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in contain an improper access control vulnerability that can result in unauthorized creation, deletion or modification access to critical data as well as unauthorized access to critical data or complete access to all Oracle HTTP Server and Oracle Weblogic Server Proxy Plug-in accessible data.",
-   "knownRansomware": false
   }
  ],
  "ransomwareTracked": 361,
@@ -836,27 +826,32 @@
   {
    "cveID": "CVE-2015-3306",
    "dueDate": "2026-10-11",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2015-5477",
    "dueDate": "2026-10-11",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2016-3081",
    "dueDate": "2026-10-11",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2021-3199",
    "dueDate": "2026-10-11",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2023-22894",
    "dueDate": "2026-10-11",
-   "diasRestantes": 3
+   "diasRestantes": 2
+  },
+  {
+   "cveID": "CVE-2026-86950",
+   "dueDate": "2026-10-13",
+   "diasRestantes": 4
   }
  ]
 }
