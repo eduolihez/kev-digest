@@ -4,7 +4,7 @@
  "generatedAt": "2026-10-09T00:58Z",
  "catalogVersion": "2026.10.08",
  "dateReleased": "2026-10-08T20:09:18.9833Z",
- "lastUpdated": "2026-10-10",
+ "lastUpdated": "2026-10-11",
  "totalTracked": 1739,
  "newToday": 0,
  "recentAdditions": [
@@ -748,66 +748,6 @@
    "dueDate": "2026-09-10",
    "shortDescription": "JFrog Artifactory contains an improper limitation of a pathname to a restricted directory vulnerability. This can allow an authenticated user to write data outside the intended Docker cache path under specific remote-repository conditions.",
    "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2021-23758",
-   "vendorProject": "Ajax.NET Professional",
-   "product": "Ajax.NET Professional",
-   "vulnerabilityName": "Ajax.NET Professional Deserialization of Untrusted Data Vulnerability",
-   "dateAdded": "2026-08-26",
-   "dueDate": "2026-09-09",
-   "shortDescription": "Ajax.NET Professional (AjaxPro) contains a deserialization of untrusted data vulnerability that could allow for remote code execution via arbitrary .NET classes. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
-   "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2015-3246",
-   "vendorProject": "Red Hat",
-   "product": "Libuser",
-   "vulnerabilityName": "Red Hat Libuser Race Condition Vulnerability",
-   "dateAdded": "2026-08-26",
-   "dueDate": "2026-09-09",
-   "shortDescription": "Red Hat libuser contains a race condition vulnerability that allows authenticated local users to corrupt the /etc/passwd file to cause a denial of service or privilege escalation.",
-   "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2015-5287",
-   "vendorProject": "Red Hat",
-   "product": "Automatic Bug Reporting Tool",
-   "vulnerabilityName": "Red Hat Automatic Bug Reporting Tool Privilege Escalation Vulnerability",
-   "dateAdded": "2026-08-26",
-   "dueDate": "2026-09-09",
-   "shortDescription": "Red Hat Automatic Bug Reporting Tool (ABRT) contains a privilege escalation vulnerability that could allow local users with certain permissions to gain privileges via a symlink attack on a file with a predictable name. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
-   "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2022-0995",
-   "vendorProject": "Linux",
-   "product": "Kernel",
-   "vulnerabilityName": "Linux Kernel Out-of-Bounds Write Vulnerability",
-   "dateAdded": "2026-08-26",
-   "dueDate": "2026-08-29",
-   "shortDescription": "Linux Kernel contains an out-of-bounds memory write vulnerability which could allow a local user to gain privileged access or cause a denial of service on the system.",
-   "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-8452",
-   "vendorProject": "Citrix",
-   "product": "NetScaler ADC and NetScaler Gateway",
-   "vulnerabilityName": "Citrix NetScaler ADC and NetScaler Gateway Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
-   "dateAdded": "2026-08-26",
-   "dueDate": "2026-08-29",
-   "shortDescription": "Citrix NetScaler ADC and NetScaler Gateway contain an improper restriction of operations within the bounds of a memory buffer vulnerability which could lead to denial of service.",
-   "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2019-1068",
-   "vendorProject": "Microsoft",
-   "product": "SQL Server",
-   "vulnerabilityName": "Microsoft SQL Server Remote Code Execution Vulnerability",
-   "dateAdded": "2026-08-26",
-   "dueDate": "2026-08-29",
-   "shortDescription": "Microsoft SQL Server contains a remote code execution vulnerability that could allow an attacker to execute code in the context of the SQL Server Database Engine service account.",
-   "knownRansomware": false
   }
  ],
  "ransomwareTracked": 361,
@@ -816,32 +756,32 @@
   {
    "cveID": "CVE-2015-3306",
    "dueDate": "2026-10-11",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2015-5477",
    "dueDate": "2026-10-11",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2016-3081",
    "dueDate": "2026-10-11",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2021-3199",
    "dueDate": "2026-10-11",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2023-22894",
    "dueDate": "2026-10-11",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-86950",
    "dueDate": "2026-10-13",
-   "diasRestantes": 3
+   "diasRestantes": 2
   }
  ]
 }
