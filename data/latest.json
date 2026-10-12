@@ -4,7 +4,7 @@
  "generatedAt": "2026-10-09T00:58Z",
  "catalogVersion": "2026.10.08",
  "dateReleased": "2026-10-08T20:09:18.9833Z",
- "lastUpdated": "2026-10-11",
+ "lastUpdated": "2026-10-12",
  "totalTracked": 1739,
  "newToday": 0,
  "recentAdditions": [
@@ -718,70 +718,15 @@
    "dueDate": "2026-09-14",
    "shortDescription": "PaperCut NG/MF contains a missing authentication for critical function vulnerability which allows an unauthenticated remote attacker to modify certain system configurations. This vulnerability can be chained with CVE-2026-82078.",
    "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2023-49105",
-   "vendorProject": "ownCloud",
-   "product": "ownCloud",
-   "vulnerabilityName": "ownCloud Improper Authentication Vulnerability",
-   "dateAdded": "2026-08-27",
-   "dueDate": "2026-08-30",
-   "shortDescription": "ownCloud contains an improper authentication vulnerability that allows an attacker to access, modify, or delete any file without authentication if the username of a victim is known, and the victim has no signing-key configured.",
-   "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-53362",
-   "vendorProject": "Linux",
-   "product": "Kernel",
-   "vulnerabilityName": "Linux Kernel Unspecified Vulnerability",
-   "dateAdded": "2026-08-27",
-   "dueDate": "2026-08-30",
-   "shortDescription": "Linux Kernel contains an unspecified vulnerability that can allow for privilege escalation via IPv6 networking subsystem. This vulnerability can impact multiple products, including but not limited to Suse, Red Hat, and other products using Linux.",
-   "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-66384",
-   "vendorProject": "JFrog",
-   "product": "Artifactory",
-   "vulnerabilityName": "JFrog Artifactory Improper Limitation of a Pathname to a Restricted Directory Vulnerability",
-   "dateAdded": "2026-08-27",
-   "dueDate": "2026-09-10",
-   "shortDescription": "JFrog Artifactory contains an improper limitation of a pathname to a restricted directory vulnerability. This can allow an authenticated user to write data outside the intended Docker cache path under specific remote-repository conditions.",
-   "knownRansomware": false
   }
  ],
  "ransomwareTracked": 361,
  "watchlistHits": [],
  "dueSoon": [
   {
-   "cveID": "CVE-2015-3306",
-   "dueDate": "2026-10-11",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2015-5477",
-   "dueDate": "2026-10-11",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2016-3081",
-   "dueDate": "2026-10-11",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2021-3199",
-   "dueDate": "2026-10-11",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2023-22894",
-   "dueDate": "2026-10-11",
-   "diasRestantes": 0
-  },
-  {
    "cveID": "CVE-2026-86950",
    "dueDate": "2026-10-13",
-   "diasRestantes": 2
+   "diasRestantes": 1
   }
  ]
 }
