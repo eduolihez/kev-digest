@@ -4,7 +4,7 @@
  "generatedAt": "2026-10-09T00:58Z",
  "catalogVersion": "2026.10.08",
  "dateReleased": "2026-10-08T20:09:18.9833Z",
- "lastUpdated": "2026-10-12",
+ "lastUpdated": "2026-10-13",
  "totalTracked": 1739,
  "newToday": 0,
  "recentAdditions": [
@@ -726,7 +726,7 @@
   {
    "cveID": "CVE-2026-86950",
    "dueDate": "2026-10-13",
-   "diasRestantes": 1
+   "diasRestantes": 0
   }
  ]
 }
