@@ -1,13 +1,26 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-10-09T00:58Z",
- "catalogVersion": "2026.10.08",
- "dateReleased": "2026-10-08T20:09:18.9833Z",
+ "generatedAt": "2026-10-13T18:52Z",
+ "catalogVersion": "2026.10.13",
+ "dateReleased": "2026-10-13T16:36:26.1679Z",
  "lastUpdated": "2026-10-13",
- "totalTracked": 1739,
- "newToday": 0,
+ "totalTracked": 1740,
+ "newToday": 1,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-104935",
+   "vendorProject": "Ivanti",
+   "product": "Connect Secure",
+   "vulnerabilityName": "Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability",
+   "dateAdded": "2026-10-13",
+   "dueDate": "2026-10-16",
+   "shortDescription": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.",
+   "knownRansomware": false,
+   "cvss": 8.6,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1"
+  },
   {
    "cveID": "CVE-2015-5477",
    "vendorProject": "ISC",
@@ -727,6 +740,11 @@
    "cveID": "CVE-2026-86950",
    "dueDate": "2026-10-13",
    "diasRestantes": 0
+  },
+  {
+   "cveID": "CVE-2026-104935",
+   "dueDate": "2026-10-16",
+   "diasRestantes": 3
   }
  ]
 }
