@@ -1,13 +1,66 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-10-14T00:08Z",
- "catalogVersion": "2026.10.13",
- "dateReleased": "2026-10-13T19:10:43.6568Z",
+ "generatedAt": "2026-10-14T23:40Z",
+ "catalogVersion": "2026.10.14",
+ "dateReleased": "2026-10-14T19:27:28.0105Z",
  "lastUpdated": "2026-10-14",
- "totalTracked": 1741,
- "newToday": 1,
+ "totalTracked": 1745,
+ "newToday": 5,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-105134",
+   "vendorProject": "Ahsay",
+   "product": "AhsayCBS",
+   "vulnerabilityName": "Ahsay AhsayCBS Command Injection Vulnerability",
+   "dateAdded": "2026-10-14",
+   "dueDate": "2026-10-17",
+   "shortDescription": "Ahsay AhsayCBS contains a command injection vulnerability that could allow a remote attacker to execute operating system commands via manipulation of the random parameter in the Replication Receiver component’s /rps/api/json/UpdateReceivers.do endpoint. This vulnerability can be chained with CVE-2026-105133.",
+   "knownRansomware": false,
+   "cvss": 10.0,
+   "cvssSeverity": "Critical",
+   "cvssVersion": "3.1",
+   "epss": 0.01843,
+   "epssPercentile": 0.78594
+  },
+  {
+   "cveID": "CVE-2026-76519",
+   "vendorProject": "Cisco",
+   "product": "Secure Email Gateway",
+   "vulnerabilityName": "Cisco Secure Email Gateway Relative Path Traversal Vulnerability",
+   "dateAdded": "2026-10-14",
+   "dueDate": "2026-10-17",
+   "shortDescription": "Cisco Secure Email Gateway contains a relative path traversal vulnerability that could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.",
+   "knownRansomware": false,
+   "cvss": 9.8,
+   "cvssSeverity": "Critical",
+   "cvssVersion": "3.1"
+  },
+  {
+   "cveID": "CVE-2026-105133",
+   "vendorProject": "Ahsay",
+   "product": "AhsayCBS",
+   "vulnerabilityName": "Ahsay AhsayCBS Improper Authentication Vulnerability",
+   "dateAdded": "2026-10-14",
+   "dueDate": "2026-10-17",
+   "shortDescription": "Ahsay AhsayCBS contains an improper authentication vulnerability that could allow a remote attacker to bypass authentication via manipulation of the random parameter in the API component’s checkSysPwd function. This vulnerability can be chained with CVE-2026-105134.",
+   "knownRansomware": false,
+   "cvss": 7.3,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1",
+   "epss": 0.00383,
+   "epssPercentile": 0.30672
+  },
+  {
+   "cveID": "CVE-2026-0322",
+   "vendorProject": "Palo Alto Networks",
+   "product": "PAN-OS",
+   "vulnerabilityName": "Palo Alto Networks PAN-OS Code Injection Vulnerability",
+   "dateAdded": "2026-10-14",
+   "dueDate": "2026-10-17",
+   "shortDescription": "Palo Alto Networks PAN-OS contains a code injection vulnerability that could allow an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.",
+   "knownRansomware": false
+  },
   {
    "cveID": "CVE-2026-104935",
    "vendorProject": "Ivanti",
@@ -758,6 +811,26 @@
    "cveID": "CVE-2026-96951",
    "dueDate": "2026-10-16",
    "diasRestantes": 2
+  },
+  {
+   "cveID": "CVE-2026-0322",
+   "dueDate": "2026-10-17",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-105133",
+   "dueDate": "2026-10-17",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-105134",
+   "dueDate": "2026-10-17",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-76519",
+   "dueDate": "2026-10-17",
+   "diasRestantes": 3
   }
  ]
 }
