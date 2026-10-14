@@ -5,8 +5,15 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-10-13T18:52:52Z</updated>
+  <updated>2026-10-14T00:08:42Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-96951 · Microsoft Windows</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-96951"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-96951/2026-10-14T00:08:42Z</id>
+    <updated>2026-10-14T00:08:42Z</updated>
+    <summary>Microsoft Windows Shell contains a command injection vulnerability that allows an unauthorized attacker to bypass a security feature over a network.</summary>
+  </entry>
   <entry>
     <title>Nueva en KEV: CVE-2026-104935 · Ivanti Connect Secure</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-104935"/>
@@ -349,12 +356,5 @@
     <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-19490/2026-09-09T20:25:33Z</id>
     <updated>2026-09-09T20:25:33Z</updated>
     <summary>Citrix NetScaler ADC and NetScaler Gateway contain an authentication-bypass vulnerability involving an alternate path or channel. When the NetScaler appliance is configured as an AAA virtual server or as a Gateway (SSL VPN, ICA Proxy, CVPN, or RDP Proxy), an unauthenticated remote threat actor may be able to bypass authentication.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2025-25249 · Fortinet Multiple Products</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2025-25249"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2025-25249/2026-09-09T20:25:33Z</id>
-    <updated>2026-09-09T20:25:33Z</updated>
-    <summary>Fortinet FortiOS, FortiSwitchManager, and FortiSASE contain a heap-based buffer overflow vulnerability that allows an attacker to execute unauthorized code or commands via specially crafted packets.</summary>
   </entry>
 </feed>

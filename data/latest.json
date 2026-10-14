@@ -1,11 +1,11 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-10-13T18:52Z",
+ "generatedAt": "2026-10-14T00:08Z",
  "catalogVersion": "2026.10.13",
- "dateReleased": "2026-10-13T16:36:26.1679Z",
- "lastUpdated": "2026-10-13",
- "totalTracked": 1740,
+ "dateReleased": "2026-10-13T19:10:43.6568Z",
+ "lastUpdated": "2026-10-14",
+ "totalTracked": 1741,
  "newToday": 1,
  "recentAdditions": [
   {
@@ -18,6 +18,19 @@
    "shortDescription": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.",
    "knownRansomware": false,
    "cvss": 8.6,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1"
+  },
+  {
+   "cveID": "CVE-2026-96951",
+   "vendorProject": "Microsoft",
+   "product": "Windows",
+   "vulnerabilityName": "Microsoft Windows Command Injection Vulnerability",
+   "dateAdded": "2026-10-13",
+   "dueDate": "2026-10-16",
+   "shortDescription": "Microsoft Windows Shell contains a command injection vulnerability that allows an unauthorized attacker to bypass a security feature over a network.",
+   "knownRansomware": false,
+   "cvss": 8.8,
    "cvssSeverity": "High",
    "cvssVersion": "3.1"
   },
@@ -737,14 +750,14 @@
  "watchlistHits": [],
  "dueSoon": [
   {
-   "cveID": "CVE-2026-86950",
-   "dueDate": "2026-10-13",
-   "diasRestantes": 0
-  },
-  {
    "cveID": "CVE-2026-104935",
    "dueDate": "2026-10-16",
-   "diasRestantes": 3
+   "diasRestantes": 2
+  },
+  {
+   "cveID": "CVE-2026-96951",
+   "dueDate": "2026-10-16",
+   "diasRestantes": 2
   }
  ]
 }
