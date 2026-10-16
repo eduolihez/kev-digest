@@ -4,9 +4,9 @@
  "generatedAt": "2026-10-15T20:56Z",
  "catalogVersion": "2026.10.15",
  "dateReleased": "2026-10-15T17:00:11.2795Z",
- "lastUpdated": "2026-10-15",
+ "lastUpdated": "2026-10-16",
  "totalTracked": 1746,
- "newToday": 1,
+ "newToday": 0,
  "recentAdditions": [
   {
    "cveID": "CVE-2026-21589",
@@ -792,26 +792,6 @@
    "dueDate": "2026-09-05",
    "shortDescription": "SonicWall SMA1000 Appliances contains an OS command injection vulnerability that could enable a remote authenticated attacker as administrator to execute arbitrary OS commands, resulting in remote code execution.",
    "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-82078",
-   "vendorProject": "PaperCut",
-   "product": "NG/MF",
-   "vulnerabilityName": "PaperCut NG/MF Unsafe Reflection Vulnerability",
-   "dateAdded": "2026-08-31",
-   "dueDate": "2026-09-14",
-   "shortDescription": "PaperCut NG/MF contains an unsafe reflection vulnerability that allows an attacker to manipulate system configuration parameters and execute arbitrary Java bytecode residing on the application classpath under the security context of the PaperCut server process. This vulnerability can be chained with CVE-2026-81578.",
-   "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-81578",
-   "vendorProject": "PaperCut",
-   "product": "NG/MF",
-   "vulnerabilityName": "PaperCut NG/MF Missing Authentication for Critical Function Vulnerability",
-   "dateAdded": "2026-08-31",
-   "dueDate": "2026-09-14",
-   "shortDescription": "PaperCut NG/MF contains a missing authentication for critical function vulnerability which allows an unauthenticated remote attacker to modify certain system configurations. This vulnerability can be chained with CVE-2026-82078.",
-   "knownRansomware": false
   }
  ],
  "ransomwareTracked": 361,
@@ -820,37 +800,37 @@
   {
    "cveID": "CVE-2026-104935",
    "dueDate": "2026-10-16",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-96951",
    "dueDate": "2026-10-16",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-0322",
    "dueDate": "2026-10-17",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-105133",
    "dueDate": "2026-10-17",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-105134",
    "dueDate": "2026-10-17",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-76519",
    "dueDate": "2026-10-17",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-21589",
    "dueDate": "2026-10-18",
-   "diasRestantes": 3
+   "diasRestantes": 2
   }
  ]
 }
