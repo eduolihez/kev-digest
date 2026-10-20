@@ -5,8 +5,50 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-10-16T20:30:47Z</updated>
+  <updated>2026-10-20T23:36:56Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-96656 · Plex Media Server</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-96656"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-96656/2026-10-20T23:36:56Z</id>
+    <updated>2026-10-20T23:36:56Z</updated>
+    <summary>Plex Media Server contains an external control of file name or path vulnerability which can allow an admin user to write arbitrary files that may be executed on load. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96655.</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-96655 · Plex Media Server</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-96655"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-96655/2026-10-20T23:36:56Z</id>
+    <updated>2026-10-20T23:36:56Z</updated>
+    <summary>Plex Media Server contains a server-side request forgery (SSRF) vulnerability that could allow an authenticated user to request arbitrary internal or external addresses via the '/video/:/transcode/universal' path parameter. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96654, and CVE-2026-96656.</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-96654 · Plex Media Server</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-96654"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-96654/2026-10-20T23:36:56Z</id>
+    <updated>2026-10-20T23:36:56Z</updated>
+    <summary>Plex Media Server contains an improper neutralization of encoded URI schemes in a web page vulnerability that could allow an attacker to call other plugins' functions and supply their own parameters. This vulnerability can be chained with CVE-2026-96652, CVE-2026-96655, and CVE-2026-96656.</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-96652 · Plex Media Server</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-96652"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-96652/2026-10-20T23:36:56Z</id>
+    <updated>2026-10-20T23:36:56Z</updated>
+    <summary>Plex Media Server contains a server-side request forgery (SSRF) vulnerability which could allow an attacker using any X-Plex-Token value to include a full URL in the 'protocol' parameter and force the Plex server to POST to the attacker's chosen destination. This vulnerability can be chained with CVE-2026-96654, CVE-2026-96655, and CVE-2026-96656.</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-110936 · Siemens Software Center</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-110936"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-110936/2026-10-20T23:36:56Z</id>
+    <updated>2026-10-20T23:36:56Z</updated>
+    <summary>Siemens Software Center contains an uncontrolled search path element vulnerability that could allow an authenticated local attacker to place a specially crafted DLL in a directory that the application searches, leading to arbitrary code execution with the privileges of the affected application.</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-106931 · EG Secure Solutions SiteGuard Server Edition</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-106931"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-106931/2026-10-20T23:36:56Z</id>
+    <updated>2026-10-20T23:36:56Z</updated>
+    <summary>EG Secure Solutions SiteGuard Server Edition contains an OS command injection vulnerability which may allow an attacker to execute arbitrary OS commands with root or SYSTEM privileges on the system running the affected product.</summary>
+  </entry>
   <entry>
     <title>Nueva en KEV: CVE-2026-102764 · BeyondTrust Remote Support</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-102764"/>
@@ -314,47 +356,5 @@
     <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2026-42016/2026-09-16T16:09:01Z</id>
     <updated>2026-09-16T16:09:01Z</updated>
     <summary>Cambios: descripción</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-58704 · Google Pixel</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-58704"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-58704/2026-09-16T16:09:01Z</id>
-    <updated>2026-09-16T16:09:01Z</updated>
-    <summary>Google Pixel devices contain an improper authorization vulnerability in the cellular modem. A logic error may allow an attacker to bypass permission checks and escalate privileges.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-76461 · Cisco Secure Email Gateway</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-76461"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-76461/2026-09-14T21:29:19Z</id>
-    <updated>2026-09-14T21:29:19Z</updated>
-    <summary>Cisco AsyncOS software for Cisco Secure Email Gateway (SEG) contains a SQL injection vulnerability that could allow an unauthenticated, remote attacker to execute arbitrary commands with root privileges on the underlying operating system.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-85706 · GitLab Community Edition and Enterprise Edition</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-85706"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-85706/2026-09-11T20:27:14Z</id>
-    <updated>2026-09-11T20:27:14Z</updated>
-    <summary>GitLab Community Edition and Enterprise Edition contains a path traversal vulnerability that allows an unauthenticated user to read arbitrary files due to an improper path confinement and missing authentication enforcement in the repository commits API.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-84869 · ConnectWise ScreenConnect</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-84869"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-84869/2026-09-11T20:27:14Z</id>
-    <updated>2026-09-11T20:27:14Z</updated>
-    <summary>ConnectWise ScreenConnect contains both an improper privilege management and missing authorization vulnerability that may allow an attacker to file transfer and execution through an active remote sessions without authorization or host confirmation.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-42018 · JFrog Artifactory</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-42018"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-42018/2026-09-11T20:27:14Z</id>
-    <updated>2026-09-11T20:27:14Z</updated>
-    <summary>JFrog Artifactory contains an improper authentication vulnerability that could return an internal anonymous-user token to an unauthenticated caller when anonymous access is disabled, potentially exposing sensitive resources.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-42016 · JFrog Artifactory</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-42016"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-42016/2026-09-11T20:27:14Z</id>
-    <updated>2026-09-11T20:27:14Z</updated>
-    <summary>JFrog Artifactory contains an incorrect authorization vulnerability that allows leads to privilege escalation attack due to a validation check of the token signature/issuer and not the token’s scope.</summary>
   </entry>
 </feed>
