@@ -4,7 +4,7 @@
  "generatedAt": "2026-10-20T23:36Z",
  "catalogVersion": "2026.10.21",
  "dateReleased": "2026-10-21T14:04:39.8983Z",
- "lastUpdated": "2026-10-22",
+ "lastUpdated": "2026-10-23",
  "totalTracked": 1754,
  "newToday": 0,
  "recentAdditions": [
@@ -835,17 +835,17 @@
   {
    "cveID": "CVE-2026-106931",
    "dueDate": "2026-10-23",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-96654",
    "dueDate": "2026-10-23",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-96656",
    "dueDate": "2026-10-23",
-   "diasRestantes": 1
+   "diasRestantes": 0
   }
  ]
 }
