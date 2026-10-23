@@ -5,8 +5,22 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-10-20T23:36:56Z</updated>
+  <updated>2026-10-23T20:59:43Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-114625 · Arista VeloCloud Orchestrator</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-114625"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-114625/2026-10-23T20:59:43Z</id>
+    <updated>2026-10-23T20:59:43Z</updated>
+    <summary>Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-110447 · Collabora Collabora Online – Built-in CODE Server</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-110447"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-110447/2026-10-23T20:59:43Z</id>
+    <updated>2026-10-23T20:59:43Z</updated>
+    <summary>Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.</summary>
+  </entry>
   <entry>
     <title>Nueva en KEV: CVE-2026-96656 · Plex Media Server</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-96656"/>
@@ -340,20 +354,6 @@
     <title>Modificada: CVE-2026-84869 · ConnectWise ScreenConnect</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-84869"/>
     <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2026-84869/2026-09-16T16:09:01Z</id>
-    <updated>2026-09-16T16:09:01Z</updated>
-    <summary>Cambios: descripción</summary>
-  </entry>
-  <entry>
-    <title>Modificada: CVE-2026-67277 · MikroTik RouterOS</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-67277"/>
-    <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2026-67277/2026-09-16T16:09:01Z</id>
-    <updated>2026-09-16T16:09:01Z</updated>
-    <summary>Cambios: descripción</summary>
-  </entry>
-  <entry>
-    <title>Modificada: CVE-2026-42016 · JFrog Artifactory</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-42016"/>
-    <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2026-42016/2026-09-16T16:09:01Z</id>
     <updated>2026-09-16T16:09:01Z</updated>
     <summary>Cambios: descripción</summary>
   </entry>

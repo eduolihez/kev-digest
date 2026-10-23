@@ -1,13 +1,40 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-10-20T23:36Z",
- "catalogVersion": "2026.10.21",
- "dateReleased": "2026-10-21T14:04:39.8983Z",
+ "generatedAt": "2026-10-23T20:59Z",
+ "catalogVersion": "2026.10.23",
+ "dateReleased": "2026-10-23T19:30:18.9209Z",
  "lastUpdated": "2026-10-23",
- "totalTracked": 1754,
- "newToday": 0,
+ "totalTracked": 1756,
+ "newToday": 2,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-114625",
+   "vendorProject": "Arista",
+   "product": "VeloCloud Orchestrator",
+   "vulnerabilityName": "Arista VeloCloud Orchestrator SQL Injection Vulnerability",
+   "dateAdded": "2026-10-23",
+   "dueDate": "2026-10-26",
+   "shortDescription": "Arista VeloCloud Orchestrator on-prem contains a SQL injection vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.",
+   "knownRansomware": false,
+   "cvss": 9.9,
+   "cvssSeverity": "Critical",
+   "cvssVersion": "3.1",
+   "epss": 0.00555,
+   "epssPercentile": 0.45586
+  },
+  {
+   "cveID": "CVE-2026-110447",
+   "vendorProject": "Collabora",
+   "product": "Collabora Online – Built-in CODE Server",
+   "vulnerabilityName": "Collabora Online – Built-in CODE Server OS Command Injection Vulnerability",
+   "dateAdded": "2026-10-23",
+   "dueDate": "2026-10-26",
+   "shortDescription": "Collabora Collabora Online – Built-in CODE Server when used within the NextCloud platform contains an OS command injection vulnerability that allows for remote code execution when the CODE server isn't running.",
+   "knownRansomware": false,
+   "epss": 0.01225,
+   "epssPercentile": 0.68615
+  },
   {
    "cveID": "CVE-2026-106931",
    "vendorProject": "EG Secure Solutions",
@@ -846,6 +873,16 @@
    "cveID": "CVE-2026-96656",
    "dueDate": "2026-10-23",
    "diasRestantes": 0
+  },
+  {
+   "cveID": "CVE-2026-110447",
+   "dueDate": "2026-10-26",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-114625",
+   "dueDate": "2026-10-26",
+   "diasRestantes": 3
   }
  ]
 }
