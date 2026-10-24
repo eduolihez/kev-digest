@@ -4,9 +4,9 @@
  "generatedAt": "2026-10-23T20:59Z",
  "catalogVersion": "2026.10.23",
  "dateReleased": "2026-10-23T19:30:18.9209Z",
- "lastUpdated": "2026-10-23",
+ "lastUpdated": "2026-10-24",
  "totalTracked": 1756,
- "newToday": 2,
+ "newToday": 0,
  "recentAdditions": [
   {
    "cveID": "CVE-2026-114625",
@@ -798,91 +798,20 @@
    "cvssVersion": "3.1",
    "epss": 0.35946,
    "epssPercentile": 0.98374
-  },
-  {
-   "cveID": "CVE-2026-75650",
-   "vendorProject": "Adobe",
-   "product": "Commerce and Magento",
-   "vulnerabilityName": "Adobe Commerce and Magento Improper Neutralization of Special Elements Used in a Template Engine Vulnerability",
-   "dateAdded": "2026-09-08",
-   "dueDate": "2026-09-11",
-   "shortDescription": "Adobe Commerce and Magento Open Source contain an improper neutralization of special elements used in a template engine vulnerability that could allow an attacker to execute arbitrary code.",
-   "knownRansomware": false,
-   "cvss": 10.0,
-   "cvssSeverity": "Critical",
-   "cvssVersion": "3.1",
-   "epss": 0.00676,
-   "epssPercentile": 0.49973
-  },
-  {
-   "cveID": "CVE-2026-81963",
-   "vendorProject": "Microsoft",
-   "product": "Windows",
-   "vulnerabilityName": "Microsoft Windows Link Following Vulnerability",
-   "dateAdded": "2026-09-08",
-   "dueDate": "2026-09-22",
-   "shortDescription": "Microsoft Windows Update Stack contains a link following vulnerability that allows a local attacker to escalate privileges locally up to SYSTEM.",
-   "knownRansomware": false,
-   "cvss": 7.8,
-   "cvssSeverity": "High",
-   "cvssVersion": "3.1"
-  },
-  {
-   "cveID": "CVE-2026-86218",
-   "vendorProject": "N-able",
-   "product": "N-central",
-   "vulnerabilityName": "N-able N-central Static Code Injection Vulnerability",
-   "dateAdded": "2026-09-08",
-   "dueDate": "2026-09-11",
-   "shortDescription": "N-able N-central contains a static code injection vulnerability that could allow for pre-authentication remote code execution.",
-   "knownRansomware": false,
-   "cvss": 9.8,
-   "cvssSeverity": "Critical",
-   "cvssVersion": "3.1",
-   "epss": 0.00411,
-   "epssPercentile": 0.34333
-  },
-  {
-   "cveID": "CVE-2026-85880",
-   "vendorProject": "Microsoft",
-   "product": "Windows",
-   "vulnerabilityName": "Microsoft Windows Heap-Based Buffer Overflow Vulnerability",
-   "dateAdded": "2026-09-08",
-   "dueDate": "2026-09-22",
-   "shortDescription": "Microsoft Windows Advanced Local Procedure Call contains a heap-based buffer overflow vulnerability that allows an attacker to elevate privileges locally.",
-   "knownRansomware": false,
-   "cvss": 7.8,
-   "cvssSeverity": "High",
-   "cvssVersion": "3.1"
   }
  ],
  "ransomwareTracked": 361,
  "watchlistHits": [],
  "dueSoon": [
   {
-   "cveID": "CVE-2026-106931",
-   "dueDate": "2026-10-23",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2026-96654",
-   "dueDate": "2026-10-23",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2026-96656",
-   "dueDate": "2026-10-23",
-   "diasRestantes": 0
-  },
-  {
    "cveID": "CVE-2026-110447",
    "dueDate": "2026-10-26",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-114625",
    "dueDate": "2026-10-26",
-   "diasRestantes": 3
+   "diasRestantes": 2
   }
  ]
 }
