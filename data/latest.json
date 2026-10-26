@@ -4,7 +4,7 @@
  "generatedAt": "2026-10-23T20:59Z",
  "catalogVersion": "2026.10.23",
  "dateReleased": "2026-10-23T19:30:18.9209Z",
- "lastUpdated": "2026-10-25",
+ "lastUpdated": "2026-10-26",
  "totalTracked": 1756,
  "newToday": 0,
  "recentAdditions": [
@@ -717,30 +717,6 @@
    "dueDate": "2026-09-14",
    "shortDescription": "GitLab Community Edition and Enterprise Edition contains a path traversal vulnerability that allows an unauthenticated user to read arbitrary files due to an improper path confinement and missing authentication enforcement in the repository commits API.",
    "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-86060",
-   "vendorProject": "MikroTik",
-   "product": "RouterOS",
-   "vulnerabilityName": "MikroTik RouterOS Improper Neutralization of Argument Delimiters in a Command Vulnerability",
-   "dateAdded": "2026-09-10",
-   "dueDate": "2026-09-13",
-   "shortDescription": "MikroTik RouterOS contains an improper neutralization of argument delimiters in a command vulnerability which allows an attacker to change the trusted RouterOS policy mask, leading to privilege escalation.",
-   "knownRansomware": false,
-   "epss": 0.00401,
-   "epssPercentile": 0.33627
-  },
-  {
-   "cveID": "CVE-2026-67277",
-   "vendorProject": "MikroTik",
-   "product": "RouterOS",
-   "vulnerabilityName": "MikroTik RouterOS Missing Authentication for Critical Function Vulnerability",
-   "dateAdded": "2026-09-10",
-   "dueDate": "2026-09-13",
-   "shortDescription": "MikroTik RouterOS contains a missing authentication for critical function vulnerability which allows kernel memory disclosure and denial of service in the btest service.",
-   "knownRansomware": false,
-   "epss": 0.00435,
-   "epssPercentile": 0.36743
   }
  ],
  "ransomwareTracked": 361,
@@ -749,12 +725,12 @@
   {
    "cveID": "CVE-2026-110447",
    "dueDate": "2026-10-26",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-114625",
    "dueDate": "2026-10-26",
-   "diasRestantes": 1
+   "diasRestantes": 0
   }
  ]
 }
