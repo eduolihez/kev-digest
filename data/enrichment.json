@@ -15,6 +15,8 @@
   "CVE-2026-105133": {"cvss": 7.3, "cvssSeverity": "High", "cvssVersion": "3.1", "epss": 0.00383, "epssPercentile": 0.30672},
   "CVE-2026-105134": {"cvss": 10.0, "cvssSeverity": "Critical", "cvssVersion": "3.1", "epss": 0.01843, "epssPercentile": 0.78594},
   "CVE-2026-106931": {"cvss": 7.8, "cvssSeverity": "High", "cvssVersion": "3.0", "epss": 0.00662, "epssPercentile": 0.50774},
+  "CVE-2026-109618": {"cvss": 9.8, "cvssSeverity": "Critical", "cvssVersion": "3.1", "epss": 0.99981, "epssPercentile": 0.99981},
+  "CVE-2026-109619": {"cvss": 8.1, "cvssSeverity": "High", "cvssVersion": "3.1", "epss": 0.99997, "epssPercentile": 0.99989},
   "CVE-2026-110447": {"epss": 0.01225, "epssPercentile": 0.68615},
   "CVE-2026-110936": {"cvss": 6.7, "cvssSeverity": "Medium", "cvssVersion": "3.1", "epss": 0.00135, "epssPercentile": 0.02673},
   "CVE-2026-114625": {"cvss": 9.9, "cvssSeverity": "Critical", "cvssVersion": "3.1", "epss": 0.00555, "epssPercentile": 0.45586},

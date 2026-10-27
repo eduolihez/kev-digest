@@ -5,8 +5,22 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-10-23T20:59:43Z</updated>
+  <updated>2026-10-27T00:13:46Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-109619 · PHP Group PHP</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-109619"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-109619/2026-10-27T00:13:46Z</id>
+    <updated>2026-10-27T00:13:46Z</updated>
+    <summary>PHP contains a stale internal request-state vulnerability that allows for unauthenticated remote code execution.</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-109618 · PHP Group PHP</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-109618"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-109618/2026-10-27T00:13:46Z</id>
+    <updated>2026-10-27T00:13:46Z</updated>
+    <summary>PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution.</summary>
+  </entry>
   <entry>
     <title>Nueva en KEV: CVE-2026-114625 · Arista VeloCloud Orchestrator</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-114625"/>
@@ -342,19 +356,5 @@
     <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-76460/2026-09-16T20:52:54Z</id>
     <updated>2026-09-16T20:52:54Z</updated>
     <summary>Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) contain an incorrect use of privileged APIs vulnerability that could allow an unauthenticated, remote attacker to gain unauthorized access to the affected device by bypassing the web-based management interface.</summary>
-  </entry>
-  <entry>
-    <title>Modificada: CVE-2026-86060 · MikroTik RouterOS</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-86060"/>
-    <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2026-86060/2026-09-16T16:09:01Z</id>
-    <updated>2026-09-16T16:09:01Z</updated>
-    <summary>Cambios: descripción</summary>
-  </entry>
-  <entry>
-    <title>Modificada: CVE-2026-84869 · ConnectWise ScreenConnect</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-84869"/>
-    <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2026-84869/2026-09-16T16:09:01Z</id>
-    <updated>2026-09-16T16:09:01Z</updated>
-    <summary>Cambios: descripción</summary>
   </entry>
 </feed>
