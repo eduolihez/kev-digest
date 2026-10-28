@@ -1,13 +1,43 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-10-27T21:49Z",
- "catalogVersion": "2026.10.27",
- "dateReleased": "2026-10-27T19:00:02.2307Z",
+ "generatedAt": "2026-10-28T20:03Z",
+ "catalogVersion": "2026.10.28",
+ "dateReleased": "2026-10-28T19:00:04.8077Z",
  "lastUpdated": "2026-10-28",
- "totalTracked": 1760,
- "newToday": 0,
+ "totalTracked": 1762,
+ "newToday": 2,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-41709",
+   "vendorProject": "Broadcom",
+   "product": "VMware ESX",
+   "vulnerabilityName": "Broadcom VMWare ESX Insufficient Logging Vulnerability",
+   "dateAdded": "2026-10-28",
+   "dueDate": "2026-11-11",
+   "shortDescription": "Broadcom VMWare ESX contains an insufficient logging vulnerability that could allow a malicious actor with admin access to perform certain operations without being logged.",
+   "knownRansomware": false,
+   "cvss": 2.7,
+   "cvssSeverity": "Low",
+   "cvssVersion": "3.1",
+   "epss": 0.00297,
+   "epssPercentile": 0.22291
+  },
+  {
+   "cveID": "CVE-2026-46300",
+   "vendorProject": "Linux",
+   "product": "Kernel",
+   "vulnerabilityName": "Linux Kernel Missing Initialization of a Variable Vulnerability",
+   "dateAdded": "2026-10-28",
+   "dueDate": "2026-10-31",
+   "shortDescription": "Linux Kernel contains a missing initialization of a variable vulnerability that could allow for unintended modification of page-cache-backed data via failure to preserve the shared-fragment marker during socket buffer coalescing, causing ESP input processing to decrypt shared fragments in place. This vulnerability can be chained with CVE-2026-109618 and CVE-2026-109619 to implant PHP webshells and run commands as root.",
+   "knownRansomware": false,
+   "cvss": 7.8,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1",
+   "epss": 0.10192,
+   "epssPercentile": 0.95651
+  },
   {
    "cveID": "CVE-2026-48356",
    "vendorProject": "Adobe",
@@ -733,6 +763,11 @@
    "cveID": "CVE-2026-109619",
    "dueDate": "2026-10-29",
    "diasRestantes": 1
+  },
+  {
+   "cveID": "CVE-2026-46300",
+   "dueDate": "2026-10-31",
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2026-110936",

@@ -5,8 +5,22 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-10-27T21:49:42Z</updated>
+  <updated>2026-10-28T20:03:52Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-46300 · Linux Kernel</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-46300"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-46300/2026-10-28T20:03:52Z</id>
+    <updated>2026-10-28T20:03:52Z</updated>
+    <summary>Linux Kernel contains a missing initialization of a variable vulnerability that could allow for unintended modification of page-cache-backed data via failure to preserve the shared-fragment marker during socket buffer coalescing, causing ESP input processing to decrypt shared fragments in place. This vulnerability can be chained with CVE-2026-109618 and CVE-2026-109619 to implant PHP webshells and</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-41709 · Broadcom VMware ESX</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-41709"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-41709/2026-10-28T20:03:52Z</id>
+    <updated>2026-10-28T20:03:52Z</updated>
+    <summary>Broadcom VMWare ESX contains an insufficient logging vulnerability that could allow a malicious actor with admin access to perform certain operations without being logged.</summary>
+  </entry>
   <entry>
     <title>Nueva en KEV: CVE-2026-48356 · Adobe Commerce and Magento</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-48356"/>
@@ -342,19 +356,5 @@
     <id>tag:eduolihez.github.io,2026:kev/new/CVE-2025-39682/2026-09-18T20:24:36Z</id>
     <updated>2026-09-18T20:24:36Z</updated>
     <summary>Linux Kernel contains an improper check for unusual or exceptional conditions vulnerability in the TLS receive path which allows a zero-length record retrieved from the rx_list to bypass the intended recvmsg() record-type handling, potentially causing subsequent TLS records to be processed using incorrect zero-copy and queuing assumptions. The impacted product(s) could be end-of-life (EoL) and/or </summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-53266 · Linux Kernel</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-53266"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-53266/2026-09-18T15:50:30Z</id>
-    <updated>2026-09-18T15:50:30Z</updated>
-    <summary>Linux Kernel contains an out-of-bounds write vulnerability in the ebtables SNAT target which allows an ARP sender hardware address rewrite to write directly into a nonlinear socket-buffer fragment backed by a splice-imported file page. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2025-39964 · Linux Kernel</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2025-39964"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2025-39964/2026-09-18T15:50:30Z</id>
-    <updated>2026-09-18T15:50:30Z</updated>
-    <summary>Linux Kernel contains a race condition vulnerability which allows concurrent writes to the same AF_ALG socket causing data to be unpredictably interleaved and creating inconsistencies in the socket's internal state.</summary>
   </entry>
 </feed>
