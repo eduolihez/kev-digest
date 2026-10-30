@@ -1,13 +1,38 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-10-30T00:36Z",
- "catalogVersion": "2026.10.29",
- "dateReleased": "2026-10-29T19:09:34.4003Z",
+ "generatedAt": "2026-10-30T17:42Z",
+ "catalogVersion": "2026.10.30",
+ "dateReleased": "2026-10-30T17:02:45.3665Z",
  "lastUpdated": "2026-10-30",
- "totalTracked": 1764,
- "newToday": 2,
+ "totalTracked": 1766,
+ "newToday": 4,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-118527",
+   "vendorProject": "Ivanti",
+   "product": "Connect Secure",
+   "vulnerabilityName": "Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability",
+   "dateAdded": "2026-10-30",
+   "dueDate": "2026-11-13",
+   "shortDescription": "Ivanti Connect Secure contains a generation of predictable numbers or identifiers vulnerability that allows a remote authenticated attacker to upload files with attacker-controlled content to a known location on disk. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-111357.",
+   "knownRansomware": false
+  },
+  {
+   "cveID": "CVE-2026-111357",
+   "vendorProject": "Ivanti",
+   "product": "Connect Secure",
+   "vulnerabilityName": "Ivanti Connect Secure Missing Authentication for Critical Function Vulnerability",
+   "dateAdded": "2026-10-30",
+   "dueDate": "2026-11-02",
+   "shortDescription": "Ivanti Connect Secure contains a missing authentication for critical function vulnerability that could allow a local authenticated attacker to escalate their privileges. This vulnerability can be chained with CVE-2026-104935 and CVE-2026-118527.",
+   "knownRansomware": false,
+   "cvss": 7.0,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1",
+   "epss": 0.00316,
+   "epssPercentile": 0.24569
+  },
   {
    "cveID": "CVE-2026-97229",
    "vendorProject": "GitLab",
@@ -785,6 +810,11 @@
    "cveID": "CVE-2026-97229",
    "dueDate": "2026-11-01",
    "diasRestantes": 2
+  },
+  {
+   "cveID": "CVE-2026-111357",
+   "dueDate": "2026-11-02",
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2026-110936",
