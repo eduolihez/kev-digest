@@ -1,13 +1,43 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-10-28T20:03Z",
- "catalogVersion": "2026.10.28",
- "dateReleased": "2026-10-28T19:00:04.8077Z",
- "lastUpdated": "2026-10-29",
- "totalTracked": 1762,
- "newToday": 0,
+ "generatedAt": "2026-10-30T00:36Z",
+ "catalogVersion": "2026.10.29",
+ "dateReleased": "2026-10-29T19:09:34.4003Z",
+ "lastUpdated": "2026-10-30",
+ "totalTracked": 1764,
+ "newToday": 2,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-97229",
+   "vendorProject": "GitLab",
+   "product": "Community Edition and Enterprise Edition",
+   "vulnerabilityName": "GitLab Community Edition and Enterprise Edition Integer Overflow or Wraparound Vulnerability",
+   "dateAdded": "2026-10-29",
+   "dueDate": "2026-11-01",
+   "shortDescription": "GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation.",
+   "knownRansomware": false,
+   "cvss": 10.0,
+   "cvssSeverity": "Critical",
+   "cvssVersion": "3.1",
+   "epss": 0.18427,
+   "epssPercentile": 0.97229
+  },
+  {
+   "cveID": "CVE-2026-76418",
+   "vendorProject": "Cisco",
+   "product": "Secure Firewall ASA Software and Cisco Secure FTD Software",
+   "vulnerabilityName": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software Unchecked Return Value to NULL Pointer Dereference Vulnerability",
+   "dateAdded": "2026-10-29",
+   "dueDate": "2026-11-01",
+   "shortDescription": "Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition.",
+   "knownRansomware": false,
+   "cvss": 8.6,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1",
+   "epss": 0.00574,
+   "epssPercentile": 0.47308
+  },
   {
    "cveID": "CVE-2026-41709",
    "vendorProject": "Broadcom",
@@ -736,53 +766,40 @@
    "dueDate": "2026-09-19",
    "shortDescription": "Acronis Backup plugin for cPanel & WHM and extension for Plesk contains an incorrect default permissions vulnerability that could allow for privilege escalation.",
    "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-76461",
-   "vendorProject": "Cisco",
-   "product": "Secure Email Gateway",
-   "vulnerabilityName": "Cisco Secure Email Gateway SQL Injection Vulnerability",
-   "dateAdded": "2026-09-14",
-   "dueDate": "2026-09-17",
-   "shortDescription": "Cisco AsyncOS software for Cisco Secure Email Gateway (SEG) contains a SQL injection vulnerability that could allow an unauthenticated, remote attacker to execute arbitrary commands with root privileges on the underlying operating system.",
-   "knownRansomware": false,
-   "cvss": 9.8,
-   "cvssSeverity": "Critical",
-   "cvssVersion": "3.1"
   }
  ],
  "ransomwareTracked": 361,
  "watchlistHits": [],
  "dueSoon": [
   {
-   "cveID": "CVE-2026-109618",
-   "dueDate": "2026-10-29",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2026-109619",
-   "dueDate": "2026-10-29",
-   "diasRestantes": 0
-  },
-  {
    "cveID": "CVE-2026-46300",
    "dueDate": "2026-10-31",
+   "diasRestantes": 1
+  },
+  {
+   "cveID": "CVE-2026-76418",
+   "dueDate": "2026-11-01",
+   "diasRestantes": 2
+  },
+  {
+   "cveID": "CVE-2026-97229",
+   "dueDate": "2026-11-01",
    "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-110936",
    "dueDate": "2026-11-03",
-   "diasRestantes": 5
+   "diasRestantes": 4
   },
   {
    "cveID": "CVE-2026-96652",
    "dueDate": "2026-11-03",
-   "diasRestantes": 5
+   "diasRestantes": 4
   },
   {
    "cveID": "CVE-2026-96655",
    "dueDate": "2026-11-03",
-   "diasRestantes": 5
+   "diasRestantes": 4
   }
  ]
 }

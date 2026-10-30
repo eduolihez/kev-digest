@@ -5,8 +5,22 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-10-28T20:03:52Z</updated>
+  <updated>2026-10-30T00:36:36Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-97229 · GitLab Community Edition and Enterprise Edition</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-97229"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-97229/2026-10-30T00:36:36Z</id>
+    <updated>2026-10-30T00:36:36Z</updated>
+    <summary>GitLab Community Edition and Enterprise Edition contain a integer overflow or wraparound vulnerability that could allow an unauthenticated user to execute arbitrary code on the GitLab server via a specially crafted regular expression in a CI/CD configuration, due to insufficient regular expression validation.</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-76418 · Cisco Secure Firewall ASA Software and Cisco Secure FTD Software</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-76418"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-76418/2026-10-30T00:36:36Z</id>
+    <updated>2026-10-30T00:36:36Z</updated>
+    <summary>Cisco Secure Firewall ASA Software and Cisco Secure FTD Software contains an unchecked return value to NULL pointer dereference vulnerability that could allow an unauthenticated, remote attacker to cause the device to reload unexpectedly, resulting in a denial of service (DoS) condition.</summary>
+  </entry>
   <entry>
     <title>Nueva en KEV: CVE-2026-46300 · Linux Kernel</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-46300"/>
@@ -342,19 +356,5 @@
     <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-85102/2026-09-22T20:53:44Z</id>
     <updated>2026-09-22T20:53:44Z</updated>
     <summary>Check Point Security Gateway and Check Point Spark Firewall using Site to Site VPN or Remote Access VPN contain an improper certificate validation vulnerability which could allow an unauthenticated remote attacker to execute arbitrary code on the Gateway.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-7273 · Zyxel GS1900 Series Switches</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-7273"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-7273/2026-09-21T19:51:19Z</id>
-    <updated>2026-09-21T19:51:19Z</updated>
-    <summary>Zyxel GS1900 series switches contain a stack-based buffer overflow vulnerability in the CGI program which could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2025-39682 · Linux Kernel</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2025-39682"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2025-39682/2026-09-18T20:24:36Z</id>
-    <updated>2026-09-18T20:24:36Z</updated>
-    <summary>Linux Kernel contains an improper check for unusual or exceptional conditions vulnerability in the TLS receive path which allows a zero-length record retrieved from the rx_list to bypass the intended recvmsg() record-type handling, potentially causing subsequent TLS records to be processed using incorrect zero-copy and queuing assumptions. The impacted product(s) could be end-of-life (EoL) and/or </summary>
   </entry>
 </feed>
