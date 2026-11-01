@@ -4,7 +4,7 @@
  "generatedAt": "2026-10-30T17:42Z",
  "catalogVersion": "2026.10.30",
  "dateReleased": "2026-10-30T17:02:45.3665Z",
- "lastUpdated": "2026-10-31",
+ "lastUpdated": "2026-11-01",
  "totalTracked": 1766,
  "newToday": 0,
  "recentAdditions": [
@@ -756,80 +756,40 @@
    "cvssVersion": "3.1",
    "epss": 0.00505,
    "epssPercentile": 0.41914
-  },
-  {
-   "cveID": "CVE-2026-58704",
-   "vendorProject": "Google",
-   "product": "Pixel",
-   "vulnerabilityName": "Google Pixel Improper Authorization Vulnerability",
-   "dateAdded": "2026-09-16",
-   "dueDate": "2026-09-19",
-   "shortDescription": "Google Pixel devices contain an improper authorization vulnerability in the cellular modem. A logic error may allow an attacker to bypass permission checks and escalate privileges.",
-   "knownRansomware": false,
-   "cvss": 8.0,
-   "cvssSeverity": "High",
-   "cvssVersion": "3.1",
-   "epss": 0.00112,
-   "epssPercentile": 0.01564
-  },
-  {
-   "cveID": "CVE-2026-76460",
-   "vendorProject": "Cisco",
-   "product": "Identity Services Engine",
-   "vulnerabilityName": "Cisco Identity Services Engine Incorrect Use of Privileged APIs Vulnerability",
-   "dateAdded": "2026-09-16",
-   "dueDate": "2026-09-19",
-   "shortDescription": "Cisco Identity Services Engine (ISE) and Cisco ISE Passive Identity Connector (ISE-PIC) contain an incorrect use of privileged APIs vulnerability that could allow an unauthenticated, remote attacker to gain unauthorized access to the affected device by bypassing the web-based management interface.",
-   "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-87886",
-   "vendorProject": "Acronis",
-   "product": "Backup",
-   "vulnerabilityName": "Acronis Backup Incorrect Default Permissions Vulnerability",
-   "dateAdded": "2026-09-16",
-   "dueDate": "2026-09-19",
-   "shortDescription": "Acronis Backup plugin for cPanel & WHM and extension for Plesk contains an incorrect default permissions vulnerability that could allow for privilege escalation.",
-   "knownRansomware": false
   }
  ],
  "ransomwareTracked": 361,
  "watchlistHits": [],
  "dueSoon": [
   {
-   "cveID": "CVE-2026-46300",
-   "dueDate": "2026-10-31",
-   "diasRestantes": 0
-  },
-  {
    "cveID": "CVE-2026-76418",
    "dueDate": "2026-11-01",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-97229",
    "dueDate": "2026-11-01",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-111357",
    "dueDate": "2026-11-02",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-110936",
    "dueDate": "2026-11-03",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-96652",
    "dueDate": "2026-11-03",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-96655",
    "dueDate": "2026-11-03",
-   "diasRestantes": 3
+   "diasRestantes": 2
   }
  ]
 }
