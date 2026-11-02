@@ -4,7 +4,7 @@
  "generatedAt": "2026-10-30T17:42Z",
  "catalogVersion": "2026.10.30",
  "dateReleased": "2026-10-30T17:02:45.3665Z",
- "lastUpdated": "2026-11-01",
+ "lastUpdated": "2026-11-02",
  "totalTracked": 1766,
  "newToday": 0,
  "recentAdditions": [
@@ -762,34 +762,24 @@
  "watchlistHits": [],
  "dueSoon": [
   {
-   "cveID": "CVE-2026-76418",
-   "dueDate": "2026-11-01",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2026-97229",
-   "dueDate": "2026-11-01",
-   "diasRestantes": 0
-  },
-  {
    "cveID": "CVE-2026-111357",
    "dueDate": "2026-11-02",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-110936",
    "dueDate": "2026-11-03",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-96652",
    "dueDate": "2026-11-03",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-96655",
    "dueDate": "2026-11-03",
-   "diasRestantes": 2
+   "diasRestantes": 1
   }
  ]
 }
