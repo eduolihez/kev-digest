@@ -1,10 +1,10 @@
 {
  "schema": 3,
- "catalog_version": "2026.10.30",
- "date_released": "2026-10-30T17:02:45.3665Z",
- "last_change": "2026-11-03 05:24 UTC",
- "count": 1766,
- "announced_due": ["CVE-2015-3306", "CVE-2015-5477", "CVE-2016-3081", "CVE-2021-3199", "CVE-2023-22894", "CVE-2025-61624", "CVE-2026-0322", "CVE-2026-102489", "CVE-2026-102490", "CVE-2026-102764", "CVE-2026-104935", "CVE-2026-105133", "CVE-2026-105134", "CVE-2026-106931", "CVE-2026-109618", "CVE-2026-109619", "CVE-2026-110447", "CVE-2026-110936", "CVE-2026-111357", "CVE-2026-111497", "CVE-2026-114625", "CVE-2026-21589", "CVE-2026-46300", "CVE-2026-48356", "CVE-2026-76418", "CVE-2026-76519", "CVE-2026-86950", "CVE-2026-88779", "CVE-2026-96652", "CVE-2026-96654", "CVE-2026-96655", "CVE-2026-96656", "CVE-2026-96951", "CVE-2026-97229"],
+ "catalog_version": "2026.11.03",
+ "date_released": "2026-11-03T20:00:24.8741Z",
+ "last_change": "2026-11-03 20:46 UTC",
+ "count": 1767,
+ "announced_due": ["CVE-2015-3306", "CVE-2015-5477", "CVE-2016-3081", "CVE-2021-3199", "CVE-2023-22894", "CVE-2025-61624", "CVE-2026-0322", "CVE-2026-102489", "CVE-2026-102490", "CVE-2026-102764", "CVE-2026-104935", "CVE-2026-105133", "CVE-2026-105134", "CVE-2026-106931", "CVE-2026-109618", "CVE-2026-109619", "CVE-2026-110447", "CVE-2026-110936", "CVE-2026-111357", "CVE-2026-111497", "CVE-2026-114625", "CVE-2026-119977", "CVE-2026-21589", "CVE-2026-46300", "CVE-2026-48356", "CVE-2026-76418", "CVE-2026-76519", "CVE-2026-86950", "CVE-2026-88779", "CVE-2026-96652", "CVE-2026-96654", "CVE-2026-96655", "CVE-2026-96656", "CVE-2026-96951", "CVE-2026-97229"],
  "entries": {
   "CVE-2002-0367": {"dateAdded": "2022-03-03", "dueDate": "2022-03-24", "knownRansomwareCampaignUse": "Unknown", "product": "Windows", "requiredAction#": "975dbe03c141", "shortDescription#": "ba5f1f8e9b35", "vendorProject": "Microsoft", "vulnerabilityName": "Microsoft Windows Privilege Escalation Vulnerability"},
   "CVE-2004-0210": {"dateAdded": "2022-03-03", "dueDate": "2022-03-24", "knownRansomwareCampaignUse": "Unknown", "product": "Windows", "requiredAction#": "975dbe03c141", "shortDescription#": "d94ad5efc92d", "vendorProject": "Microsoft", "vulnerabilityName": "Microsoft Windows Privilege Escalation Vulnerability"},
@@ -1599,6 +1599,7 @@
   "CVE-2026-114625": {"dateAdded": "2026-10-23", "dueDate": "2026-10-26", "knownRansomwareCampaignUse": "Unknown", "product": "VeloCloud Orchestrator", "requiredAction#": "ba0d649eb29b", "shortDescription#": "558c2c6c3da7", "vendorProject": "Arista", "vulnerabilityName": "Arista VeloCloud Orchestrator SQL Injection Vulnerability"},
   "CVE-2026-11645": {"dateAdded": "2026-06-09", "dueDate": "2026-06-23", "knownRansomwareCampaignUse": "Unknown", "product": "Chromium V8", "requiredAction#": "f09df147152e", "shortDescription#": "1063fafa3e1b", "vendorProject": "Google", "vulnerabilityName": "Google Chromium V8 Out-of-Bounds Read and Write Vulnerability"},
   "CVE-2026-118527": {"dateAdded": "2026-10-30", "dueDate": "2026-11-13", "knownRansomwareCampaignUse": "Unknown", "product": "Connect Secure", "requiredAction#": "ba0d649eb29b", "shortDescription#": "f89dbd795a13", "vendorProject": "Ivanti", "vulnerabilityName": "Ivanti Connect Secure Generation of Predictable Numbers or Identifiers Vulnerability"},
+  "CVE-2026-119977": {"dateAdded": "2026-11-03", "dueDate": "2026-11-06", "knownRansomwareCampaignUse": "Unknown", "product": "WordPress Core", "requiredAction#": "ba0d649eb29b", "shortDescription#": "ef61b3fab53e", "vendorProject": "WordPress", "vulnerabilityName": "WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability"},
   "CVE-2026-12569": {"dateAdded": "2026-06-25", "dueDate": "2026-06-28", "knownRansomwareCampaignUse": "Known", "product": "Windchill and FlexPLM", "requiredAction#": "ba0d649eb29b", "shortDescription#": "d722871df20e", "vendorProject": "PTC", "vulnerabilityName": "PTC Windchill and FlexPLM Improper Input Validation Vulnerability"},
   "CVE-2026-1281": {"dateAdded": "2026-01-29", "dueDate": "2026-02-01", "knownRansomwareCampaignUse": "Unknown", "product": "Endpoint Manager Mobile (EPMM)", "requiredAction#": "f09df147152e", "shortDescription#": "e3cbfbd714e6", "vendorProject": "Ivanti", "vulnerabilityName": "Ivanti Endpoint Manager Mobile (EPMM) Code Injection Vulnerability"},
   "CVE-2026-1340": {"dateAdded": "2026-04-08", "dueDate": "2026-04-11", "knownRansomwareCampaignUse": "Unknown", "product": "Endpoint Manager Mobile (EPMM)", "requiredAction#": "f09df147152e", "shortDescription#": "e3cbfbd714e6", "vendorProject": "Ivanti", "vulnerabilityName": "Ivanti Endpoint Manager Mobile (EPMM) Code Injection Vulnerability"},

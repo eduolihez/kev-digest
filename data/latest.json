@@ -1,13 +1,28 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-11-03T05:24Z",
- "catalogVersion": "2026.10.30",
- "dateReleased": "2026-10-30T17:02:45.3665Z",
+ "generatedAt": "2026-11-03T20:46Z",
+ "catalogVersion": "2026.11.03",
+ "dateReleased": "2026-11-03T20:00:24.8741Z",
  "lastUpdated": "2026-11-03",
- "totalTracked": 1766,
- "newToday": 0,
+ "totalTracked": 1767,
+ "newToday": 1,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-119977",
+   "vendorProject": "WordPress",
+   "product": "WordPress Core",
+   "vulnerabilityName": "WordPress WordPress Core Time-of-check Time-of-use (TOCTOU) Race Condition Vulnerability",
+   "dateAdded": "2026-11-03",
+   "dueDate": "2026-11-06",
+   "shortDescription": "WordPress WordPress Core contains a time-of-check time-of-use (TOCTOU) race condition vulnerability that could allow unauthenticated attackers to execute code on the server during the upgrade window. This is due to predictable, web-accessible staging paths used during full-package core upgrades.",
+   "knownRansomware": false,
+   "cvss": 8.1,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1",
+   "epss": 0.006,
+   "epssPercentile": 0.48751
+  },
   {
    "cveID": "CVE-2026-118527",
    "vendorProject": "Ivanti",
@@ -730,6 +745,11 @@
    "cveID": "CVE-2026-96655",
    "dueDate": "2026-11-03",
    "diasRestantes": 0
+  },
+  {
+   "cveID": "CVE-2026-119977",
+   "dueDate": "2026-11-06",
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2026-111497",
