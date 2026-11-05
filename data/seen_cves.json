@@ -1,9 +1,9 @@
 {
  "schema": 3,
- "catalog_version": "2026.11.03",
- "date_released": "2026-11-03T20:00:24.8741Z",
- "last_change": "2026-11-04 01:01 UTC",
- "count": 1767,
+ "catalog_version": "2026.11.04",
+ "date_released": "2026-11-04T20:00:05.774Z",
+ "last_change": "2026-11-05 01:16 UTC",
+ "count": 1768,
  "announced_due": ["CVE-2015-3306", "CVE-2015-5477", "CVE-2016-3081", "CVE-2021-3199", "CVE-2023-22894", "CVE-2025-61624", "CVE-2026-0322", "CVE-2026-102764", "CVE-2026-104935", "CVE-2026-105133", "CVE-2026-105134", "CVE-2026-106931", "CVE-2026-109618", "CVE-2026-109619", "CVE-2026-110447", "CVE-2026-110936", "CVE-2026-111357", "CVE-2026-111497", "CVE-2026-114625", "CVE-2026-119977", "CVE-2026-21589", "CVE-2026-41709", "CVE-2026-46300", "CVE-2026-48356", "CVE-2026-76418", "CVE-2026-76519", "CVE-2026-86950", "CVE-2026-88779", "CVE-2026-96652", "CVE-2026-96654", "CVE-2026-96655", "CVE-2026-96656", "CVE-2026-96951", "CVE-2026-97229"],
  "entries": {
   "CVE-2002-0367": {"dateAdded": "2022-03-03", "dueDate": "2022-03-24", "knownRansomwareCampaignUse": "Unknown", "product": "Windows", "requiredAction#": "975dbe03c141", "shortDescription#": "ba5f1f8e9b35", "vendorProject": "Microsoft", "vulnerabilityName": "Microsoft Windows Privilege Escalation Vulnerability"},
@@ -1270,6 +1270,7 @@
   "CVE-2024-27199": {"dateAdded": "2026-04-20", "dueDate": "2026-05-04", "knownRansomwareCampaignUse": "Known", "product": "TeamCity", "requiredAction#": "f09df147152e", "shortDescription#": "4a32e6d9001d", "vendorProject": "JetBrains", "vulnerabilityName": "JetBrains TeamCity Relative Path Traversal Vulnerability"},
   "CVE-2024-27348": {"dateAdded": "2024-09-18", "dueDate": "2024-10-09", "knownRansomwareCampaignUse": "Unknown", "product": "HugeGraph-Server", "requiredAction#": "af6aa6680722", "shortDescription#": "f5ac10522e4f", "vendorProject": "Apache", "vulnerabilityName": "Apache HugeGraph-Server Improper Access Control Vulnerability"},
   "CVE-2024-27443": {"dateAdded": "2025-05-19", "dueDate": "2025-06-09", "knownRansomwareCampaignUse": "Unknown", "product": "Zimbra Collaboration Suite (ZCS)", "requiredAction#": "f09df147152e", "shortDescription#": "87f0f3d444fc", "vendorProject": "Synacor", "vulnerabilityName": "Synacor Zimbra Collaboration Suite (ZCS) Cross-Site Scripting (XSS) Vulnerability"},
+  "CVE-2024-27834": {"dateAdded": "2026-11-04", "dueDate": "2026-11-18", "knownRansomwareCampaignUse": "Unknown", "product": "Multiple Products", "requiredAction#": "ba0d649eb29b", "shortDescription#": "c79da8ca3299", "vendorProject": "Apple", "vulnerabilityName": "Apple Multiple Products Improper Authentication Vulnerability"},
   "CVE-2024-28986": {"dateAdded": "2024-08-15", "dueDate": "2024-09-05", "knownRansomwareCampaignUse": "Unknown", "product": "Web Help Desk", "requiredAction#": "af6aa6680722", "shortDescription#": "7c50ce5d72fe", "vendorProject": "SolarWinds", "vulnerabilityName": "SolarWinds Web Help Desk Deserialization of Untrusted Data Vulnerability"},
   "CVE-2024-28987": {"dateAdded": "2024-10-15", "dueDate": "2024-11-05", "knownRansomwareCampaignUse": "Unknown", "product": "Web Help Desk", "requiredAction#": "af6aa6680722", "shortDescription#": "f6305669121d", "vendorProject": "SolarWinds", "vulnerabilityName": "SolarWinds Web Help Desk Hardcoded Credential Vulnerability"},
   "CVE-2024-28995": {"dateAdded": "2024-07-17", "dueDate": "2024-08-07", "knownRansomwareCampaignUse": "Unknown", "product": "Serv-U", "requiredAction#": "af6aa6680722", "shortDescription#": "4e47fe2e66e5", "vendorProject": "SolarWinds", "vulnerabilityName": "SolarWinds Serv-U Path Traversal Vulnerability"},

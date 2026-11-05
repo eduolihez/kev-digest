@@ -1,13 +1,28 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-11-04T01:01Z",
- "catalogVersion": "2026.11.03",
- "dateReleased": "2026-11-03T20:00:24.8741Z",
- "lastUpdated": "2026-11-04",
- "totalTracked": 1767,
- "newToday": 0,
+ "generatedAt": "2026-11-05T01:16Z",
+ "catalogVersion": "2026.11.04",
+ "dateReleased": "2026-11-04T20:00:05.774Z",
+ "lastUpdated": "2026-11-05",
+ "totalTracked": 1768,
+ "newToday": 1,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2024-27834",
+   "vendorProject": "Apple",
+   "product": "Multiple Products",
+   "vulnerabilityName": "Apple Multiple Products Improper Authentication Vulnerability",
+   "dateAdded": "2026-11-04",
+   "dueDate": "2026-11-18",
+   "shortDescription": "Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication.",
+   "knownRansomware": false,
+   "cvss": 5.5,
+   "cvssSeverity": "Medium",
+   "cvssVersion": "3.1",
+   "epss": 0.00598,
+   "epssPercentile": 0.4875
+  },
   {
    "cveID": "CVE-2026-119977",
    "vendorProject": "WordPress",
@@ -734,22 +749,22 @@
   {
    "cveID": "CVE-2026-119977",
    "dueDate": "2026-11-06",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-111497",
    "dueDate": "2026-11-10",
-   "diasRestantes": 6
+   "diasRestantes": 5
   },
   {
    "cveID": "CVE-2026-48356",
    "dueDate": "2026-11-10",
-   "diasRestantes": 6
+   "diasRestantes": 5
   },
   {
    "cveID": "CVE-2026-41709",
    "dueDate": "2026-11-11",
-   "diasRestantes": 7
+   "diasRestantes": 6
   }
  ]
 }

@@ -5,8 +5,15 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-11-03T20:46:11Z</updated>
+  <updated>2026-11-05T01:16:57Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Nueva en KEV: CVE-2024-27834 · Apple Multiple Products</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2024-27834"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2024-27834/2026-11-05T01:16:57Z</id>
+    <updated>2026-11-05T01:16:57Z</updated>
+    <summary>Apple iOS, iPadOS, macOS, Safari, tvOS and watchOS 10.5 contain an improper authentication vulnerability which could allow an attacker with arbitrary read and write capability to bypass pointer authentication.</summary>
+  </entry>
   <entry>
     <title>Nueva en KEV: CVE-2026-119977 · WordPress WordPress Core</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-119977"/>
@@ -349,12 +356,5 @@
     <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2026-63077/2026-09-23T16:07:23Z</id>
     <updated>2026-09-23T16:07:23Z</updated>
     <summary>Cambios: uso en ransomware</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-94127 · F5 BIG-IP APM</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-94127"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-94127/2026-09-22T20:53:44Z</id>
-    <updated>2026-09-22T20:53:44Z</updated>
-    <summary>F5 BIG-IP APM contains a heap-based buffer overflow vulnerability when access policy and an OAuth profile are configured on a virtual server. This vulnerability could allow an unauthenticated attacker to perform remote code execution.</summary>
   </entry>
 </feed>
