@@ -1,12 +1,12 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-11-05T01:16Z",
+ "generatedAt": "2026-11-06T01:22Z",
  "catalogVersion": "2026.11.04",
  "dateReleased": "2026-11-04T20:00:05.774Z",
- "lastUpdated": "2026-11-05",
+ "lastUpdated": "2026-11-06",
  "totalTracked": 1768,
- "newToday": 1,
+ "newToday": 0,
  "recentAdditions": [
   {
    "cveID": "CVE-2024-27834",
@@ -726,21 +726,6 @@
    "cvssVersion": "3.1",
    "epss": 0.00329,
    "epssPercentile": 0.26293
-  },
-  {
-   "cveID": "CVE-2026-7273",
-   "vendorProject": "Zyxel",
-   "product": "GS1900 Series Switches",
-   "vulnerabilityName": "Zyxel GS1900 Series Switches Stack-Based Buffer Overflow Vulnerability",
-   "dateAdded": "2026-09-21",
-   "dueDate": "2026-09-24",
-   "shortDescription": "Zyxel GS1900 series switches contain a stack-based buffer overflow vulnerability in the CGI program which could allow a LAN-based, unauthenticated attacker to exploit the flaw and potentially execute OS commands via a crafted HTTP request.",
-   "knownRansomware": false,
-   "cvss": 8.8,
-   "cvssSeverity": "High",
-   "cvssVersion": "3.1",
-   "epss": 0.00315,
-   "epssPercentile": 0.24603
   }
  ],
  "ransomwareTracked": 361,
@@ -749,22 +734,27 @@
   {
    "cveID": "CVE-2026-119977",
    "dueDate": "2026-11-06",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-111497",
    "dueDate": "2026-11-10",
-   "diasRestantes": 5
+   "diasRestantes": 4
   },
   {
    "cveID": "CVE-2026-48356",
    "dueDate": "2026-11-10",
-   "diasRestantes": 5
+   "diasRestantes": 4
   },
   {
    "cveID": "CVE-2026-41709",
    "dueDate": "2026-11-11",
-   "diasRestantes": 6
+   "diasRestantes": 5
+  },
+  {
+   "cveID": "CVE-2026-118527",
+   "dueDate": "2026-11-13",
+   "diasRestantes": 7
   }
  ]
 }

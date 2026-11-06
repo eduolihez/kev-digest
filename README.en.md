@@ -31,9 +31,9 @@ Actions.
 | **Known ransomware use** | 361 |
 | **Catalog version** | 2026.11.04 |
 | **Published by CISA** | 2026-11-04T20:00:05.774Z |
-| **Last change detected** | 2026-11-05 01:16 UTC |
-| **Deadlines within 7 days** | 4 |
-| **Latest digest** | [`digest/2026-11-05.md`](digest/2026-11-05.md) |
+| **Last change detected** | 2026-11-06 01:22 UTC |
+| **Deadlines within 7 days** | 5 |
+| **Latest digest** | [`digest/2026-11-06.md`](digest/2026-11-06.md) |
 
 <!-- KEV-STATS:END -->
 
