@@ -1,13 +1,26 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-11-06T01:22Z",
- "catalogVersion": "2026.11.04",
- "dateReleased": "2026-11-04T20:00:05.774Z",
- "lastUpdated": "2026-11-06",
- "totalTracked": 1768,
- "newToday": 0,
+ "generatedAt": "2026-11-07T00:37Z",
+ "catalogVersion": "2026.11.06",
+ "dateReleased": "2026-11-06T19:44:45.1797Z",
+ "lastUpdated": "2026-11-07",
+ "totalTracked": 1769,
+ "newToday": 1,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-19868",
+   "vendorProject": "SonicWall",
+   "product": "SonicOS SSLVPN",
+   "vulnerabilityName": "SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability",
+   "dateAdded": "2026-11-06",
+   "dueDate": "2026-11-20",
+   "shortDescription": "SonicWall SonicOS SSLVPN contains a use of single-factor authentication vulnerability that may allow a user with valid credentials for an alternate authentication method to bypass SAML authentication controls. Successful exploitation may also bypass SAML-enforced multi-factor authentication (MFA).",
+   "knownRansomware": false,
+   "cvss": 7.5,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1"
+  },
   {
    "cveID": "CVE-2024-27834",
    "vendorProject": "Apple",
@@ -670,91 +683,30 @@
    "cvssVersion": "3.1",
    "epss": 0.02335,
    "epssPercentile": 0.82839
-  },
-  {
-   "cveID": "CVE-2026-93952",
-   "vendorProject": "Arista",
-   "product": "VeloCloud Orchestrator",
-   "vulnerabilityName": "Arista VeloCloud Orchestrator Improper Input Validation Vulnerability",
-   "dateAdded": "2026-09-22",
-   "dueDate": "2026-09-25",
-   "shortDescription": "Arista VeloCloud Orchestrator (VCO) on-prem contains an improper input validation vulnerability that may allow a remote attacker to access privileged internal functionality and impact the VCO host. Successful exploitation may compromise the confidentiality, integrity, and availability of the orchestrator and data managed by the orchestrator.",
-   "knownRansomware": false,
-   "cvss": 10.0,
-   "cvssSeverity": "Critical",
-   "cvssVersion": "3.1",
-   "epss": 0.00424,
-   "epssPercentile": 0.36318
-  },
-  {
-   "cveID": "CVE-2026-94127",
-   "vendorProject": "F5",
-   "product": "BIG-IP APM",
-   "vulnerabilityName": "F5 BIG-IP APM Heap-based Buffer Overflow Vulnerability",
-   "dateAdded": "2026-09-22",
-   "dueDate": "2026-09-25",
-   "shortDescription": "F5 BIG-IP APM contains a heap-based buffer overflow vulnerability when access policy and an OAuth profile are configured on a virtual server. This vulnerability could allow an unauthenticated attacker to perform remote code execution.",
-   "knownRansomware": false,
-   "cvss": 9.8,
-   "cvssSeverity": "Critical",
-   "cvssVersion": "3.1"
-  },
-  {
-   "cveID": "CVE-2026-93616",
-   "vendorProject": "Check Point",
-   "product": "Multiple Products",
-   "vulnerabilityName": "Check Point Multiple Products Path Traversal Vulnerability",
-   "dateAdded": "2026-09-22",
-   "dueDate": "2026-09-25",
-   "shortDescription": "Check Point Security Management Server, Multi-Domain Security Management Server, Log Server, Multi-Domain Log Server, and SmartEvent contain a path traversal vulnerability that allows an unauthenticated attacker to upload and execute arbitrary scripts.",
-   "knownRansomware": false,
-   "cvss": 9.8,
-   "cvssSeverity": "Critical",
-   "cvssVersion": "3.1"
-  },
-  {
-   "cveID": "CVE-2026-85102",
-   "vendorProject": "Check Point",
-   "product": "Multiple Products",
-   "vulnerabilityName": "Check Point Multiple Products Improper Certificate Validation Vulnerability",
-   "dateAdded": "2026-09-22",
-   "dueDate": "2026-09-25",
-   "shortDescription": "Check Point Security Gateway and Check Point Spark Firewall using Site to Site VPN or Remote Access VPN contain an improper certificate validation vulnerability which could allow an unauthenticated remote attacker to execute arbitrary code on the Gateway.",
-   "knownRansomware": false,
-   "cvss": 9.8,
-   "cvssSeverity": "Critical",
-   "cvssVersion": "3.1",
-   "epss": 0.00329,
-   "epssPercentile": 0.26293
   }
  ],
  "ransomwareTracked": 361,
  "watchlistHits": [],
  "dueSoon": [
   {
-   "cveID": "CVE-2026-119977",
-   "dueDate": "2026-11-06",
-   "diasRestantes": 0
-  },
-  {
    "cveID": "CVE-2026-111497",
    "dueDate": "2026-11-10",
-   "diasRestantes": 4
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2026-48356",
    "dueDate": "2026-11-10",
-   "diasRestantes": 4
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2026-41709",
    "dueDate": "2026-11-11",
-   "diasRestantes": 5
+   "diasRestantes": 4
   },
   {
    "cveID": "CVE-2026-118527",
    "dueDate": "2026-11-13",
-   "diasRestantes": 7
+   "diasRestantes": 6
   }
  ]
 }

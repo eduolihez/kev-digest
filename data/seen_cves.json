@@ -1,9 +1,9 @@
 {
  "schema": 3,
- "catalog_version": "2026.11.04",
- "date_released": "2026-11-04T20:00:05.774Z",
- "last_change": "2026-11-06 01:22 UTC",
- "count": 1768,
+ "catalog_version": "2026.11.06",
+ "date_released": "2026-11-06T19:44:45.1797Z",
+ "last_change": "2026-11-07 00:37 UTC",
+ "count": 1769,
  "announced_due": ["CVE-2015-3306", "CVE-2015-5477", "CVE-2016-3081", "CVE-2021-3199", "CVE-2023-22894", "CVE-2025-61624", "CVE-2026-0322", "CVE-2026-102764", "CVE-2026-104935", "CVE-2026-105133", "CVE-2026-105134", "CVE-2026-106931", "CVE-2026-109618", "CVE-2026-109619", "CVE-2026-110447", "CVE-2026-110936", "CVE-2026-111357", "CVE-2026-111497", "CVE-2026-114625", "CVE-2026-118527", "CVE-2026-119977", "CVE-2026-21589", "CVE-2026-41709", "CVE-2026-46300", "CVE-2026-48356", "CVE-2026-76418", "CVE-2026-76519", "CVE-2026-86950", "CVE-2026-96652", "CVE-2026-96654", "CVE-2026-96655", "CVE-2026-96656", "CVE-2026-96951", "CVE-2026-97229"],
  "entries": {
   "CVE-2002-0367": {"dateAdded": "2022-03-03", "dueDate": "2022-03-24", "knownRansomwareCampaignUse": "Unknown", "product": "Windows", "requiredAction#": "975dbe03c141", "shortDescription#": "ba5f1f8e9b35", "vendorProject": "Microsoft", "vulnerabilityName": "Microsoft Windows Privilege Escalation Vulnerability"},
@@ -1613,6 +1613,7 @@
   "CVE-2026-18556": {"dateAdded": "2026-08-04", "dueDate": "2026-08-07", "knownRansomwareCampaignUse": "Unknown", "product": "N-central", "requiredAction#": "ba0d649eb29b", "shortDescription#": "72f00b93b039", "vendorProject": "N-able", "vulnerabilityName": "N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability"},
   "CVE-2026-18577": {"dateAdded": "2026-08-03", "dueDate": "2026-08-06", "knownRansomwareCampaignUse": "Unknown", "product": "N-central", "requiredAction#": "ba0d649eb29b", "shortDescription#": "6e03def64458", "vendorProject": "N-able", "vulnerabilityName": "N-able N-central Authentication Bypass Using an Alternate Path or Channel Vulnerability"},
   "CVE-2026-19490": {"dateAdded": "2026-09-09", "dueDate": "2026-09-12", "knownRansomwareCampaignUse": "Unknown", "product": "NetScaler", "requiredAction#": "ba0d649eb29b", "shortDescription#": "17391437e9a6", "vendorProject": "Citrix", "vulnerabilityName": "Citrix NetScaler Authentication Bypass Using an Alternate Path or Channel Vulnerability"},
+  "CVE-2026-19868": {"dateAdded": "2026-11-06", "dueDate": "2026-11-20", "knownRansomwareCampaignUse": "Unknown", "product": "SonicOS SSLVPN", "requiredAction#": "ba0d649eb29b", "shortDescription#": "d495e2966269", "vendorProject": "SonicWall", "vulnerabilityName": "SonicWall SonicOS SSLVPN Use of Single-factor Authentication Vulnerability"},
   "CVE-2026-20045": {"dateAdded": "2026-01-21", "dueDate": "2026-02-11", "knownRansomwareCampaignUse": "Unknown", "product": "Unified Communications Manager", "requiredAction#": "f09df147152e", "shortDescription#": "2f2134baadc6", "vendorProject": "Cisco", "vulnerabilityName": "Cisco Unified Communications Products Code Injection Vulnerability"},
   "CVE-2026-20079": {"dateAdded": "2026-09-09", "dueDate": "2026-09-12", "knownRansomwareCampaignUse": "Unknown", "product": "Secure Firewall Management Center (FMC) and Security Cloud Control (SCC) Firewall Management", "requiredAction#": "ba0d649eb29b", "shortDescription#": "22feeac9925b", "vendorProject": "Cisco", "vulnerabilityName": "Cisco Firewall Management Center Authentication Bypass Using an Alternate Path or Channel Vulnerability"},
   "CVE-2026-20122": {"dateAdded": "2026-04-20", "dueDate": "2026-04-23", "knownRansomwareCampaignUse": "Unknown", "product": "Catalyst SD-WAN Manger", "requiredAction#": "6c2bc2181231", "shortDescription#": "d8c7fafce881", "vendorProject": "Cisco", "vulnerabilityName": "Cisco Catalyst SD-WAN Manager Incorrect Use of Privileged APIs Vulnerability"},
