@@ -4,7 +4,7 @@
  "generatedAt": "2026-11-07T00:37Z",
  "catalogVersion": "2026.11.06",
  "dateReleased": "2026-11-06T19:44:45.1797Z",
- "lastUpdated": "2026-11-08",
+ "lastUpdated": "2026-11-09",
  "totalTracked": 1769,
  "newToday": 0,
  "recentAdditions": [
@@ -653,36 +653,6 @@
    "cvssVersion": "3.1",
    "epss": 0.02877,
    "epssPercentile": 0.86275
-  },
-  {
-   "cveID": "CVE-2026-5430",
-   "vendorProject": "WSO2",
-   "product": "Multiple Products",
-   "vulnerabilityName": "WSO2 Multiple Products Path Traversal Vulnerability ",
-   "dateAdded": "2026-09-24",
-   "dueDate": "2026-09-27",
-   "shortDescription": "WSO2 API Control Plane, API Manager, Traffic Manager & Universal Gateway contain a path traversal vulnerability that could allow for unrestricted file upload and lead to remote code execution.",
-   "knownRansomware": false,
-   "cvss": 10.0,
-   "cvssSeverity": "Critical",
-   "cvssVersion": "3.1",
-   "epss": 0.00374,
-   "epssPercentile": 0.28583
-  },
-  {
-   "cveID": "CVE-2026-71362",
-   "vendorProject": "Adobe",
-   "product": "Commerce and Magento ",
-   "vulnerabilityName": "Adobe Commerce and Magento Incorrect Authorization Vulnerability ",
-   "dateAdded": "2026-09-24",
-   "dueDate": "2026-09-27",
-   "shortDescription": "Adobe Commerce and Magento contains an incorrect authorization vulnerability that could allow an attacker to leverage this vulnerability to gain elevated access to sensitive resources without any user interaction.",
-   "knownRansomware": false,
-   "cvss": 9.1,
-   "cvssSeverity": "Critical",
-   "cvssVersion": "3.1",
-   "epss": 0.02335,
-   "epssPercentile": 0.82839
   }
  ],
  "ransomwareTracked": 361,
@@ -691,22 +661,22 @@
   {
    "cveID": "CVE-2026-111497",
    "dueDate": "2026-11-10",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-48356",
    "dueDate": "2026-11-10",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-41709",
    "dueDate": "2026-11-11",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-118527",
    "dueDate": "2026-11-13",
-   "diasRestantes": 5
+   "diasRestantes": 4
   }
  ]
 }
