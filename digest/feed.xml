@@ -5,8 +5,36 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-11-07T00:37:01Z</updated>
+  <updated>2026-11-09T21:56:01Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-123218 · IBM Aspera Faspex</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-123218"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-123218/2026-11-09T21:56:01Z</id>
+    <updated>2026-11-09T21:56:01Z</updated>
+    <summary>IBM Aspera Faspex contains an incorrect authorization vulnerability that could allow an authenticated user to craft a specific message to bypass authorization, causing privilege escalations.</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-123158 · OpenBSD OpenSSH</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-123158"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-123158/2026-11-09T21:56:01Z</id>
+    <updated>2026-11-09T21:56:01Z</updated>
+    <summary>OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-116779 · SignalWire FreeSwitch</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-116779"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-116779/2026-11-09T21:56:01Z</id>
+    <updated>2026-11-09T21:56:01Z</updated>
+    <summary>SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution.</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-102895 · GPUStack GPUStack</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-102895"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-102895/2026-11-09T21:56:01Z</id>
+    <updated>2026-11-09T21:56:01Z</updated>
+    <summary>GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml.</summary>
+  </entry>
   <entry>
     <title>Nueva en KEV: CVE-2026-19868 · SonicWall SonicOS SSLVPN</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-19868"/>
@@ -328,33 +356,5 @@
     <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-87902/2026-09-25T21:05:52Z</id>
     <updated>2026-09-25T21:05:52Z</updated>
     <summary>WordPress Core contains a remote file inclusion vulnerability which could allow an unauthenticated attacker to make page-template resolution include a chosen readable local `.php` file outside the active theme directories, leading to remote code execution.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-67279 · MikroTik RouterOS</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-67279"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-67279/2026-09-25T16:33:19Z</id>
-    <updated>2026-09-25T16:33:19Z</updated>
-    <summary>Mikrotik RouterOS contains an improper enforcement of behavioral workflow vulnerability that could allow an unauthenticated client to open a session channel and send an exec request. This vulnerability can be chained to achieve unauthenticated exploitation of CVE-2026-86060.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-65660 · Microsoft SharePoint</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-65660"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-65660/2026-09-25T16:33:19Z</id>
-    <updated>2026-09-25T16:33:19Z</updated>
-    <summary>Microsoft SharePoint contains a code injection vulnerability which could allow an authorized attacker to execute code over a network.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-71362 · Adobe Commerce and Magento</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-71362"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-71362/2026-09-24T21:09:16Z</id>
-    <updated>2026-09-24T21:09:16Z</updated>
-    <summary>Adobe Commerce and Magento contains an incorrect authorization vulnerability that could allow an attacker to leverage this vulnerability to gain elevated access to sensitive resources without any user interaction.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-5430 · WSO2 Multiple Products</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-5430"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-5430/2026-09-24T21:09:16Z</id>
-    <updated>2026-09-24T21:09:16Z</updated>
-    <summary>WSO2 API Control Plane, API Manager, Traffic Manager &amp; Universal Gateway contain a path traversal vulnerability that could allow for unrestricted file upload and lead to remote code execution.</summary>
   </entry>
 </feed>

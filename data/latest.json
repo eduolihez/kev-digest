@@ -1,13 +1,73 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-11-07T00:37Z",
- "catalogVersion": "2026.11.06",
- "dateReleased": "2026-11-06T19:44:45.1797Z",
+ "generatedAt": "2026-11-09T21:56Z",
+ "catalogVersion": "2026.11.09",
+ "dateReleased": "2026-11-09T19:54:37.4945Z",
  "lastUpdated": "2026-11-09",
- "totalTracked": 1769,
- "newToday": 0,
+ "totalTracked": 1773,
+ "newToday": 4,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-102895",
+   "vendorProject": "GPUStack",
+   "product": "GPUStack",
+   "vulnerabilityName": "GPUStack Improper Authentication Vulnerability",
+   "dateAdded": "2026-11-09",
+   "dueDate": "2026-11-12",
+   "shortDescription": "GPUStack contains an improper authentication vulnerability which could allow unauthenticated administrative access, including user and model changes, persistent administrator API-key creation, disclosure of worker and cloud-provider secrets, and code execution through POST /v2/inference-backends/from-yaml.",
+   "knownRansomware": false,
+   "cvss": 9.8,
+   "cvssSeverity": "Critical",
+   "cvssVersion": "3.1",
+   "epss": 0.00331,
+   "epssPercentile": 0.2646
+  },
+  {
+   "cveID": "CVE-2026-123158",
+   "vendorProject": "OpenBSD",
+   "product": "OpenSSH",
+   "vulnerabilityName": "OpenBSD OpenSSH Unexpected Status Code or Return Value Vulnerability",
+   "dateAdded": "2026-11-09",
+   "dueDate": "2026-11-12",
+   "shortDescription": "OpenBSD OpenSSH on Linux contains an unexpected status code or return value vulnerability that could allow for authentication bypass.",
+   "knownRansomware": false,
+   "cvss": 8.1,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1",
+   "epss": 0.01014,
+   "epssPercentile": 0.63482
+  },
+  {
+   "cveID": "CVE-2026-116779",
+   "vendorProject": "SignalWire",
+   "product": "FreeSwitch",
+   "vulnerabilityName": "SignalWire FreeSwitch Code Injection Vulnerability",
+   "dateAdded": "2026-11-09",
+   "dueDate": "2026-11-12",
+   "shortDescription": "SignalWire FreeSwitch contains a code injection vulnerability that permits configuration and credential disclosure, arbitrary call control, and command execution.",
+   "knownRansomware": false,
+   "cvss": 9.8,
+   "cvssSeverity": "Critical",
+   "cvssVersion": "3.1",
+   "epss": 0.01299,
+   "epssPercentile": 0.70632
+  },
+  {
+   "cveID": "CVE-2026-123218",
+   "vendorProject": "IBM",
+   "product": "Aspera Faspex",
+   "vulnerabilityName": "IBM Aspera Faspex Incorrect Authorization Vulnerability",
+   "dateAdded": "2026-11-09",
+   "dueDate": "2026-11-12",
+   "shortDescription": "IBM Aspera Faspex contains an incorrect authorization vulnerability that could allow an authenticated user to craft a specific message to bypass authorization, causing privilege escalations.",
+   "knownRansomware": false,
+   "cvss": 9.8,
+   "cvssSeverity": "Critical",
+   "cvssVersion": "3.1",
+   "epss": 0.00396,
+   "epssPercentile": 0.34123
+  },
   {
    "cveID": "CVE-2026-19868",
    "vendorProject": "SonicWall",
@@ -672,6 +732,26 @@
    "cveID": "CVE-2026-41709",
    "dueDate": "2026-11-11",
    "diasRestantes": 2
+  },
+  {
+   "cveID": "CVE-2026-102895",
+   "dueDate": "2026-11-12",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-116779",
+   "dueDate": "2026-11-12",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-123158",
+   "dueDate": "2026-11-12",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-123218",
+   "dueDate": "2026-11-12",
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2026-118527",
