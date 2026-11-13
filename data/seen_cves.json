@@ -2,9 +2,9 @@
  "schema": 3,
  "catalog_version": "2026.11.10",
  "date_released": "2026-11-10T19:03:29.8375Z",
- "last_change": "2026-11-11 04:44 UTC",
+ "last_change": "2026-11-13 05:06 UTC",
  "count": 1779,
- "announced_due": ["CVE-2024-27834", "CVE-2025-61624", "CVE-2026-0322", "CVE-2026-102764", "CVE-2026-102895", "CVE-2026-104935", "CVE-2026-105133", "CVE-2026-105134", "CVE-2026-106931", "CVE-2026-109618", "CVE-2026-109619", "CVE-2026-110447", "CVE-2026-110936", "CVE-2026-111357", "CVE-2026-111497", "CVE-2026-111560", "CVE-2026-114625", "CVE-2026-116606", "CVE-2026-116779", "CVE-2026-118527", "CVE-2026-119977", "CVE-2026-123158", "CVE-2026-123218", "CVE-2026-21589", "CVE-2026-41709", "CVE-2026-46300", "CVE-2026-48356", "CVE-2026-76418", "CVE-2026-76519", "CVE-2026-86950", "CVE-2026-96652", "CVE-2026-96654", "CVE-2026-96655", "CVE-2026-96656", "CVE-2026-96951", "CVE-2026-97229"],
+ "announced_due": ["CVE-2024-27834", "CVE-2025-61624", "CVE-2026-0322", "CVE-2026-102764", "CVE-2026-102895", "CVE-2026-104935", "CVE-2026-105133", "CVE-2026-105134", "CVE-2026-106931", "CVE-2026-109618", "CVE-2026-109619", "CVE-2026-110447", "CVE-2026-110936", "CVE-2026-111357", "CVE-2026-111497", "CVE-2026-111560", "CVE-2026-114625", "CVE-2026-116606", "CVE-2026-116779", "CVE-2026-118527", "CVE-2026-119977", "CVE-2026-123158", "CVE-2026-123218", "CVE-2026-19868", "CVE-2026-21589", "CVE-2026-41709", "CVE-2026-46300", "CVE-2026-48356", "CVE-2026-76418", "CVE-2026-76519", "CVE-2026-96652", "CVE-2026-96654", "CVE-2026-96655", "CVE-2026-96656", "CVE-2026-96951", "CVE-2026-97229"],
  "entries": {
   "CVE-2002-0367": {"dateAdded": "2022-03-03", "dueDate": "2022-03-24", "knownRansomwareCampaignUse": "Unknown", "product": "Windows", "requiredAction#": "975dbe03c141", "shortDescription#": "ba5f1f8e9b35", "vendorProject": "Microsoft", "vulnerabilityName": "Microsoft Windows Privilege Escalation Vulnerability"},
   "CVE-2004-0210": {"dateAdded": "2022-03-03", "dueDate": "2022-03-24", "knownRansomwareCampaignUse": "Unknown", "product": "Windows", "requiredAction#": "975dbe03c141", "shortDescription#": "d94ad5efc92d", "vendorProject": "Microsoft", "vulnerabilityName": "Microsoft Windows Privilege Escalation Vulnerability"},
