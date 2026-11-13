@@ -5,8 +5,22 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-11-10T21:11:40Z</updated>
+  <updated>2026-11-13T21:10:24Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-123039 · Check Point Multiple Products</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-123039"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-123039/2026-11-13T21:10:24Z</id>
+    <updated>2026-11-13T21:10:24Z</updated>
+    <summary>Check Point Firewall, Multi-Domain Security Management Server, Scalable Platforms, Security Gateway, and Security Management Server contain an incorrect permissions assignment for critical resources vulnerability when the Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket without authenticating connecting processes. An authenticated local user can send a command to</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-114713 · UnrealIRCd UnrealIRCd</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-114713"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-114713/2026-11-13T21:10:24Z</id>
+    <updated>2026-11-13T21:10:24Z</updated>
+    <summary>UnrealIRCd UnrealIRCd contains an improper neutralization of delimiters vulnerability that allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.</summary>
+  </entry>
   <entry>
     <title>Nueva en KEV: CVE-2026-20320 · Cisco BroadWorks</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-20320"/>
@@ -342,19 +356,5 @@
     <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-88779/2026-10-04T20:52:20Z</id>
     <updated>2026-10-04T20:52:20Z</updated>
     <summary>Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-102490 · Zammad GmbH Zammad</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-102490"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-102490/2026-10-02T17:28:26Z</id>
-    <updated>2026-10-02T17:28:26Z</updated>
-    <summary>Zammad GmbH Zammad contains an improper privilege management vulnerability that can allow the local zammad user to escalate privileges to root. This vulnerability can be chained with CVE-2026-102489.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-102489 · Zammad GmbH Zammad</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-102489"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-102489/2026-10-02T17:28:26Z</id>
-    <updated>2026-10-02T17:28:26Z</updated>
-    <summary>Zammad GmbH Zammad contains a session fixation vulnerability that can lead to remote code execution as the zammad user. This vulnerability can be chained with CVE-2026-102490.</summary>
   </entry>
 </feed>

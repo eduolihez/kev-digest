@@ -1,13 +1,43 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-11-13T05:06Z",
- "catalogVersion": "2026.11.10",
- "dateReleased": "2026-11-10T19:03:29.8375Z",
+ "generatedAt": "2026-11-13T21:10Z",
+ "catalogVersion": "2026.11.13",
+ "dateReleased": "2026-11-13T17:49:24.9532Z",
  "lastUpdated": "2026-11-13",
- "totalTracked": 1779,
- "newToday": 0,
+ "totalTracked": 1781,
+ "newToday": 2,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-114713",
+   "vendorProject": "UnrealIRCd",
+   "product": "UnrealIRCd",
+   "vulnerabilityName": "UnrealIRCd Improper Neutralization of Delimiters Vulnerability",
+   "dateAdded": "2026-11-13",
+   "dueDate": "2026-11-16",
+   "shortDescription": "UnrealIRCd UnrealIRCd contains an improper neutralization of delimiters vulnerability that allows any user on a network with two or more linked servers to inject server-to-server commands that are executed with server authority.",
+   "knownRansomware": false,
+   "cvss": 8.6,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1",
+   "epss": 0.00302,
+   "epssPercentile": 0.23297
+  },
+  {
+   "cveID": "CVE-2026-123039",
+   "vendorProject": "Check Point",
+   "product": "Multiple Products",
+   "vulnerabilityName": "Check Point Multiple Products Incorrect Permission Assignment for Critical Resource Vulnerability",
+   "dateAdded": "2026-11-13",
+   "dueDate": "2026-11-16",
+   "shortDescription": "Check Point Firewall, Multi-Domain Security Management Server, Scalable Platforms, Security Gateway, and Security Management Server contain an incorrect permissions assignment for critical resources vulnerability when the Gaia OS DynamicCLI daemon runs as root and listens on a world-writable local socket without authenticating connecting processes. An authenticated local user can send a command to the socket and have it executed as root.",
+   "knownRansomware": false,
+   "cvss": 7.8,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1",
+   "epss": 0.01274,
+   "epssPercentile": 0.70349
+  },
   {
    "cveID": "CVE-2026-124194",
    "vendorProject": "Microsoft",
@@ -747,6 +777,16 @@
    "cveID": "CVE-2026-118527",
    "dueDate": "2026-11-13",
    "diasRestantes": 0
+  },
+  {
+   "cveID": "CVE-2026-114713",
+   "dueDate": "2026-11-16",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-123039",
+   "dueDate": "2026-11-16",
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2024-27834",
