@@ -3,10 +3,10 @@
  "source": "https://github.com/eduolihez/kev-digest",
  "generatedAt": "2026-11-13T21:10Z",
  "catalogVersion": "2026.11.13",
- "dateReleased": "2026-11-13T17:49:24.9532Z",
- "lastUpdated": "2026-11-13",
+ "dateReleased": "2026-11-13T20:24:18.3008Z",
+ "lastUpdated": "2026-11-14",
  "totalTracked": 1781,
- "newToday": 2,
+ "newToday": 0,
  "recentAdditions": [
   {
    "cveID": "CVE-2026-114713",
@@ -608,7 +608,7 @@
    "cveID": "CVE-2015-5477",
    "vendorProject": "ISC",
    "product": "BIND",
-   "vulnerabilityName": " ISC BIND Data Processing Errors Vulnerability",
+   "vulnerabilityName": "ISC BIND Data Processing Errors Vulnerability",
    "dateAdded": "2026-10-08",
    "dueDate": "2026-10-11",
    "shortDescription": "ISC BIND contains a data processing errors vulnerability that could allow remote attackers to cause a denial of service via TKEY queries.",
@@ -743,60 +743,30 @@
    "cvss": 9.8,
    "cvssSeverity": "Critical",
    "cvssVersion": "3.1"
-  },
-  {
-   "cveID": "CVE-2026-86950",
-   "vendorProject": "Apple",
-   "product": "Multiple Products",
-   "vulnerabilityName": "Apple Multiple Products Out-of-Bounds Write Vulnerability",
-   "dateAdded": "2026-09-29",
-   "dueDate": "2026-10-13",
-   "shortDescription": "Apple iOS, macOS, and iPadOS contain an out-of-bounds write vulnerability in CoreGraphics that may lead to arbitrary code execution.",
-   "knownRansomware": false,
-   "cvss": 8.8,
-   "cvssSeverity": "High",
-   "cvssVersion": "3.1",
-   "epss": 0.00812,
-   "epssPercentile": 0.55295
   }
  ],
  "ransomwareTracked": 361,
  "watchlistHits": [],
  "dueSoon": [
   {
-   "cveID": "CVE-2026-111560",
-   "dueDate": "2026-11-13",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2026-116606",
-   "dueDate": "2026-11-13",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2026-118527",
-   "dueDate": "2026-11-13",
-   "diasRestantes": 0
-  },
-  {
    "cveID": "CVE-2026-114713",
    "dueDate": "2026-11-16",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-123039",
    "dueDate": "2026-11-16",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2024-27834",
    "dueDate": "2026-11-18",
-   "diasRestantes": 5
+   "diasRestantes": 4
   },
   {
    "cveID": "CVE-2026-19868",
    "dueDate": "2026-11-20",
-   "diasRestantes": 7
+   "diasRestantes": 6
   }
  ]
 }
