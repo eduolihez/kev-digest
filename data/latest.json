@@ -4,7 +4,7 @@
  "generatedAt": "2026-11-13T21:10Z",
  "catalogVersion": "2026.11.13",
  "dateReleased": "2026-11-13T20:24:18.3008Z",
- "lastUpdated": "2026-11-14",
+ "lastUpdated": "2026-11-15",
  "totalTracked": 1781,
  "newToday": 0,
  "recentAdditions": [
@@ -730,19 +730,6 @@
    "dueDate": "2026-10-04",
    "shortDescription": "Fortinet FortiMail contains a path traversal and an improper neutralization of NULL byte or NULL character vulnerability that may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.",
    "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-76504",
-   "vendorProject": "Cisco",
-   "product": "Catalyst SD-WAN Manager",
-   "vulnerabilityName": "Cisco Catalyst SD-WAN Manager Hex Encoding Vulnerability",
-   "dateAdded": "2026-09-30",
-   "dueDate": "2026-10-03",
-   "shortDescription": "Cisco Catalyst SD-WAN Manager contains a hex encoding vulnerability that could allow an unauthenticated, remote attacker to access an affected system with privileges of the admin user due to improper handling of URI encoding in an HTTP request.",
-   "knownRansomware": false,
-   "cvss": 9.8,
-   "cvssSeverity": "Critical",
-   "cvssVersion": "3.1"
   }
  ],
  "ransomwareTracked": 361,
@@ -751,22 +738,22 @@
   {
    "cveID": "CVE-2026-114713",
    "dueDate": "2026-11-16",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-123039",
    "dueDate": "2026-11-16",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2024-27834",
    "dueDate": "2026-11-18",
-   "diasRestantes": 4
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2026-19868",
    "dueDate": "2026-11-20",
-   "diasRestantes": 6
+   "diasRestantes": 5
   }
  ]
 }
