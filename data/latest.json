@@ -4,7 +4,7 @@
  "generatedAt": "2026-11-13T21:10Z",
  "catalogVersion": "2026.11.13",
  "dateReleased": "2026-11-13T20:24:18.3008Z",
- "lastUpdated": "2026-11-15",
+ "lastUpdated": "2026-11-16",
  "totalTracked": 1781,
  "newToday": 0,
  "recentAdditions": [
@@ -720,16 +720,6 @@
    "cvssVersion": "3.1",
    "epss": 0.00582,
    "epssPercentile": 0.45835
-  },
-  {
-   "cveID": "CVE-2026-104286",
-   "vendorProject": "Fortinet",
-   "product": "FortiMail",
-   "vulnerabilityName": "Fortinet FortiMail Path Traversal Vulnerability",
-   "dateAdded": "2026-10-01",
-   "dueDate": "2026-10-04",
-   "shortDescription": "Fortinet FortiMail contains a path traversal and an improper neutralization of NULL byte or NULL character vulnerability that may allow an unauthenticated attacker to write arbitrary files on the underlying system via crafted HTTP or HTTPS requests.",
-   "knownRansomware": false
   }
  ],
  "ransomwareTracked": 361,
@@ -738,22 +728,22 @@
   {
    "cveID": "CVE-2026-114713",
    "dueDate": "2026-11-16",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-123039",
    "dueDate": "2026-11-16",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2024-27834",
    "dueDate": "2026-11-18",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-19868",
    "dueDate": "2026-11-20",
-   "diasRestantes": 5
+   "diasRestantes": 4
   }
  ]
 }
