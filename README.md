@@ -26,13 +26,13 @@ cambiado. Sin intervención manual y sin servidor: todo ocurre en GitHub Actions
 
 | | |
 |---|---|
-| **CVEs en seguimiento** | 1781 |
+| **CVEs en seguimiento** | 1782 |
 | **Con uso conocido en ransomware** | 361 |
-| **Versión del catálogo** | 2026.11.13 |
-| **Publicado por CISA** | 2026-11-13T20:24:18.3008Z |
-| **Último cambio detectado** | 2026-11-17 06:34 UTC |
+| **Versión del catálogo** | 2026.11.17 |
+| **Publicado por CISA** | 2026-11-17T17:53:15.5664Z |
+| **Último cambio detectado** | 2026-11-18 02:43 UTC |
 | **Plazos que vencen en 7 días** | 6 |
-| **Último digest** | [`digest/2026-11-17.md`](digest/2026-11-17.md) |
+| **Último digest** | [`digest/2026-11-18.md`](digest/2026-11-18.md) |
 
 <!-- KEV-STATS:END -->
 

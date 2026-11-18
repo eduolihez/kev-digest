@@ -1,10 +1,10 @@
 {
  "schema": 3,
- "catalog_version": "2026.11.13",
- "date_released": "2026-11-13T20:24:18.3008Z",
- "last_change": "2026-11-17 06:34 UTC",
- "count": 1781,
- "announced_due": ["CVE-2024-27834", "CVE-2025-61624", "CVE-2026-102764", "CVE-2026-102895", "CVE-2026-106931", "CVE-2026-109618", "CVE-2026-109619", "CVE-2026-110447", "CVE-2026-110936", "CVE-2026-111357", "CVE-2026-111497", "CVE-2026-111560", "CVE-2026-111793", "CVE-2026-114625", "CVE-2026-114713", "CVE-2026-116606", "CVE-2026-116779", "CVE-2026-118527", "CVE-2026-119977", "CVE-2026-123039", "CVE-2026-123158", "CVE-2026-123218", "CVE-2026-124194", "CVE-2026-125350", "CVE-2026-19868", "CVE-2026-20320", "CVE-2026-41709", "CVE-2026-46300", "CVE-2026-48356", "CVE-2026-76418", "CVE-2026-96652", "CVE-2026-96654", "CVE-2026-96655", "CVE-2026-96656", "CVE-2026-97229"],
+ "catalog_version": "2026.11.17",
+ "date_released": "2026-11-17T17:53:15.5664Z",
+ "last_change": "2026-11-18 02:43 UTC",
+ "count": 1782,
+ "announced_due": ["CVE-2024-27834", "CVE-2026-102895", "CVE-2026-106931", "CVE-2026-109618", "CVE-2026-109619", "CVE-2026-110447", "CVE-2026-110936", "CVE-2026-111357", "CVE-2026-111497", "CVE-2026-111560", "CVE-2026-111793", "CVE-2026-114625", "CVE-2026-114713", "CVE-2026-116606", "CVE-2026-116779", "CVE-2026-118527", "CVE-2026-119977", "CVE-2026-123039", "CVE-2026-123158", "CVE-2026-123218", "CVE-2026-124194", "CVE-2026-125350", "CVE-2026-19868", "CVE-2026-20320", "CVE-2026-41709", "CVE-2026-46300", "CVE-2026-48356", "CVE-2026-76418", "CVE-2026-96652", "CVE-2026-96654", "CVE-2026-96655", "CVE-2026-96656", "CVE-2026-97229"],
  "entries": {
   "CVE-2002-0367": {"dateAdded": "2022-03-03", "dueDate": "2022-03-24", "knownRansomwareCampaignUse": "Unknown", "product": "Windows", "requiredAction#": "975dbe03c141", "shortDescription#": "ba5f1f8e9b35", "vendorProject": "Microsoft", "vulnerabilityName": "Microsoft Windows Privilege Escalation Vulnerability"},
   "CVE-2004-0210": {"dateAdded": "2022-03-03", "dueDate": "2022-03-24", "knownRansomwareCampaignUse": "Unknown", "product": "Windows", "requiredAction#": "975dbe03c141", "shortDescription#": "d94ad5efc92d", "vendorProject": "Microsoft", "vulnerabilityName": "Microsoft Windows Privilege Escalation Vulnerability"},
@@ -1602,6 +1602,7 @@
   "CVE-2026-111793": {"dateAdded": "2026-11-10", "dueDate": "2026-11-24", "knownRansomwareCampaignUse": "Unknown", "product": "Webtop Media Transcoder", "requiredAction#": "ba0d649eb29b", "shortDescription#": "ea0b3d1044b4", "vendorProject": "Openwave Messaging Limited", "vulnerabilityName": "Openwave Messaging Limited Webtop Media Transcoder Incorrect Resource Transfer Between Spheres Vulnerability"},
   "CVE-2026-114625": {"dateAdded": "2026-10-23", "dueDate": "2026-10-26", "knownRansomwareCampaignUse": "Unknown", "product": "VeloCloud Orchestrator", "requiredAction#": "ba0d649eb29b", "shortDescription#": "558c2c6c3da7", "vendorProject": "Arista", "vulnerabilityName": "Arista VeloCloud Orchestrator SQL Injection Vulnerability"},
   "CVE-2026-114713": {"dateAdded": "2026-11-13", "dueDate": "2026-11-16", "knownRansomwareCampaignUse": "Unknown", "product": "UnrealIRCd", "requiredAction#": "ba0d649eb29b", "shortDescription#": "fd36cf2dd39d", "vendorProject": "UnrealIRCd", "vulnerabilityName": "UnrealIRCd Improper Neutralization of Delimiters Vulnerability"},
+  "CVE-2026-115731": {"dateAdded": "2026-11-17", "dueDate": "2026-12-01", "knownRansomwareCampaignUse": "Unknown", "product": "Puppet Enterprise", "requiredAction#": "ba0d649eb29b", "shortDescription#": "114be63b7066", "vendorProject": "Perforce", "vulnerabilityName": "Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability"},
   "CVE-2026-11645": {"dateAdded": "2026-06-09", "dueDate": "2026-06-23", "knownRansomwareCampaignUse": "Unknown", "product": "Chromium V8", "requiredAction#": "f09df147152e", "shortDescription#": "1063fafa3e1b", "vendorProject": "Google", "vulnerabilityName": "Google Chromium V8 Out-of-Bounds Read and Write Vulnerability"},
   "CVE-2026-116606": {"dateAdded": "2026-11-10", "dueDate": "2026-11-13", "knownRansomwareCampaignUse": "Unknown", "product": "Barracuda Email Security Gateway (ESG)", "requiredAction#": "ba0d649eb29b", "shortDescription#": "08736423f478", "vendorProject": "Barracuda Networks", "vulnerabilityName": "Barracuda Networks Email Security Gateway (ESG) Authentication Bypass Using an Alternate Path or Channel Vulnerability"},
   "CVE-2026-116779": {"dateAdded": "2026-11-09", "dueDate": "2026-11-12", "knownRansomwareCampaignUse": "Unknown", "product": "FreeSwitch", "requiredAction#": "ba0d649eb29b", "shortDescription#": "8755d62deaf3", "vendorProject": "SignalWire", "vulnerabilityName": "SignalWire FreeSwitch Code Injection Vulnerability"},

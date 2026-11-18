@@ -5,8 +5,15 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-11-13T21:10:24Z</updated>
+  <updated>2026-11-18T02:43:45Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-115731 · Perforce Puppet Enterprise</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-115731"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-115731/2026-11-18T02:43:45Z</id>
+    <updated>2026-11-18T02:43:45Z</updated>
+    <summary>Perforce Puppet Enterprise contains a deserialization of untrusted data vulnerability in Puppet’s report-processing code that allows a client with any CA-signed agent certificate to execute arbitrary code on the Puppet Server as the service user by submitting a report containing a crafted rich-data type through a PUT request. If the certificate authority automatically signs requests without strong</summary>
+  </entry>
   <entry>
     <title>Nueva en KEV: CVE-2026-123039 · Check Point Multiple Products</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-123039"/>
@@ -349,12 +356,5 @@
     <id>tag:eduolihez.github.io,2026:kev/new/CVE-2015-3306/2026-10-08T18:25:37Z</id>
     <updated>2026-10-08T18:25:37Z</updated>
     <summary>ProFTPD contains an improper access control vulnerability that could allow remote attackers to read and write to arbitrary files via the site cpfr and site cpto commands.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-88779 · Citrix NetScaler</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-88779"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-88779/2026-10-04T20:52:20Z</id>
-    <updated>2026-10-04T20:52:20Z</updated>
-    <summary>Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service.</summary>
   </entry>
 </feed>

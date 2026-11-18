@@ -27,13 +27,13 @@ Actions.
 
 | | |
 |---|---|
-| **CVEs tracked** | 1781 |
+| **CVEs tracked** | 1782 |
 | **Known ransomware use** | 361 |
-| **Catalog version** | 2026.11.13 |
-| **Published by CISA** | 2026-11-13T20:24:18.3008Z |
-| **Last change detected** | 2026-11-17 06:34 UTC |
+| **Catalog version** | 2026.11.17 |
+| **Published by CISA** | 2026-11-17T17:53:15.5664Z |
+| **Last change detected** | 2026-11-18 02:43 UTC |
 | **Deadlines within 7 days** | 6 |
-| **Latest digest** | [`digest/2026-11-17.md`](digest/2026-11-17.md) |
+| **Latest digest** | [`digest/2026-11-18.md`](digest/2026-11-18.md) |
 
 <!-- KEV-STATS:END -->
 

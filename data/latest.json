@@ -1,13 +1,28 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-11-17T06:34Z",
+ "generatedAt": "2026-11-18T02:43Z",
  "catalogVersion": "2026.11.17",
- "dateReleased": "2026-11-17T17:00:49.4895Z",
- "lastUpdated": "2026-11-17",
- "totalTracked": 1781,
- "newToday": 0,
+ "dateReleased": "2026-11-17T17:53:15.5664Z",
+ "lastUpdated": "2026-11-18",
+ "totalTracked": 1782,
+ "newToday": 1,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-115731",
+   "vendorProject": "Perforce",
+   "product": "Puppet Enterprise",
+   "vulnerabilityName": "Perforce Puppet Enterprise Deserialization of Untrusted Data Vulnerability",
+   "dateAdded": "2026-11-17",
+   "dueDate": "2026-12-01",
+   "shortDescription": "Perforce Puppet Enterprise contains a deserialization of untrusted data vulnerability in Puppet’s report-processing code that allows a client with any CA-signed agent certificate to execute arbitrary code on the Puppet Server as the service user by submitting a report containing a crafted rich-data type through a PUT request. If the certificate authority automatically signs requests without strong verification, an unauthenticated network attacker can obtain a valid certificate and exploit the vulnerability.",
+   "knownRansomware": false,
+   "cvss": 9.9,
+   "cvssSeverity": "Critical",
+   "cvssVersion": "3.1",
+   "epss": 0.00366,
+   "epssPercentile": 0.30882
+  },
   {
    "cveID": "CVE-2026-114713",
    "vendorProject": "UnrealIRCd",
@@ -698,32 +713,32 @@
   {
    "cveID": "CVE-2024-27834",
    "dueDate": "2026-11-18",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-19868",
    "dueDate": "2026-11-20",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-111793",
    "dueDate": "2026-11-24",
-   "diasRestantes": 7
+   "diasRestantes": 6
   },
   {
    "cveID": "CVE-2026-124194",
    "dueDate": "2026-11-24",
-   "diasRestantes": 7
+   "diasRestantes": 6
   },
   {
    "cveID": "CVE-2026-125350",
    "dueDate": "2026-11-24",
-   "diasRestantes": 7
+   "diasRestantes": 6
   },
   {
    "cveID": "CVE-2026-20320",
    "dueDate": "2026-11-24",
-   "diasRestantes": 7
+   "diasRestantes": 6
   }
  ]
 }
