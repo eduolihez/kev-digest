@@ -4,9 +4,9 @@
  "generatedAt": "2026-11-18T19:58Z",
  "catalogVersion": "2026.11.18",
  "dateReleased": "2026-11-18T19:17:41.0354Z",
- "lastUpdated": "2026-11-18",
+ "lastUpdated": "2026-11-19",
  "totalTracked": 1786,
- "newToday": 5,
+ "newToday": 0,
  "recentAdditions": [
   {
    "cveID": "CVE-2024-10441",
@@ -753,67 +753,50 @@
    "cvssVersion": "3.1",
    "epss": 0.96752,
    "epssPercentile": 0.99887
-  },
-  {
-   "cveID": "CVE-2026-88779",
-   "vendorProject": "Citrix",
-   "product": "NetScaler",
-   "vulnerabilityName": "Citrix NetScaler Improper Restriction of Operations within the Bounds of a Memory Buffer Vulnerability",
-   "dateAdded": "2026-10-04",
-   "dueDate": "2026-10-07",
-   "shortDescription": "Citrix NetScaler ADC (formerly Citrix ADC) and Citrix NetScaler Gateway (formerly Citrix Gateway) contain an improper restriction of operations within the bounds of a memory buffer vulnerability that could allow for a denial of service.",
-   "knownRansomware": false,
-   "epss": 0.00276,
-   "epssPercentile": 0.18203
   }
  ],
  "ransomwareTracked": 361,
  "watchlistHits": [],
  "dueSoon": [
   {
-   "cveID": "CVE-2024-27834",
-   "dueDate": "2026-11-18",
-   "diasRestantes": 0
-  },
-  {
    "cveID": "CVE-2026-19868",
    "dueDate": "2026-11-20",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2024-10441",
    "dueDate": "2026-11-21",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-90436",
    "dueDate": "2026-11-21",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-90817",
    "dueDate": "2026-11-21",
-   "diasRestantes": 3
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-111793",
    "dueDate": "2026-11-24",
-   "diasRestantes": 6
+   "diasRestantes": 5
   },
   {
    "cveID": "CVE-2026-124194",
    "dueDate": "2026-11-24",
-   "diasRestantes": 6
+   "diasRestantes": 5
   },
   {
    "cveID": "CVE-2026-125350",
    "dueDate": "2026-11-24",
-   "diasRestantes": 6
+   "diasRestantes": 5
   },
   {
    "cveID": "CVE-2026-20320",
    "dueDate": "2026-11-24",
-   "diasRestantes": 6
+   "diasRestantes": 5
   }
  ]
 }
