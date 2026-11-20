@@ -5,8 +5,36 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-11-18T19:58:42Z</updated>
+  <updated>2026-11-20T19:37:22Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-76466 · Cisco Expressway Series</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-76466"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-76466/2026-11-20T19:37:22Z</id>
+    <updated>2026-11-20T19:37:22Z</updated>
+    <summary>Cisco Expressway Series contains a use of hard-coded credentials vulnerability that allows an unauthenticated, remote attacker with persistent cookies and network access to execute commands as root on a clustered device via the database service.</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-129448 · Apache Roller</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-129448"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-129448/2026-11-20T19:37:22Z</id>
+    <updated>2026-11-20T19:37:22Z</updated>
+    <summary>Apache Roller contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via the XML-RPC endpoint, which accepts and deserializes vendor extension types before authentication. This CVE covers the same underlying vulnerability as CVE-2026-82384 but applies to a broader range of affected versions.</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-123890 · Broadcom VMware vCenter</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-123890"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-123890/2026-11-20T19:37:22Z</id>
+    <updated>2026-11-20T19:37:22Z</updated>
+    <summary>Broadcom VMware vCenter contains an authentication bypass using an alternate path or channel vulnerability in the VMware Directory Service that allows an unauthenticated attacker with network access to vCenter to bypass authentication and gain unauthorized access to the system.</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2025-42884 · SAP NetWeaver</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2025-42884"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2025-42884/2026-11-20T19:37:22Z</id>
+    <updated>2026-11-20T19:37:22Z</updated>
+    <summary>SAP NetWeaver Enterprise Portal contains an improper neutralization of special elements in data query logic vulnerability that allows an unauthenticated attacker to disclose or modify server information via injected JNDI environment properties or a URL used during JNDI lookup operations.</summary>
+  </entry>
   <entry>
     <title>Nueva en KEV: CVE-2026-90817 · Vanderbilt University Research Electronic Data Capture (REDCap)</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-90817"/>
@@ -328,33 +356,5 @@
     <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-96951/2026-10-14T00:08:42Z</id>
     <updated>2026-10-14T00:08:42Z</updated>
     <summary>Microsoft Windows Shell contains a command injection vulnerability that allows an unauthorized attacker to bypass a security feature over a network.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-104935 · Ivanti Connect Secure</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-104935"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-104935/2026-10-13T18:52:52Z</id>
-    <updated>2026-10-13T18:52:52Z</updated>
-    <summary>Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.</summary>
-  </entry>
-  <entry>
-    <title>Modificada: CVE-2026-86950 · Apple Multiple Products</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-86950"/>
-    <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2026-86950/2026-10-09T00:58:15Z</id>
-    <updated>2026-10-09T00:58:15Z</updated>
-    <summary>Cambios: plazo de mitigación</summary>
-  </entry>
-  <entry>
-    <title>Modificada: CVE-2022-0995 · Linux Kernel</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2022-0995"/>
-    <id>tag:eduolihez.github.io,2026:kev/modified/CVE-2022-0995/2026-10-09T00:58:15Z</id>
-    <updated>2026-10-09T00:58:15Z</updated>
-    <summary>Cambios: plazo de mitigación</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2023-22894 · Strapi Strapi</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2023-22894"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2023-22894/2026-10-08T18:25:37Z</id>
-    <updated>2026-10-08T18:25:37Z</updated>
-    <summary>Strapi contains a cleartext storage of sensitive information vulnerability that could allow attackers with access to the admin panel to discover sensitive user details via the query filter. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version. This vulnerability can be chained with CVE-2023-226</summary>
   </entry>
 </feed>
