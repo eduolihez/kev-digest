@@ -1,13 +1,40 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-11-20T19:37Z",
- "catalogVersion": "2026.11.20",
- "dateReleased": "2026-11-20T17:48:39.1516Z",
+ "generatedAt": "2026-11-23T23:23Z",
+ "catalogVersion": "2026.11.23",
+ "dateReleased": "2026-11-23T19:43:55.7979Z",
  "lastUpdated": "2026-11-23",
- "totalTracked": 1790,
- "newToday": 0,
+ "totalTracked": 1792,
+ "newToday": 2,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-133968",
+   "vendorProject": "Project MONAI",
+   "product": "MONAI Label",
+   "vulnerabilityName": "Project MONAI MONAI Label Path Traversal Vulnerability",
+   "dateAdded": "2026-11-23",
+   "dueDate": "2026-11-26",
+   "shortDescription": "Project MONAI MONAI Label contains a path traversal vulnerability that allows an unauthenticated remote attacker to write arbitrary files outside the intended datastore directory, potentially resulting in remote code execution.",
+   "knownRansomware": false,
+   "cvss": 9.8,
+   "cvssSeverity": "Critical",
+   "cvssVersion": "3.1",
+   "epss": 0.03664,
+   "epssPercentile": 0.89921
+  },
+  {
+   "cveID": "CVE-2026-134624",
+   "vendorProject": "N-able",
+   "product": "MailAssure",
+   "vulnerabilityName": "N-able MailAssure (SpamExperts) Server-Side Request Forgery (SSRF) Vulnerability",
+   "dateAdded": "2026-11-23",
+   "dueDate": "2026-11-26",
+   "shortDescription": "N-able MailAssure (SpamExperts) contains a server-side request forgery vulnerability in the LDAP synchronization connection check that allows an authenticated API user to connect to arbitrary internal hosts and ports, determine which are reachable, and send crafted data to internal services.",
+   "knownRansomware": false,
+   "epss": 0.00354,
+   "epssPercentile": 0.2969
+  },
   {
    "cveID": "CVE-2026-129448",
    "vendorProject": "Apache",
@@ -76,7 +103,7 @@
    "dateAdded": "2026-11-18",
    "dueDate": "2026-11-21",
    "shortDescription": "Synology DSM contains an improper encoding or escaping of output vulnerability in the system plugin daemon in Synology BeeStation OS (BSM) that could allow a remote attacker to execute arbitrary code via unspecified vectors.",
-   "knownRansomware": false,
+   "knownRansomware": true,
    "cvss": 9.8,
    "cvssSeverity": "Critical",
    "cvssVersion": "3.1",
@@ -740,7 +767,7 @@
    "cvssVersion": "3.1"
   }
  ],
- "ransomwareTracked": 361,
+ "ransomwareTracked": 362,
  "watchlistHits": [],
  "dueSoon": [
   {
@@ -782,6 +809,16 @@
    "cveID": "CVE-2026-20320",
    "dueDate": "2026-11-24",
    "diasRestantes": 1
+  },
+  {
+   "cveID": "CVE-2026-133968",
+   "dueDate": "2026-11-26",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-134624",
+   "dueDate": "2026-11-26",
+   "diasRestantes": 3
   }
  ]
 }
