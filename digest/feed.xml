@@ -5,8 +5,29 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-11-23T23:23:28Z</updated>
+  <updated>2026-11-24T19:55:47Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-132224 · Optimizely Web Experimentation</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-132224"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-132224/2026-11-24T19:55:47Z</id>
+    <updated>2026-11-24T19:55:47Z</updated>
+    <summary>Optimizely Web Experimentation contains an external control of critical state data vulnerability in its account signup flow that could allow an attacker to impersonate existing customer users and modify Project JavaScript. Successful exploitation can result in attacker-controlled JavaScript being distributed through Optimizely-hosted assets and executed in browsers visiting affected customer websi</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-132165 · Drupal Core</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-132165"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-132165/2026-11-24T19:55:47Z</id>
+    <updated>2026-11-24T19:55:47Z</updated>
+    <summary>Drupal Core contains a not failing securely vulnerability that could allow an unauthenticated attacker to take over an existing site or execute arbitrary code via the Drupal installer. Under specific conditions, the attacker can use install.php to attempt to reinstall Drupal on the site.</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-131914 · Idunno AntiCsrf</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-131914"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-131914/2026-11-24T19:55:47Z</id>
+    <updated>2026-11-24T19:55:47Z</updated>
+    <summary>Idunno AntiCsrf contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via object injection. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.</summary>
+  </entry>
   <entry>
     <title>Modificada: CVE-2024-10441 · Synology DiskStation Manager (DSM)</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2024-10441"/>
@@ -335,26 +356,5 @@
     <id>tag:eduolihez.github.io,2026:kev/new/CVE-2025-61624/2026-10-16T20:30:47Z</id>
     <updated>2026-10-16T20:30:47Z</updated>
     <summary>FortiOS, FortiPAM, FortiProxy, and FortiSwitchManager contain a path traversal vulnerability that may allow an authenticated attacker with admin profile and at least read-write permissions to write or delete arbitrary files via specific CLI commands.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-21589 · Atlassian Multiple Products</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-21589"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-21589/2026-10-15T20:56:21Z</id>
-    <updated>2026-10-15T20:56:21Z</updated>
-    <summary>Multiple Atlassian products (Bitbucket Data Center ,Confluence Data Center, Jira Service Management Data Center, Jira Software Data Center, Bamboo Data Center, Crowd Data Center, Crucible and Fisheye) contain a files or directories accessible to external parties vulnerability which could allow an unauthenticated attacker to access specific files within the web application root directory in affecte</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-76519 · Cisco Secure Email Gateway</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-76519"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-76519/2026-10-14T23:40:53Z</id>
-    <updated>2026-10-14T23:40:53Z</updated>
-    <summary>Cisco Secure Email Gateway contains a relative path traversal vulnerability that could allow an unauthenticated, remote attacker to write arbitrary files on the underlying operating system.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-105134 · Ahsay AhsayCBS</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-105134"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-105134/2026-10-14T23:40:53Z</id>
-    <updated>2026-10-14T23:40:53Z</updated>
-    <summary>Ahsay AhsayCBS contains a command injection vulnerability that could allow a remote attacker to execute operating system commands via manipulation of the random parameter in the Replication Receiver component’s /rps/api/json/UpdateReceivers.do endpoint. This vulnerability can be chained with CVE-2026-105133.</summary>
   </entry>
 </feed>

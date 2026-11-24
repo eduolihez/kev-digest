@@ -1,13 +1,50 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-11-24T08:26Z",
- "catalogVersion": "2026.11.23",
- "dateReleased": "2026-11-23T19:43:55.7979Z",
+ "generatedAt": "2026-11-24T19:55Z",
+ "catalogVersion": "2026.11.24",
+ "dateReleased": "2026-11-24T17:47:46.199Z",
  "lastUpdated": "2026-11-24",
- "totalTracked": 1792,
- "newToday": 0,
+ "totalTracked": 1795,
+ "newToday": 3,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-132224",
+   "vendorProject": "Optimizely",
+   "product": "Web Experimentation",
+   "vulnerabilityName": "Optimizely Web Experimentation External Control of Critical State Data Vulnerability",
+   "dateAdded": "2026-11-24",
+   "dueDate": "2026-11-27",
+   "shortDescription": "Optimizely Web Experimentation contains an external control of critical state data vulnerability in its account signup flow that could allow an attacker to impersonate existing customer users and modify Project JavaScript. Successful exploitation can result in attacker-controlled JavaScript being distributed through Optimizely-hosted assets and executed in browsers visiting affected customer websites.",
+   "knownRansomware": false,
+   "cvss": 8.7,
+   "cvssSeverity": "High",
+   "cvssVersion": "3.1",
+   "epss": 0.00411,
+   "epssPercentile": 0.35845
+  },
+  {
+   "cveID": "CVE-2026-131914",
+   "vendorProject": "Idunno",
+   "product": "AntiCsrf",
+   "vulnerabilityName": "Idunno AntiCsrf Deserialization of Untrusted Data Vulnerability",
+   "dateAdded": "2026-11-24",
+   "dueDate": "2026-11-27",
+   "shortDescription": "Idunno AntiCsrf contains a deserialization of untrusted data vulnerability that allows an unauthenticated remote attacker to execute arbitrary code via object injection. The impacted product(s) could be end-of-life (EoL) and/or end-of-service (EoS). Users are advised to discontinue use and/or transition to a supported version.",
+   "knownRansomware": false,
+   "epss": 0.00614,
+   "epssPercentile": 0.50152
+  },
+  {
+   "cveID": "CVE-2026-132165",
+   "vendorProject": "Drupal",
+   "product": "Core",
+   "vulnerabilityName": "Drupal Core Remote Code Execution Vulnerability",
+   "dateAdded": "2026-11-24",
+   "dueDate": "2026-11-27",
+   "shortDescription": "Drupal Core contains a not failing securely vulnerability that could allow an unauthenticated attacker to take over an existing site or execute arbitrary code via the Drupal installer. Under specific conditions, the attacker can use install.php to attempt to reinstall Drupal on the site.",
+   "knownRansomware": false
+  },
   {
    "cveID": "CVE-2026-133968",
    "vendorProject": "Project MONAI",
@@ -799,6 +836,21 @@
    "cveID": "CVE-2026-134624",
    "dueDate": "2026-11-26",
    "diasRestantes": 2
+  },
+  {
+   "cveID": "CVE-2026-131914",
+   "dueDate": "2026-11-27",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-132165",
+   "dueDate": "2026-11-27",
+   "diasRestantes": 3
+  },
+  {
+   "cveID": "CVE-2026-132224",
+   "dueDate": "2026-11-27",
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2026-115731",
