@@ -1,13 +1,28 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-11-25T03:56Z",
- "catalogVersion": "2026.11.24",
- "dateReleased": "2026-11-24T17:47:46.199Z",
+ "generatedAt": "2026-11-25T16:48Z",
+ "catalogVersion": "2026.11.25",
+ "dateReleased": "2026-11-25T14:22:29.6361Z",
  "lastUpdated": "2026-11-25",
- "totalTracked": 1795,
- "newToday": 0,
+ "totalTracked": 1796,
+ "newToday": 1,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-103406",
+   "vendorProject": "Hewlett Packard Enterprise (HPE)",
+   "product": "Juniper Session Smart Conductor and Session Smart Router",
+   "vulnerabilityName": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router OS Command Injection Vulnerability",
+   "dateAdded": "2026-11-25",
+   "dueDate": "2026-11-28",
+   "shortDescription": "Hewlett Packard Enterprise (HPE) Juniper Session Smart Conductor and Session Smart Router contain an OS command injection vulnerability that could allow a remote attacker to execute arbitrary commands as root via a specially crafted salt minion ID.",
+   "knownRansomware": false,
+   "cvss": 9.8,
+   "cvssSeverity": "Critical",
+   "cvssVersion": "3.1",
+   "epss": 0.0086,
+   "epssPercentile": 0.56019
+  },
   {
    "cveID": "CVE-2026-132224",
    "vendorProject": "Optimizely",
@@ -831,6 +846,11 @@
    "cveID": "CVE-2026-132224",
    "dueDate": "2026-11-27",
    "diasRestantes": 2
+  },
+  {
+   "cveID": "CVE-2026-103406",
+   "dueDate": "2026-11-28",
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2026-115731",
