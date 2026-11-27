@@ -4,9 +4,9 @@
  "generatedAt": "2026-11-26T01:33Z",
  "catalogVersion": "2026.11.25",
  "dateReleased": "2026-11-25T19:48:12.4344Z",
- "lastUpdated": "2026-11-26",
+ "lastUpdated": "2026-11-27",
  "totalTracked": 1805,
- "newToday": 9,
+ "newToday": 0,
  "recentAdditions": [
   {
    "cveID": "CVE-2026-103406",
@@ -958,79 +958,69 @@
  "watchlistHits": [],
  "dueSoon": [
   {
-   "cveID": "CVE-2026-133968",
-   "dueDate": "2026-11-26",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2026-134624",
-   "dueDate": "2026-11-26",
-   "diasRestantes": 0
-  },
-  {
    "cveID": "CVE-2026-131914",
    "dueDate": "2026-11-27",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-132165",
    "dueDate": "2026-11-27",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-132224",
    "dueDate": "2026-11-27",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2023-25914",
    "dueDate": "2026-11-28",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2023-25915",
    "dueDate": "2026-11-28",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-103406",
    "dueDate": "2026-11-28",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-133275",
    "dueDate": "2026-11-28",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-133303",
    "dueDate": "2026-11-28",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-133323",
    "dueDate": "2026-11-28",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-133324",
    "dueDate": "2026-11-28",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-133469",
    "dueDate": "2026-11-28",
-   "diasRestantes": 2
+   "diasRestantes": 1
   },
   {
    "cveID": "CVE-2026-115731",
    "dueDate": "2026-12-01",
-   "diasRestantes": 5
+   "diasRestantes": 4
   },
   {
    "cveID": "CVE-2026-40217",
    "dueDate": "2026-12-02",
-   "diasRestantes": 6
+   "diasRestantes": 5
   }
  ]
 }
