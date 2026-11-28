@@ -1,13 +1,48 @@
 {
  "schema": 1,
  "source": "https://github.com/eduolihez/kev-digest",
- "generatedAt": "2026-11-26T01:33Z",
- "catalogVersion": "2026.11.25",
- "dateReleased": "2026-11-25T19:48:12.4344Z",
- "lastUpdated": "2026-11-27",
- "totalTracked": 1805,
- "newToday": 0,
+ "generatedAt": "2026-11-28T01:05Z",
+ "catalogVersion": "2026.11.27",
+ "dateReleased": "2026-11-27T18:03:12.5733Z",
+ "lastUpdated": "2026-11-28",
+ "totalTracked": 1808,
+ "newToday": 3,
  "recentAdditions": [
+  {
+   "cveID": "CVE-2026-120705",
+   "vendorProject": "OSGeo",
+   "product": "GeoServer",
+   "vulnerabilityName": "OSGeo GeoServer XML Injection Vulnerability",
+   "dateAdded": "2026-11-27",
+   "dueDate": "2026-11-30",
+   "shortDescription": "OsGeo GeoServer contains an XML injection vulnerability that allows an unauthenticated remote attacker to cause the server to read local text files accessible to the GeoServer process or fetch attacker-specified HTTP or HTTPS URLs via a crafted ID parameter in the WFS 2.0 GetFeatureById stored query. This vulnerability can be chained with CVE-2026-129244, CVE-2026-129243, CVE-2026-129245, and CVE-2026-129242 to achieve unauthenticated remote code execution on an affected GeoServer instance.",
+   "knownRansomware": false
+  },
+  {
+   "cveID": "CVE-2026-129243",
+   "vendorProject": "OSGeo",
+   "product": "GeoServer",
+   "vulnerabilityName": "OSGeo GeoServer Incorrect Authorization Vulnerability",
+   "dateAdded": "2026-11-27",
+   "dueDate": "2026-11-30",
+   "shortDescription": "GeoServer contains an incorrect authorization vulnerability that allows an unauthenticated remote attacker to bypass service-level role checks and invoke operations protected solely by those checks via a request with a prefixed service parameter. This vulnerability can be chained with CVE-2026-129244, CVE-2026-120705, CVE-2026-129245, and CVE-2026-129242 to achieve unauthenticated remote code execution on an affected GeoServer instance.",
+   "knownRansomware": false
+  },
+  {
+   "cveID": "CVE-2026-136716",
+   "vendorProject": "Drupal",
+   "product": "Core",
+   "vulnerabilityName": "Drupal Core Improper Check for Unusual or Exceptional Conditions Vulnerability",
+   "dateAdded": "2026-11-27",
+   "dueDate": "2026-11-30",
+   "shortDescription": "Drupal Core contains an improper check for unusual or exceptional conditions vulnerability that allows an unauthenticated remote attacker to take over a site via the exposed Drupal installer when the site is in one of the affected unusual or incomplete installation states.",
+   "knownRansomware": false,
+   "cvss": 9.8,
+   "cvssSeverity": "Critical",
+   "cvssVersion": "3.1",
+   "epss": 0.01212,
+   "epssPercentile": 0.68449
+  },
   {
    "cveID": "CVE-2026-103406",
    "vendorProject": "Hewlett Packard Enterprise (HPE)",
@@ -926,101 +961,75 @@
    "dueDate": "2026-10-17",
    "shortDescription": "Palo Alto Networks PAN-OS contains a code injection vulnerability that could allow an authenticated attacker with network access to execute arbitrary code with root privileges on the firewall.",
    "knownRansomware": false
-  },
-  {
-   "cveID": "CVE-2026-104935",
-   "vendorProject": "Ivanti",
-   "product": "Connect Secure",
-   "vulnerabilityName": "Ivanti Connect Secure Authentication Bypass by Spoofing Vulnerability",
-   "dateAdded": "2026-10-13",
-   "dueDate": "2026-10-16",
-   "shortDescription": "Ivanti Connect Secure contains an authentication bypass by spoofing vulnerability that allows a remote unauthenticated attacker to execute arbitrary commands.",
-   "knownRansomware": false,
-   "cvss": 8.6,
-   "cvssSeverity": "High",
-   "cvssVersion": "3.1"
-  },
-  {
-   "cveID": "CVE-2026-96951",
-   "vendorProject": "Microsoft",
-   "product": "Windows",
-   "vulnerabilityName": "Microsoft Windows Command Injection Vulnerability",
-   "dateAdded": "2026-10-13",
-   "dueDate": "2026-10-16",
-   "shortDescription": "Microsoft Windows Shell contains a command injection vulnerability that allows an unauthorized attacker to bypass a security feature over a network.",
-   "knownRansomware": false,
-   "cvss": 8.8,
-   "cvssSeverity": "High",
-   "cvssVersion": "3.1"
   }
  ],
  "ransomwareTracked": 362,
  "watchlistHits": [],
  "dueSoon": [
   {
-   "cveID": "CVE-2026-131914",
-   "dueDate": "2026-11-27",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2026-132165",
-   "dueDate": "2026-11-27",
-   "diasRestantes": 0
-  },
-  {
-   "cveID": "CVE-2026-132224",
-   "dueDate": "2026-11-27",
-   "diasRestantes": 0
-  },
-  {
    "cveID": "CVE-2023-25914",
    "dueDate": "2026-11-28",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2023-25915",
    "dueDate": "2026-11-28",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-103406",
    "dueDate": "2026-11-28",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-133275",
    "dueDate": "2026-11-28",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-133303",
    "dueDate": "2026-11-28",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-133323",
    "dueDate": "2026-11-28",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-133324",
    "dueDate": "2026-11-28",
-   "diasRestantes": 1
+   "diasRestantes": 0
   },
   {
    "cveID": "CVE-2026-133469",
    "dueDate": "2026-11-28",
-   "diasRestantes": 1
+   "diasRestantes": 0
+  },
+  {
+   "cveID": "CVE-2026-120705",
+   "dueDate": "2026-11-30",
+   "diasRestantes": 2
+  },
+  {
+   "cveID": "CVE-2026-129243",
+   "dueDate": "2026-11-30",
+   "diasRestantes": 2
+  },
+  {
+   "cveID": "CVE-2026-136716",
+   "dueDate": "2026-11-30",
+   "diasRestantes": 2
   },
   {
    "cveID": "CVE-2026-115731",
    "dueDate": "2026-12-01",
-   "diasRestantes": 4
+   "diasRestantes": 3
   },
   {
    "cveID": "CVE-2026-40217",
    "dueDate": "2026-12-02",
-   "diasRestantes": 5
+   "diasRestantes": 4
   }
  ]
 }

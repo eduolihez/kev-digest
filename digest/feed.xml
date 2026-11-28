@@ -5,8 +5,29 @@
   <link href="https://github.com/eduolihez/kev-digest"/>
   <link rel="self" href="https://raw.githubusercontent.com/eduolihez/kev-digest/main/digest/feed.xml"/>
   <id>https://github.com/eduolihez/kev-digest</id>
-  <updated>2026-11-26T01:33:52Z</updated>
+  <updated>2026-11-28T01:05:44Z</updated>
   <author><name>kev-digest</name></author>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-136716 · Drupal Core</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-136716"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-136716/2026-11-28T01:05:44Z</id>
+    <updated>2026-11-28T01:05:44Z</updated>
+    <summary>Drupal Core contains an improper check for unusual or exceptional conditions vulnerability that allows an unauthenticated remote attacker to take over a site via the exposed Drupal installer when the site is in one of the affected unusual or incomplete installation states.</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-129243 · OSGeo GeoServer</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-129243"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-129243/2026-11-28T01:05:44Z</id>
+    <updated>2026-11-28T01:05:44Z</updated>
+    <summary>GeoServer contains an incorrect authorization vulnerability that allows an unauthenticated remote attacker to bypass service-level role checks and invoke operations protected solely by those checks via a request with a prefixed service parameter. This vulnerability can be chained with CVE-2026-129244, CVE-2026-120705, CVE-2026-129245, and CVE-2026-129242 to achieve unauthenticated remote code exec</summary>
+  </entry>
+  <entry>
+    <title>Nueva en KEV: CVE-2026-120705 · OSGeo GeoServer</title>
+    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-120705"/>
+    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-120705/2026-11-28T01:05:44Z</id>
+    <updated>2026-11-28T01:05:44Z</updated>
+    <summary>OsGeo GeoServer contains an XML injection vulnerability that allows an unauthenticated remote attacker to cause the server to read local text files accessible to the GeoServer process or fetch attacker-specified HTTP or HTTPS URLs via a crafted ID parameter in the WFS 2.0 GetFeatureById stored query. This vulnerability can be chained with CVE-2026-129244, CVE-2026-129243, CVE-2026-129245, and CVE-</summary>
+  </entry>
   <entry>
     <title>Nueva en KEV: CVE-2026-133469 · Vates Xen Orchestra</title>
     <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-133469"/>
@@ -335,26 +356,5 @@
     <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-48356/2026-10-27T21:49:42Z</id>
     <updated>2026-10-27T21:49:42Z</updated>
     <summary>Adobe Commerce and Magento contain an unrestricted upload of file with dangerous type vulnerability that could result in arbitrary code execution in the context of the current user, potentially gaining elevated access or control over the victim's account or session.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-111497 · Google Brotli</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-111497"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-111497/2026-10-27T21:49:42Z</id>
-    <updated>2026-10-27T21:49:42Z</updated>
-    <summary>Google Brotli contains an unchecked return value vulnerability that allows a remote unauthenticated attacker to corrupt adjacent decoder state memory, disclose sensitive memory contents, cause a denial of service, or potentially execute arbitrary code using a crafted Brotli-compressed stream.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-109619 · PHP Group PHP</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-109619"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-109619/2026-10-27T00:13:46Z</id>
-    <updated>2026-10-27T00:13:46Z</updated>
-    <summary>PHP contains a stale internal request-state vulnerability that allows for unauthenticated remote code execution.</summary>
-  </entry>
-  <entry>
-    <title>Nueva en KEV: CVE-2026-109618 · PHP Group PHP</title>
-    <link href="https://nvd.nist.gov/vuln/detail/CVE-2026-109618"/>
-    <id>tag:eduolihez.github.io,2026:kev/new/CVE-2026-109618/2026-10-27T00:13:46Z</id>
-    <updated>2026-10-27T00:13:46Z</updated>
-    <summary>PHP contains an out-of-memory corruption vulnerability that allows for unauthenticated remote code execution.</summary>
   </entry>
 </feed>
